@@ -1,51 +1,6 @@
 /* Стилизация кнопки */
 
-@keyframes beautifullization {
-  0% { background: repeating-radial-gradient(#ff0000, #00ff15 80px); }
 
-  10% { background: repeating-radial-gradient(#fe0000, #00ff30 86px); }
-
-  20% { background: repeating-radial-gradient(#fa0000, #00ff46 97px); }
-
-  30% { background: repeating-radial-gradient(#f90000, #00ff77 160px); }
-
-  40% { background: repeating-radial-gradient(#f70000, #00ff88 186px); }
-
-  50% { background: repeating-radial-gradient(#f40000, #00ff99 190px); }
-
-  60% { background: repeating-radial-gradient(#f60000, #00ff77 140px); }
-
-  70% { background: repeating-radial-gradient(#f80000, #00ff88 130px); }
-
-  80% { background: repeating-radial-gradient(#f90000, #00ff30 120px); }
-
-  90% { background: repeating-radial-gradient(#fa0000, #00ff18 110px); }
-
-  100% { background: repeating-radial-gradient(#ff0000, #00ff15 90px); }
-}
-
-body {
-  padding: var(--sp-64);
-  height: 100vh;
-}
-
-body:not(.-off){
-  animation-name: beautifullization;
-  animation-delay: 0s;
-  animation-duration: 0.80s;
-
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-  animation-play-state: running;
-  animation-direction: normal;
-}
-
-.presentation {
-  padding: var(--sp-24);
-  background-color: rgba(255, 255, 255, 0.5);
-  margin-bottom: var(--sp-32);
-}
 
 .button {
   transition: background-color var(--trz-eo-015-015),
@@ -79,6 +34,7 @@ body:not(.-off){
 
   cursor: pointer;
 }
+
 .button:hover{
   transition: background-color var(--trz-eo-015),
               color var(--trz-eo-015),
@@ -86,43 +42,41 @@ body:not(.-off){
 }
 
 /* disabled */
-.button_disabled {
+.button.button_disabled,
+.button:disabled,
+.button[aria-disabled="true"] {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-
 /* primary */
-.button_primary {
+.button.button_primary {
   background-color: var(--primary);
   color: var(--clr-btn-primary);
 }
 
-.button_primary:hover {
+.button.button_primary:hover {
   background-color: var(--bg-btn-primary-hover);
 }
 
-
 /* secondary */
-.button_secondary {
+.button.button_secondary {
   background-color: var(--secondary);
   color: var(--clr-btn-secondary);
 }
 
-.button_secondary:hover {
+.button.button_secondary:hover {
   background-color: var(--bg-btn-secondary-hover);
 }
 
-
 /* alternate */
-.button_alternate {
+.button.button_alternate {
   background-color: var(--bg-btn-alternate);
   border: 1px solid var(--grey-3);
   color: var(--clr-btn-alternate);
 }
 
-.button_alternate:hover {
+.button.button_alternate:hover {
   background-color: var(--bg-btn-alternate);
   border: 1px solid var(--black);
 }
-/* 128 ^_^ */
