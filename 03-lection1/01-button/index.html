@@ -48,5 +48,85 @@
       <button class="button button_alternate">Alternate</button>
       <button class="button button_disabled button_alternate">Alternate</button>
     </div>
+
+    <script>
+      (function() {
+        'use strict';
+        const { floor, random } = Math;
+        /* utils */
+        const rndMinMaxInt = (min, max) => floor(random() * (max - min + 1)) + min;
+
+        const getAttr = (el, keyAttribute) => el.getAttribute(keyAttribute);
+        const setAttr = (el, keyAttribute, valAttribute) => el.setAttribute(keyAttribute, valAttribute);
+        const remAttr = (el, keyAttribute) => el.removeAttribute(keyAttribute);
+
+        const qs = (slctr, ctx = null, mode = 'querySelector') => (ctx ? ctx : document.body)[mode](slctr);
+        const cl = (el, cls, mode = 'contains') => el.classList[mode](cls);
+        const getRndTimeout = _ => rndMinMaxInt(1379, 3837);
+
+        /* variables */
+        let countPrimary = 0;
+        const countPrimaryMax = 3;
+        let timerPrimary = null;
+        let timeoutPrimary = getRndTimeout();
+
+        let countSecondary = 0;
+        const countSecondaryMax = 3;
+        let timerSecondary = null;
+        let timeoutSecondary = getRndTimeout();
+
+        /* DOM elements */
+        const elBody = document.body;
+        const elBtnPrimary = qs('.button.button_primary', elBody);
+        const elBtnSecondary = qs('.button.button_secondary', elBody);
+
+        setAttr(elBtnPrimary, 'title', countPrimaryMax - countPrimary);
+        setAttr(elBtnSecondary, 'title', countSecondaryMax - countSecondary);
+
+        /* magic! */
+        const magicPrimary = element => {
+          setAttr(element, 'disabled', true);
+          setAttr(element, 'aria-disabled', true);
+          if(cl(elBody, '-off')) cl(elBody, '-off', 'remove');
+          timerPrimary = setTimeout(_ => {
+            if(cl(elBody, '-off') === false) cl(elBody, '-off', 'add');
+            remAttr(element, 'disabled');
+            setAttr(element, 'aria-disabled', false);
+            countPrimary = 0;
+            timeoutPrimary = getRndTimeout();
+            setAttr(element, 'title', countPrimaryMax - countPrimary);
+            clearTimeout(timerPrimary);
+          }, timeoutPrimary);
+        };
+
+        const magicSecondary = element => {
+          // setAttr(element, 'disabled', true);
+          if(cl(elBody, '-off')) cl(elBody, '-off', 'remove');
+          if(cl(element, 'button_disabled') === false) cl(element, 'button_disabled', 'add');
+
+          timerSecondary = setTimeout(_ => {
+            if(cl(elBody, '-off') === false) cl(elBody, '-off', 'add');
+            if(cl(element, 'button_disabled')) cl(element, 'button_disabled', 'remove');
+            // remAttr(element, 'disabled');
+            countSecondary = 0;
+            timeoutSecondary = getRndTimeout();
+            setAttr(element, 'title', countSecondaryMax - countSecondary);
+            clearTimeout(timerSecondary);
+          }, timeoutSecondary);
+        };
+
+        /* handlers */
+        elBtnPrimary && elBtnPrimary.addEventListener('click', _ => {
+          if(++countPrimary >= countPrimaryMax) magicPrimary(elBtnPrimary);
+          setAttr(elBtnPrimary, 'title', countPrimaryMax - countPrimary);
+        });
+
+        elBtnSecondary && elBtnSecondary.addEventListener('click', _ => {
+          if(++countSecondary >= countSecondaryMax) magicSecondary(elBtnSecondary);
+          setAttr(elBtnSecondary, 'title', countSecondaryMax - countSecondary);
+        });
+
+      })();
+    </script>
   </body>
 </html>
