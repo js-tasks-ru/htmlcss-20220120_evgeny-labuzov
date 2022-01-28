@@ -1,0 +1,91 @@
+:root {
+   /* colors: */
+  --white: #ffffff;
+  --black: #212429;
+  --pink: #F784AD;
+  --purple: #7048E8;
+  --blue: #374FC7;
+  --red: #F03D3E;
+
+  /* g r a y colors */
+  --grey-1: #F8F9FA;
+  --grey-e5: #E5E5E5;
+  --grey-2: #DDE2E5;
+  --grey-3: #ACB5BD;
+  --grey-4: #495057;
+
+  /* utility colors */
+  --error: var(--red);
+  --success: var(--blue);
+  --primary: var(--blue);
+  --secondary: var(--purple);
+
+  /* bg-colors: */
+  --bg-main: var(--white);
+
+  /* special */
+  --transpr: rgba(255, 255, 255, 0);
+  --bg-btn-alternate: var(--bg-main);
+  --clr-btn-alternate: var(--gray-4);
+
+  --bg-btn-primary-hover: #2342C0;
+  --clr-btn-primary: var(--white);
+
+  --bg-btn-secondary-hover: #5028C6;
+  --clr-btn-secondary: var(--white);
+
+  /* typography: */
+  --ff-roboto: 'Roboto', sans-serif;
+  --ff-common: var(--ff-roboto);
+  --ff-ui-controls: var(--ff-roboto);
+
+  --clr-common-text: var(--black);
+
+  --fz-base: 16px;
+
+  --lh-common: 1.5;
+  --lh-title: 1;
+
+  /* fz text */
+  /* s, m */
+  --fz-text-s: calc(1rem / 1.1428);
+  --fz-text-m: 1rem;
+
+  /* fz title */
+  /* s, m, l, xl*/
+  --fz-title-s: calc(1rem * 1.25);
+  --fz-title-m: calc(1rem * 1.75);
+  --fz-title-l: calc(1rem * 2.375);
+  --fz-title-xl: calc(1rem * 3.125);
+
+  /* fz title mobile */
+  /* m, l, xl*/
+  --fz-title-mob-m: calc(1rem * 1.25);
+  --fz-title-mob-l: calc(1rem * 1.5);
+  --fz-title-mob-xl: calc(1rem * 1.75);
+
+  /* fz text mobile */
+  /* small, p */
+  --fz-text-mob-small: calc(1rem * 1.6);
+  --fz-text-mob-p: calc(1rem / 1.1428);
+
+  /* spacers */
+  /* 8, 24, 32, 64 */
+  --sp-8: calc(1rem / 2);
+  --sp-24: calc(var(--sp-8) * 3) /* calc(1rem * 1.5)*/;
+  --sp-32: calc(var(--sp-8) * 4) /* calc(1rem * 2)*/;
+  --sp-64: calc(var(--sp-8) * 8) /* calc(1rem * 4)*/;
+  /* buttons */
+  --sp-pt-buttons: calc(1rem / 1.0666);
+  --sp-pr-buttons: calc(1rem / 1.0666);
+  --sp-pb-buttons: calc(1rem / 1.1428);
+  --sp-pl-buttons: calc(1rem / 1.0666);
+
+  /* border-radiuses */
+  --rad-buttons: var(--sp-8);
+  --rad-card: var(--sp-24);
+
+  /* transition */
+  --trz-eo-015: /* prop first */ 0.15s 0s ease-out;
+  --trz-eo-015-015: /* prop first */ 0.15s 0.15s ease-out;
+}

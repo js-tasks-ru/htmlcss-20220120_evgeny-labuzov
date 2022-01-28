@@ -1,24 +1,32 @@
+/* libs */
+@import 'libraries/reset/reset.css';
+@import 'libraries/reset/normalize.css';
+
+/* fonts */
 @import '../fonts/fonts.css';
 
-:root {
-    --white: #ffffff;
-    --black: #212429;
-    --pink: #F784AD;
-    --purple: #7048E8;
-    --blue: #374FC7;
-    --red: #F03D3E;
-    --grey-1: #F8F9FA;
-    --grey-2: #DDE2E5;
-    --grey-3: #ACB5BD;
-    --grey-4: #495057;
+/* variables */
+@import 'variables.css';
 
-    --error: var(--red);
-    --success: var(--blue);
-
-    --primary: var(--blue);
-    --secondary: var(--purple);
-}
+/* components */
+@import '../../components/presentation/presentation.css';
 
 * {
-    font-family: 'Roboto', sans-serif;
+  font-family: var(--ff-common);
+
+  padding: 0;
+  margin: 0;
+
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: var(--fz-base);
+  line-height: var(--lh-common);
+  font-family: var(--ff-common);
+
+  background-color: var(--bg-main);
+  color: var(--clr-common-text);
+  height: 100vh;
 }

@@ -1,1 +1,82 @@
 /* Стилизация кнопки */
+
+
+
+.button {
+  transition: background-color var(--trz-eo-015-015),
+              color var(--trz-eo-015-015),
+              border var(--trz-eo-015-015);
+
+  padding-top: var(--sp-pt-buttons);
+  padding-right: var(--sp-pr-buttons);
+  padding-bottom: var(--sp-pb-buttons);
+  padding-left: var(--sp-pl-buttons);
+
+  border-radius: var(--rad-buttons);
+  border: 1px solid var(--transpr);
+
+  min-width: 11.4rem;
+  max-width: 100%;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  font-family: var(--ff-ui-controls);
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1;
+  white-space: nowrap;
+  text-align: center;
+
+  user-select: none;
+
+  display: inline-block;
+
+  cursor: pointer;
+}
+
+.button:hover{
+  transition: background-color var(--trz-eo-015),
+              color var(--trz-eo-015),
+              border var(--trz-eo-015);
+}
+
+/* disabled */
+.button.button_disabled,
+.button:disabled,
+.button[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* primary */
+.button.button_primary {
+  background-color: var(--primary);
+  color: var(--clr-btn-primary);
+}
+
+.button.button_primary:hover {
+  background-color: var(--bg-btn-primary-hover);
+}
+
+/* secondary */
+.button.button_secondary {
+  background-color: var(--secondary);
+  color: var(--clr-btn-secondary);
+}
+
+.button.button_secondary:hover {
+  background-color: var(--bg-btn-secondary-hover);
+}
+
+/* alternate */
+.button.button_alternate {
+  background-color: var(--bg-btn-alternate);
+  border: 1px solid var(--grey-3);
+  color: var(--clr-btn-alternate);
+}
+
+.button.button_alternate:hover {
+  background-color: var(--bg-btn-alternate);
+  border: 1px solid var(--black);
+}

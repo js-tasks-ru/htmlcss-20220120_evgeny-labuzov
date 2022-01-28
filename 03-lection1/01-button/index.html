@@ -1,11 +1,132 @@
 <!DOCTYPE html>
 <!-- Страница с кнопкой -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./button.css">
-    </head>
-    <body>
+  <head>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./button.css">
+    <title>Beautiful Buttons</title>
+    <style>
+      @keyframes beautifullization {
+        0% { background: repeating-radial-gradient(#ff0000, #00ff15 80px); }
+        10% { background: repeating-radial-gradient(#fe0000, #00ff30 86px); }
+        20% { background: repeating-radial-gradient(#fa0000, #00ff46 97px); }
+        30% { background: repeating-radial-gradient(#f90000, #00ff77 160px); }
+        40% { background: repeating-radial-gradient(#f70000, #00ff88 186px); }
+        50% { background: repeating-radial-gradient(#f40000, #00ff99 190px); }
+        60% { background: repeating-radial-gradient(#f60000, #00ff77 140px); }
+        70% { background: repeating-radial-gradient(#f80000, #00ff88 130px); }
+        80% { background: repeating-radial-gradient(#f90000, #00ff30 120px); }
+        90% { background: repeating-radial-gradient(#fa0000, #00ff18 110px); }
+        100% { background: repeating-radial-gradient(#ff0000, #00ff15 90px); }
+      }
+      body:not(.-off) {
+        animation-name: beautifullization;
+        animation-delay: 0s;
+        animation-duration: 0.80s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+        animation-direction: normal;
+      }
+      body {
+        padding: var(--sp-64);
+      }
+    </style>
+  </head>
+  <body class="-off" role="document" aria-label="03-lection1/01-button">
 
-    </body>
+    <div class="presentation" role="application" aria-label="Тест смены атрибута disabled средствами javascript">
+      <button class="button button_primary" title="-1" aria-disabled="false" >Primary</button>
+      <button class="button button_disabled button_primary" aria-disabled="true" disabled>Primary</button>
+    </div>
+    <div class="presentation" role="application" aria-label="Тест смены специального класса средствами javascript">
+      <button class="button button_secondary" title="-1">Secondary</button>
+      <button class="button button_disabled button_secondary">Secondary</button>
+    </div>
+    <div class="presentation" role="presentation" aria-label="Пример кнопки">
+      <button class="button button_alternate">Alternate</button>
+      <button class="button button_disabled button_alternate">Alternate</button>
+    </div>
+
+    <script>
+      (function() {
+        'use strict';
+        const { floor, random } = Math;
+        /* utils */
+        const rndMinMaxInt = (min, max) => floor(random() * (max - min + 1)) + min;
+
+        const getAttr = (el, keyAttribute) => el.getAttribute(keyAttribute);
+        const setAttr = (el, keyAttribute, valAttribute) => el.setAttribute(keyAttribute, valAttribute);
+        const remAttr = (el, keyAttribute) => el.removeAttribute(keyAttribute);
+
+        const qs = (slctr, ctx = null, mode = 'querySelector') => (ctx ? ctx : document.body)[mode](slctr);
+        const cl = (el, cls, mode = 'contains') => el.classList[mode](cls);
+        const getRndTimeout = _ => rndMinMaxInt(1379, 3837);
+
+        /* variables */
+        let countPrimary = 0;
+        const countPrimaryMax = 3;
+        let timerPrimary = null;
+        let timeoutPrimary = getRndTimeout();
+
+        let countSecondary = 0;
+        const countSecondaryMax = 3;
+        let timerSecondary = null;
+        let timeoutSecondary = getRndTimeout();
+
+        /* DOM elements */
+        const elBody = document.body;
+        const elBtnPrimary = qs('.button.button_primary', elBody);
+        const elBtnSecondary = qs('.button.button_secondary', elBody);
+
+        setAttr(elBtnPrimary, 'title', countPrimaryMax - countPrimary);
+        setAttr(elBtnSecondary, 'title', countSecondaryMax - countSecondary);
+
+        /* magic! */
+        const magicPrimary = element => {
+          setAttr(element, 'disabled', true);
+          setAttr(element, 'aria-disabled', true);
+          if(cl(elBody, '-off')) cl(elBody, '-off', 'remove');
+          timerPrimary = setTimeout(_ => {
+            if(cl(elBody, '-off') === false) cl(elBody, '-off', 'add');
+            remAttr(element, 'disabled');
+            setAttr(element, 'aria-disabled', false);
+            countPrimary = 0;
+            timeoutPrimary = getRndTimeout();
+            setAttr(element, 'title', countPrimaryMax - countPrimary);
+            clearTimeout(timerPrimary);
+          }, timeoutPrimary);
+        };
+
+        const magicSecondary = element => {
+          // setAttr(element, 'disabled', true);
+          if(cl(elBody, '-off')) cl(elBody, '-off', 'remove');
+          if(cl(element, 'button_disabled') === false) cl(element, 'button_disabled', 'add');
+
+          timerSecondary = setTimeout(_ => {
+            if(cl(elBody, '-off') === false) cl(elBody, '-off', 'add');
+            if(cl(element, 'button_disabled')) cl(element, 'button_disabled', 'remove');
+            // remAttr(element, 'disabled');
+            countSecondary = 0;
+            timeoutSecondary = getRndTimeout();
+            setAttr(element, 'title', countSecondaryMax - countSecondary);
+            clearTimeout(timerSecondary);
+          }, timeoutSecondary);
+        };
+
+        /* handlers */
+        elBtnPrimary && elBtnPrimary.addEventListener('click', _ => {
+          if(++countPrimary >= countPrimaryMax) magicPrimary(elBtnPrimary);
+          setAttr(elBtnPrimary, 'title', countPrimaryMax - countPrimary);
+        });
+
+        elBtnSecondary && elBtnSecondary.addEventListener('click', _ => {
+          if(++countSecondary >= countSecondaryMax) magicSecondary(elBtnSecondary);
+          setAttr(elBtnSecondary, 'title', countSecondaryMax - countSecondary);
+        });
+
+      })();
+    </script>
+  </body>
 </html>
