@@ -36,15 +36,16 @@
 
   /* typography: */
   --ff-roboto: 'Roboto', sans-serif;
-  --ff-common: var(--ff-roboto);
+  --ff-inter: 'Inter', sans-serif;
+  --ff-common: var(--ff-inter);
   --ff-ui-controls: var(--ff-roboto);
+  --ff-ui-accordion: var(--ff-inter);
 
   --clr-common-text: var(--black);
 
   --fz-base: 16px;
 
-  --lh-common: 1.5;
-  --lh-title: 1;
+
 
   /* fz text */
   /* s, m */
@@ -69,9 +70,14 @@
   --fz-text-mob-small: calc(1rem * 1.6);
   --fz-text-mob-p: calc(1rem / 1.1428);
 
+  /* line-heights */
+  --lh-common: 1.5;
+  --lh-title: 1;
+  --lh-text-s: 1.5714;
+
   /* spacers */
   /* 8, 24, 32, 64 */
-  --sp-8: calc(1rem / 2);
+  --sp-8:  calc(1rem / 2);
   --sp-24: calc(var(--sp-8) * 3) /* calc(1rem * 1.5)*/;
   --sp-32: calc(var(--sp-8) * 4) /* calc(1rem * 2)*/;
   --sp-64: calc(var(--sp-8) * 8) /* calc(1rem * 4)*/;
@@ -81,9 +87,22 @@
   --sp-pb-buttons: calc(1rem / 1.1428);
   --sp-pl-buttons: calc(1rem / 1.0666);
 
+  /* icons */
+  --ic-black-chevron-down: url("../../assets/images/ic-black-chevron-down.svg");
+
+  --ic-accordion-toggle: var(--ic-black-chevron-down);
+
+  /* icon-sizes */
+  /* x, s, m */
+  --ic-size-x: calc(1rem / 1.3333);
+  --ic-size-s: 1rem;
+  --ic-size-m: 1.374rem;
+
   /* border-radiuses */
-  --rad-buttons: var(--sp-8);
-  --rad-card: var(--sp-24);
+  --rad-common: var(--sp-8);
+  --rad-buttons: var(--rad-common);
+  --rad-accordion: var(--rad-common);
+  --rad-card: calc(1rem / 1.3333);
 
   /* transition */
   --trz-eo-015: /* prop first */ 0.15s 0s ease-out;

@@ -22,11 +22,19 @@
 }
 
 html, body {
+  font-family: var(--ff-common);
   font-size: var(--fz-base);
   line-height: var(--lh-common);
-  font-family: var(--ff-common);
 
-  background-color: var(--bg-main);
   color: var(--clr-common-text);
+  background-color: var(--bg-main);
+
   height: 100vh;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+p:last-child {
+  margin-bottom: 0;
 }
