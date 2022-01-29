@@ -4,6 +4,7 @@
   <head>
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="./button.css">
+    <script src="../../assets/js/utils.js"></script>
     <title>Beautiful Buttons</title>
     <style>
       @keyframes beautifullization {
@@ -52,16 +53,16 @@
     <script>
       (function() {
         'use strict';
-        const { floor, random } = Math;
-        /* utils */
-        const rndMinMaxInt = (min, max) => floor(random() * (max - min + 1)) + min;
 
-        const getAttr = (el, keyAttribute) => el.getAttribute(keyAttribute);
-        const setAttr = (el, keyAttribute, valAttribute) => el.setAttribute(keyAttribute, valAttribute);
-        const remAttr = (el, keyAttribute) => el.removeAttribute(keyAttribute);
+        const {
+          rndMinMaxInt,
+          getAttr,
+          setAttr,
+          remAttr,
+          qs,
+          cl
+        } = window.utils;
 
-        const qs = (slctr, ctx = null, mode = 'querySelector') => (ctx ? ctx : document.body)[mode](slctr);
-        const cl = (el, cls, mode = 'contains') => el.classList[mode](cls);
         const getRndTimeout = _ => rndMinMaxInt(1379, 3837);
 
         /* variables */
