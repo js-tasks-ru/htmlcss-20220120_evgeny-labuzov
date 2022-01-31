@@ -9,7 +9,23 @@
 @import 'variables.css';
 
 /* components */
+
+/*grid*/
+@import '../../components/container/container.css';
+
+/* pages */
+@import '../../components/page/page.css';
+
+/* global layout */
+@import '../../components/header/header.css';
+@import '../../components/content/content.css';
+@import '../../components/footer/footer.css';
+
+
+/* blocks */
 @import '../../components/presentation/presentation.css';
+@import '../../components/title/title.css';
+
 
 * {
   font-family: var(--ff-common);
@@ -37,4 +53,10 @@ p {
 }
 p:last-child {
   margin-bottom: 0;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  padding: 0;
+  margin: 0;
 }

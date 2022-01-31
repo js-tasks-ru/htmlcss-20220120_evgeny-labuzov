@@ -1,0 +1,15 @@
+.header {
+  background-color: var(--bg-header);
+  padding-top: var(--sp-pt-header);
+  padding-bottom: var(--sp-pb-header);
+  width: 100%;
+}
+
+.header__title {
+  font-family: var(--ff-common-title);
+  font-size: var(--fz-title-xl);
+  line-height: var(--lh-title);
+  font-weight: 500;
+
+  color: var(--clr-common-title);
+}

@@ -1,0 +1,129 @@
+.\#{
+  width: 100%;
+  max-width: var(--w-container-desktop);
+  margin: 0 auto;
+}
+.\#__row{
+  width: 100%;
+}
+.\#__col{
+  width: 100%;
+}
+
+
+.\# .\#__col\:1\/3 {
+  --l-full: var(--w-container-desktop);
+  --l-base-cols: 3;
+  --l-divider-cols: 1;
+  --l-one: calc(var(--l-full) / var(--l-base-cols));
+  max-width: calc(var(--l-one) * var(--l-divider-cols));
+}
+.\# .\#__col\:2\/3 {
+  --l-full: var(--w-container-desktop);
+  --l-base-cols: 3;
+  --l-divider-cols: 2;
+  --l-one: calc(var(--l-full) / var(--l-base-cols));
+  max-width: calc(var(--l-one) * var(--l-divider-cols));
+}
+.\# .\#__col\:3\/3 {
+  --l-full: var(--w-container-desktop);
+  --l-base-cols: 3;
+  --l-divider-cols: 3;
+  --l-one: calc(var(--l-full) / var(--l-base-cols));
+  max-width: calc(var(--l-one) * var(--l-divider-cols));
+}
+
+/* mini ============================*/
+@media screen and (max-width: /* var(--brk-w-container-mini)*/ 639px ) {
+  :root{
+    --l-w-container: var(--w-container-mini);
+  }
+  .\# {
+    max-width: var(--l-w-container);
+    padding-left: var(--sp-8);
+    padding-right: var(--sp-8);
+  }
+  .\# .\#__col_mini\:1\/3 {
+    --l-full: var(--l-w-container);
+    --l-base-cols: 3;
+    --l-divider-cols: 1;
+    --l-one: calc(var(--l-full) / var(--l-base-cols));
+    max-width: calc(var(--l-one) * var(--l-divider-cols));
+  }
+  .\# .\#__col_mini\:2\/3 {
+    --l-full: var(--l-w-container);
+    --l-base-cols: 3;
+    --l-divider-cols: 2;
+    --l-one: calc(var(--l-full) / var(--l-base-cols));
+    max-width: calc(var(--l-one) * var(--l-divider-cols));
+  }
+  .\# .\#__col_mini\:3\/3 {
+    --l-full: var(--l-w-container);
+    --l-base-cols: 3;
+    --l-divider-cols: 3;
+    --l-one: calc(var(--l-full) / var(--l-base-cols));
+    max-width: calc(var(--l-one) * var(--l-divider-cols));
+  }
+}
+
+/* mobile ============================*/
+@media screen and (min-width: /* var(--brk-w-container-mobile)*/ 640px) and (max-width: /* var(--brk-w-container-desktop)*/ 1110px) {
+  :root{
+    --l-w-container: var(--w-container-mobile);
+  }
+  .\# {
+    max-width: var(--l-w-container);
+  }
+  .\# .\#__col_mobile\:1\/3 {
+    --l-full: var(--l-w-container);
+    --l-base-cols: 3;
+    --l-divider-cols: 1;
+    --l-one: calc(var(--l-full) / var(--l-base-cols));
+    max-width: calc(var(--l-one) * var(--l-divider-cols));
+  }
+  .\# .\#__col_mobile\:2\/3 {
+    --l-full: var(--l-w-container);
+    --l-base-cols: 3;
+    --l-divider-cols: 2;
+    --l-one: calc(var(--l-full) / var(--l-base-cols));
+    max-width: calc(var(--l-one) * var(--l-divider-cols));
+  }
+  .\# .\#__col_mobile\:3\/3 {
+    --l-full: var(--l-w-container);
+    --l-base-cols: 3;
+    --l-divider-cols: 3;
+    --l-one: calc(var(--l-full) / var(--l-base-cols));
+    max-width: calc(var(--l-one) * var(--l-divider-cols));
+  }
+}
+
+/* desktop ============================*/
+@media screen and (min-width: /* var(--brk-w-container-desktop)*/ 1110px) {
+  :root{
+    --l-w-container: var(--w-container-desktop);
+  }
+  .\# {
+    max-width: var(--l-w-container);
+  }
+  .\# .\#__col_desktop\:1\/3 {
+    --l-full: var(--l-w-container);
+    --l-base-cols: 3;
+    --l-divider-cols: 1;
+    --l-one: calc(var(--l-full) / var(--l-base-cols));
+    max-width: calc(var(--l-one) * var(--l-divider-cols));
+  }
+  .\# .\#__col_desktop\:2\/3 {
+    --l-full: var(--l-w-container);
+    --l-base-cols: 3;
+    --l-divider-cols: 2;
+    --l-one: calc(var(--l-full) / var(--l-base-cols));
+    max-width: calc(var(--l-one) * var(--l-divider-cols));
+  }
+  .\# .\#__col_desktop\:3\/3 {
+    --l-full: var(--l-w-container);
+    --l-base-cols: 3;
+    --l-divider-cols: 3;
+    --l-one: calc(var(--l-full) / var(--l-base-cols));
+    max-width: calc(var(--l-one) * var(--l-divider-cols));
+  }
+}
