@@ -1,35 +1,30 @@
 /* Стилизация аккордеона */
 
 .accordion {
+  font-family: var(--ff-ui-accordion);
+}
+
+.accordion__item {
   border: 1px solid var(--grey-3);
   border-radius: var(--rad-accordion);
   background-color: var(--bg-main);
-  font-family: var(--ff-ui-accordion);
   margin-bottom: var(--sp-8);
 }
 
-.accordion:last-child {
+.accordion__item:last-child {
   margin-bottom: 0;
 }
 
-.accordion .accordion__summary {
+.accordion__summary {
   font-weight: 500;
   line-height: 1;
 
-  display: -webkit-flex;
-  display: -ms-flex;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
   justify-content: flex-start;
-  -ms-align-items: center;
   align-items: center;
 
-  padding-top: var(--sp-24);
-  padding-right: var(--sp-32);
-  padding-bottom: var(--sp-24);
-  padding-left: var(--sp-32);
+  padding: var(--sp-24) var(--sp-32) var(--sp-24) var(--sp-32);
 
   -webkit-appearance: none;
   cursor: pointer;
@@ -37,7 +32,7 @@
   user-select: none;
 }
 
-.accordion .accordion__summary:after {
+.accordion__summary:after {
   content: "";
   display: block;
 
@@ -51,23 +46,22 @@
   background-image: var(--ic-accordion-toggle);
   background-repeat: no-repeat;
   background-position: center center;
-  -webkit-background-size: contain;
   background-size: contain;
   transform: rotate(0deg);
   transition: transform var(--trz-eo-015);
 }
 
-.accordion[open] .accordion__summary:after {
+.accordion__item[open] .accordion__summary:after {
   transform: rotate(-180deg);
 }
 
-.accordion .accordion__summary::-webkit-details-marker,
-.accordion .accordion__summary::marker {
+.accordion__summary::-webkit-details-marker,
+.accordion__summary::marker {
   content: none;
   display: none;
 }
 
-.accordion .accordion__content {
+.accordion__content {
   font-weight: 400;
   padding-right: var(--sp-32);
   padding-bottom: var(--sp-32);
