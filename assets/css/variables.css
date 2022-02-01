@@ -135,4 +135,7 @@
   --w-container-mini: 100%;
   --w-container-mobile: 640px;
   --w-container-desktop: 1110px;
+
+  /* grid*/
+  --base-cols: 3;
 }
