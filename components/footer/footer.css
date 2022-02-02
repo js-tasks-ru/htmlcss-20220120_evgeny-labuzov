@@ -5,13 +5,10 @@
 }
 
 .footer__content {
-  display: -webkit-flex;
-  display: -ms-flex;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .footer__title {
@@ -23,9 +20,7 @@
   line-height: var(--lh-title-section);
 
   color: var(--clr-common-title);
-
   margin-bottom: var(--sp-32);
-
 }
 
 .footer__text {
