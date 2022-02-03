@@ -1,0 +1,5 @@
+.content {
+  background-color: var(--gray-0);
+  width: 100%;
+  flex-grow: 1;
+}

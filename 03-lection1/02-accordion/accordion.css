@@ -1,1 +1,73 @@
 /* Стилизация аккордеона */
+
+.accordion {
+  font-family: var(--ff-ui-accordion);
+}
+
+.accordion__item {
+  border: 1px solid var(--grey-3);
+  border-radius: var(--rad-accordion);
+  background-color: var(--bg-main);
+  margin-bottom: var(--sp-8);
+}
+
+.accordion__item:last-child {
+  margin-bottom: 0;
+}
+
+.accordion__summary {
+  font-weight: 500;
+  line-height: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: var(--sp-24) var(--sp-32) var(--sp-24) var(--sp-32);
+
+  -webkit-appearance: none;
+  cursor: pointer;
+
+  user-select: none;
+}
+
+.accordion__summary:after {
+  content: "";
+  display: block;
+
+  width: var(--ic-size-s);
+  height: var(--ic-size-s);
+
+  margin-left: auto;
+
+  border-radius: 50%;
+
+  background-image: var(--ic-accordion-toggle);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  transform: rotate(0deg);
+  transition: transform var(--trz-eo-015);
+}
+
+.accordion__item[open] .accordion__summary:after {
+  transform: rotate(-180deg);
+}
+
+.accordion__summary::-webkit-details-marker,
+.accordion__summary::marker {
+  content: none;
+  display: none;
+}
+
+.accordion__content {
+  font-weight: 400;
+  padding-right: var(--sp-32);
+  padding-bottom: var(--sp-32);
+  padding-left: var(--sp-32);
+}
+
+.accordion__title {
+  font-weight: 600;
+}

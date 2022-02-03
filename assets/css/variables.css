@@ -8,6 +8,7 @@
   --red: #F03D3E;
 
   /* g r a y colors */
+  --gray-0: #F9FAFC;
   --grey-1: #F8F9FA;
   --grey-e5: #E5E5E5;
   --grey-2: #DDE2E5;
@@ -21,6 +22,7 @@
   --secondary: var(--purple);
 
   /* bg-colors: */
+  --bg-header: var(--white);
   --bg-main: var(--white);
 
   /* special */
@@ -36,15 +38,17 @@
 
   /* typography: */
   --ff-roboto: 'Roboto', sans-serif;
-  --ff-common: var(--ff-roboto);
+  --ff-inter: 'Inter', sans-serif;
+  --ff-common: var(--ff-inter);
+  --ff-common-title: var(--ff-inter);
   --ff-ui-controls: var(--ff-roboto);
+  --ff-ui-accordion: var(--ff-inter);
 
   --clr-common-text: var(--black);
+  --clr-common-title: var(--black);
 
   --fz-base: 16px;
 
-  --lh-common: 1.5;
-  --lh-title: 1;
 
   /* fz text */
   /* s, m */
@@ -69,23 +73,69 @@
   --fz-text-mob-small: calc(1rem * 1.6);
   --fz-text-mob-p: calc(1rem / 1.1428);
 
+  /* line-heights */
+  --lh-common: 1.5;
+  --lh-title: 1.28;
+  --lh-title-section: 1.26;
+  --lh-text-s: 1.5714;
+
   /* spacers */
   /* 8, 24, 32, 64 */
-  --sp-8: calc(1rem / 2);
+  --sp-8:  calc(1rem / 2);
   --sp-24: calc(var(--sp-8) * 3) /* calc(1rem * 1.5)*/;
   --sp-32: calc(var(--sp-8) * 4) /* calc(1rem * 2)*/;
   --sp-64: calc(var(--sp-8) * 8) /* calc(1rem * 4)*/;
+
   /* buttons */
   --sp-pt-buttons: calc(1rem / 1.0666);
   --sp-pr-buttons: calc(1rem / 1.0666);
   --sp-pb-buttons: calc(1rem / 1.1428);
   --sp-pl-buttons: calc(1rem / 1.0666);
 
+
+  /* header */
+  --sp-pt-header: calc(var(--sp-8) * 12);
+  --sp-pb-header: calc(var(--sp-8) * 9);
+
+  /* footer */
+  --sp-pt-footer: calc(var(--sp-8) * 9);
+  --sp-pb-footer: calc(var(--sp-8) * 17);
+
+  /* icons */
+  --ic-black-chevron-down: url("../../assets/images/ic-black-chevron-down.svg");
+
+  --ic-accordion-toggle: var(--ic-black-chevron-down);
+
+  /* icon-sizes */
+  /* x, s, m */
+  --ic-size-x: calc(1rem / 1.3333);
+  --ic-size-s: 1rem;
+  --ic-size-m: 1.374rem;
+
   /* border-radiuses */
-  --rad-buttons: var(--sp-8);
-  --rad-card: var(--sp-24);
+  --rad-common: var(--sp-8);
+  --rad-buttons: var(--rad-common);
+  --rad-accordion: var(--rad-common);
+  --rad-card: calc(1rem / 1.3333);
 
   /* transition */
   --trz-eo-015: /* prop first */ 0.15s 0s ease-out;
   --trz-eo-015-015: /* prop first */ 0.15s 0.15s ease-out;
+
+  /* grid & layout */
+  /* container breakpoints*/
+  /* not support :-( */
+  /* mini, mobile, desktop */
+  --brk-w-container-mini: 639px;
+  --brk-w-container-mobile: 640px;
+  --brk-w-container-desktop: 1110px;
+
+  /* container width*/
+  /* mini, mobile, desktop */
+  --w-container-mini: 100%;
+  --w-container-mobile: 640px;
+  --w-container-desktop: 1110px;
+
+  /* grid*/
+  --base-cols: 3;
 }
