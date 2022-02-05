@@ -8,7 +8,7 @@
   --red: #F03D3E;
 
   /* g r a y colors */
-  --gray-0: #F9FAFC;
+  --grey-0: #F9FAFC;
   --grey-1: #F8F9FA;
   --grey-e5: #E5E5E5;
   --grey-2: #DDE2E5;
@@ -28,7 +28,7 @@
   /* special */
   --transpr: rgba(255, 255, 255, 0);
   --bg-btn-alternate: var(--bg-main);
-  --clr-btn-alternate: var(--gray-4);
+  --clr-btn-alternate: var(--grey-4);
 
   --bg-btn-primary-hover: #2342C0;
   --clr-btn-primary: var(--white);
