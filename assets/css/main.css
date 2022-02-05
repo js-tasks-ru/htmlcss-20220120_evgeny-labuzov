@@ -42,7 +42,7 @@ html, body {
   background-color: var(--bg-main);
 }
 
-.__dev-bg {
+.__dev-bg:not(._off) {
   background-color: var(--clr-dev-b);
   background-image:
   repeating-linear-gradient(
@@ -67,7 +67,7 @@ html, body {
   background-size: 2rem 2rem;
 }
 
-.__dev-grid {
+.__dev-grid:not(._off) {
 
   background-color: var(--clr-dev-b);
   background-image:
