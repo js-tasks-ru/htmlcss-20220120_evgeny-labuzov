@@ -1,16 +1,16 @@
 :root {
   /* colors: */
-  --lighten-gray:           hsla(0deg, 0%, 95%, 1);
-  --lighten-gray-op5:       hsla(0deg, 0%, 95%, 0.5);
-  --lighten-gray-op25:      hsla(0deg, 0%, 95%, 0.25);
-  --lighten-gray-op1:       hsla(0deg, 0%, 95%, 0.1);
-  --lighten-gray-op05:      hsla(0deg, 0%, 95%, 0.05);
+  --lighten-grey:           hsla(0deg, 0%, 95%, 1);
+  --lighten-grey-op5:       hsla(0deg, 0%, 95%, 0.5);
+  --lighten-grey-op25:      hsla(0deg, 0%, 95%, 0.25);
+  --lighten-grey-op1:       hsla(0deg, 0%, 95%, 0.1);
+  --lighten-grey-op05:      hsla(0deg, 0%, 95%, 0.05);
 
-  --shadow-gray:            hsla(0deg, 0%, 75%, 1);
-  --lighten-gray-live:      hsla(45deg, 9%, 61%, 1);
+  --shadow-grey:            hsla(0deg, 0%, 75%, 1);
+  --lighten-grey-live:      hsla(45deg, 9%, 61%, 1);
 
-  --shadow-gray-live:       hsla(44deg, 11%, 40%, 1);
-  --shadow-gray-live-op0:   hsla(44deg, 11%, 40%, 0);
+  --shadow-grey-live:       hsla(44deg, 11%, 40%, 1);
+  --shadow-grey-live-op0:   hsla(44deg, 11%, 40%, 0);
 
   --brown:                  hsla(16deg, 50%, 29%, 1);
   --poor-skin:              hsla(34deg, 77%, 65%, 1);
@@ -31,11 +31,11 @@
 
 
   /* bg-colors: */
-  --bg-main:         var(--lighten-gray);
-  --bg-header:       var(--shadow-gray-live);
+  --bg-main:         var(--lighten-grey);
+  --bg-header:       var(--shadow-grey-live);
   --bg-content:      var(--brown);
   --bg-article:      var(--white);
-  --bg-navigation:   var(--lighten-gray-live);
+  --bg-navigation:   var(--lighten-grey-live);
   --bg-footer:       var(--poor-skin);
 
 
@@ -84,7 +84,7 @@
   --shd-outer-up:   0 calc(-1 * var(--sp-l)) var(--sp-l) 0 var(--cold-blue-op1),
                     0 calc(-1 * var(--sp-x)) var(--sp-s) 0 var(--cold-blue-op25);
 
-  --glw-outer-up:   0 calc(-1 * var(--sp-l)) var(--sp-l) 0 var(--lighten-gray-op1),
+  --glw-outer-up:   0 calc(-1 * var(--sp-l)) var(--sp-l) 0 var(--lighten-grey-op1),
                     0 calc(-1 * var(--sp-x)) var(--sp-s) 0 var(--white-op1);
 
   /* zIndexes */
@@ -141,7 +141,7 @@ body {
 .header .header__title {
   flex: 1;
   text-align: center;
-  color: var(--lighten-gray);
+  color: var(--lighten-grey);
   font-size: var(--fz-lll);
   text-shadow:  var(--shd-text-section-title);
   margin-top: 1fr;
@@ -170,7 +170,7 @@ body {
 }
 .navigationTop .navigationTop__link {
   transition: background-color var(--trz-eo-015-015), color var(--trz-eo-015-015);
-  background-color: var(--shadow-gray-live-op0);
+  background-color: var(--shadow-grey-live-op0);
   color: var(--white-op75);
   padding-left: var(--sp-l);
   padding-right: var(--sp-l);
@@ -190,7 +190,7 @@ body {
 .navigationTop .navigationTop__link:focus {
   transition: background-color var(--trz-eo-015), color var(--trz-eo-015);
   color: var(--white);
-  background-color: var(--shadow-gray-live);
+  background-color: var(--shadow-grey-live);
 }
 
 .content {
@@ -243,7 +243,7 @@ body {
   flex: 1;
 }
 .footer .footer__title {
-  color: var(--lighten-gray);
+  color: var(--lighten-grey);
   font-size: var(--fz-ll);
   text-shadow: var(--shd-text-section-title);
 }
