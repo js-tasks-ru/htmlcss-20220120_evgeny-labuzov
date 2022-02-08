@@ -5,6 +5,7 @@
   --pink: #F784AD;
   --purple: #7048E8;
   --blue: #374FC7;
+  --blue-alt: #4263EB;
   --red: #F03D3E;
 
   /* g r a y colors */
@@ -46,6 +47,7 @@
 
   --clr-common-text: var(--black);
   --clr-common-title: var(--black);
+  --clr-blue-text: var(--blue-alt);
 
   --fz-base: 16px;
 
@@ -57,10 +59,10 @@
 
   /* fz title */
   /* s, m, l, xl*/
-  --fz-title-s: calc(1rem * 1.25);
-  --fz-title-m: calc(1rem * 1.75);
-  --fz-title-l: calc(1rem * 2.375);
-  --fz-title-xl: calc(1rem * 3.125);
+  --fz-title-s: calc(1rem * 1.25);   /* 20 */
+  --fz-title-m: calc(1rem * 1.75);   /* 28 */
+  --fz-title-l: calc(1rem * 2.375);  /* 38 */
+  --fz-title-xl: calc(1rem * 3.125); /* 50 */
 
   /* fz title mobile */
   /* m, l, xl*/
@@ -74,10 +76,11 @@
   --fz-text-mob-p: calc(1rem / 1.1428);
 
   /* line-heights */
-  --lh-common: 1.5;
-  --lh-title: 1.28;
-  --lh-title-section: 1.26;
-  --lh-text-s: 1.5714;
+  --lh-common: 1.5;          /* 24       || 150% */
+  --lh-title: 1.28;          /* 20.48    || 128%  */
+  --lh-title-section: 1.26;  /* 20.16    || 126%  */
+  --lh-130: 1.3;             /* 20.8     || 130%  */
+  --lh-text-s: 1.5714;       /* 25,1424‬ */
 
   /* spacers */
   /* 8, 24, 32, 64 */
@@ -138,4 +141,15 @@
 
   /* grid*/
   --base-cols: 3;
+
+
+  /* __dev */
+  --ln-dev-w-bold: 2px;
+  --ln-dev-w-light: 1px;
+
+  --ln-dev-g-every: var(--sp-8);
+  --ln-dev-g-group: calc(var(--ln-dev-g-every) * 8);
+
+  --clr-dev-a: hsla(255deg, 50%, 87%, 1);
+  --clr-dev-b: var(--grey-e5);
 }
