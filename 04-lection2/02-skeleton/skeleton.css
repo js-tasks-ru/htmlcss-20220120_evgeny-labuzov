@@ -5,9 +5,8 @@
   background-color: var(--bg-main);
 
   padding: var(--sp-24);
-  min-width: calc(1rem * 12);
+  min-width: 12rem;
   max-width: 100%;
-  width: 100%;
 
   border: 1px solid var(--grey-3);
   border-radius: var(--rad-common);
@@ -15,11 +14,9 @@
 }
 
 .skeleton__header {
-  width: 100%;
-
   display: grid;
 
-  grid-template-columns: var(--avatar-size-s) repeat(12, 1fr);
+  grid-template-columns: var(--avatar-size-s) 1fr;
   grid-template-rows: repeat(2, 1fr);
   gap: var(--sp-8) 1rem;
 
