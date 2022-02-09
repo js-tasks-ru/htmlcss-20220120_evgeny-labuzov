@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="../../assets/css/main.css">
   <link rel="stylesheet" href="./histogram.css">
   <script src="../../assets/js/utils.js"></script>
-  <title>Skeleton</title>
+  <title>Histogram</title>
   <style>
     body { padding: var(--sp-64); }
 
@@ -105,6 +105,10 @@
       /* А что если значений будет очень много?
       * Если сжать экран, то гистограмма поедет влево, а не в право.
       * оставляя предположительно актуальные значения всегда в видимой области справа.
+      * .upd:
+      * Не акутально теперь
+      * актуальный эффект см. коммит:a026d26e04c82f98d23439c2b853259b1e89ae21
+      * direction: rtl/ltr, flex-direction: row-reverse
       */
     -->
     <div class="histogram" animated>
