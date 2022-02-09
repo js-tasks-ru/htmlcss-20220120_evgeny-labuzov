@@ -18,9 +18,9 @@
 </head>
 
 <body class="__dev-grid _off">
-  <div class="presentation histogram">
+  <div class="presentation">
     <!-- Как в макете: -->
-    <div class="histogram__item">
+    <div class="histogram">
       <div class="histogram__info">
         <label class="histogram__label">Total orders</label>
         <p class="histogram__value">50254</p>
@@ -67,7 +67,7 @@
      * В тоже время для одного из элементов внутри был добавлен еще модификатор .histogram__column_critical
      */
         -->
-    <div class="histogram__item">
+    <div class="histogram">
       <div class="histogram__info">
         <label class="histogram__label">Total orders</label>
         <p class="histogram__value">502</p>
@@ -89,7 +89,7 @@
      * Тест модификатора .histogram__column_critical
      */
     -->
-    <div class="histogram__item">
+    <div class="histogram">
       <div class="histogram__info">
         <label class="histogram__label">Total orders</label>
         <p class="histogram__value">50</p>
@@ -107,7 +107,7 @@
       * оставляя предположительно актуальные значения всегда в видимой области справа.
       */
     -->
-    <div class="histogram__item" animated>
+    <div class="histogram" animated>
       <div class="histogram__info">
         <label class="histogram__label">Total orders</label>
         <p class="histogram__value">5025450254</p>
@@ -375,7 +375,7 @@
       };
 
       Histogram
-        .init({ selector: '.histogram__item[animated]' })
+        .init({ selector: '.histogram[animated]' })
         .log();
     })();
   </script>

@@ -1,5 +1,4 @@
-.histogram {}
-.histogram__item {
+.histogram {
   background-color: var(--bg-main);
 
   padding: var(--sp-24);
@@ -9,14 +8,12 @@
   border-radius: var(--rad-common);
 
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  direction: rtl;
+  grid-template-rows: 1fr 3.125rem;
 }
 
 /* info */
 .histogram__info {
   display: grid;
-  direction: ltr;
   grid-template-areas:
     "label action"
     "value .";
@@ -24,7 +21,7 @@
 
 .histogram__label {
   grid-area: label;
-  direction: ltr;
+  font-family: var(--ff-inter);
   font-size: 1rem;
   line-height: var(--lh-common);
   opacity: 0.8;
@@ -32,6 +29,7 @@
 
 .histogram__value {
   grid-area: value;
+  font-family: var(--ff-inter);
   font-size: var(--fz-title-s);
   line-height: var(--lh-130);
   transition: opacity var(--trz-eo-015);
@@ -68,50 +66,49 @@
 /* chart */
 .histogram__chart {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: flex-end;
-  direction: rtl;
   overflow: hidden;
   max-width: 100%;
+  gap: 1px;
 }
 /* тест модификаторов */
-.histogram__chart.histogram__chart_alt .histogram__column {
+.histogram__chart_alt .histogram__column {
   background-color: var(--secondary);
 }
 
 .histogram__column {
   background-color: var(--blue-alt);
-  margin-left:  1px;
-  margin-right:  1px;
   min-width: 1px;
-  width: 100%;
-  transition: height var(--trz-eo-015), background-color var(--trz-eo-015-015), transform var(--trz-eo-015-015);
+  flex-grow: 1;
+  transition: height var(--trz-eo-015),
+              background-color var(--trz-eo-015-015),
+              transform var(--trz-eo-015-015);
 }
-.histogram__column:first-child { margin-left:  0; }
-.histogram__column:last-child { margin-right:  0; }
 
 /* тест модификаторов */
-.histogram__chart .histogram__column.histogram__column_critical {
+.histogram__column_critical {
   background-color: var(--error);
 }
 
-
 /* эксперименты:*/
-.histogram__value.histogram__value_ghost {
-  transition: opacity var(--trz-eo-015), transform var(--trz-eo-015);
+.histogram__value_ghost {
+  transition: opacity var(--trz-eo-015),
+              transform var(--trz-eo-015);
   opacity: 0;
   transform: translate(0rem, -1.6rem);
 }
 
-.histogram__value.histogram__value_ghostAppear {
+.histogram__value_ghostAppear {
   opacity: 1;
   transform: translate(0rem, 0rem);
 }
 
-.histogram__value.histogram__value_hide {
-  transition: opacity var(--trz-eo-015), transform var(--trz-eo-015);
+.histogram__value_hide {
+  transition: opacity var(--trz-eo-015),
+              transform var(--trz-eo-015);
   transform: translate(0, 1.6rem);
   opacity: 0;
 }
