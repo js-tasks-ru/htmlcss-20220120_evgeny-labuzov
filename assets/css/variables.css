@@ -7,13 +7,13 @@
   --blue: #374FC7;
   --red: #F03D3E;
 
-  /* g r a y colors */
-  --grey-0: #F9FAFC;
-  --grey-1: #F8F9FA;
+  /* g r E y colors */
+  --grey-0:  #F9FAFC;
+  --grey-1:  #F8F9FA;
   --grey-e5: #E5E5E5;
-  --grey-2: #DDE2E5;
-  --grey-3: #ACB5BD;
-  --grey-4: #495057;
+  --grey-2:  #DDE2E5;
+  --grey-3:  #ACB5BD;
+  --grey-4:  #495057;
 
   /* utility colors */
   --error: var(--red);
@@ -24,6 +24,8 @@
   /* bg-colors: */
   --bg-header: var(--white);
   --bg-main: var(--white);
+  --bg-ui-widgets: var(--bg-main);
+
   /* gradients*/
   --grad-l-silver: linear-gradient(
       92.51deg,
@@ -44,6 +46,17 @@
 
   --bg-btn-secondary-hover: #5028C6;
   --clr-btn-secondary: var(--white);
+
+  --clr-ui-36e: #334D6E;
+  --clr-ui-9b7: #90A0B7;
+
+  --clr-calendar-blue: #4263EB;
+  --clr-calendar-blue-hover: hsl(228deg 81% 49%);
+  --clr-calendar-blue-active: hsl(228deg 94% 39%);
+
+  --clr-calendar-blue-light: rgb(160, 177, 245, 0.2); /*#A0B1F5!33*/
+  --clr-calendar-blue-light-hover: rgb(160, 177, 245, 0.3);
+  --clr-calendar-blue-light-active: hsl(228deg,81%,60%, 0.2);
 
   /* typography: */
   --ff-roboto: 'Roboto', sans-serif;
