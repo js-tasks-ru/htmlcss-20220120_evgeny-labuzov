@@ -25,6 +25,7 @@
 /* blocks */
 @import '../../components/presentation/presentation.css';
 @import '../../components/title/title.css';
+@import '../../components/cards/cards.css';
 
 
 * {
@@ -42,6 +43,9 @@ html, body {
   background-color: var(--bg-main);
 }
 
+img {
+  max-width: 100%;
+}
 .__dev-bg:not(._off) {
   background-color: var(--clr-dev-b);
   background-image:
