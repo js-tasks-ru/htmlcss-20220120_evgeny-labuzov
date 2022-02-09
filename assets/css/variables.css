@@ -147,7 +147,7 @@
   /* mini, mobile, desktop */
   --w-container-mini: 100%;
   --w-container-mobile: 640px;
-  --w-container-desktop: 1110px;
+  --w-container-desktop: 1170px;
 
   /* grid*/
   --base-cols: 3;
