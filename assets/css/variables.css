@@ -25,6 +25,15 @@
   /* bg-colors: */
   --bg-header: var(--white);
   --bg-main: var(--white);
+  /* gradients*/
+  --grad-l-silver: linear-gradient(
+      92.51deg,
+      #DDE2E5 6.44%,
+      #E2E6E8 38.47%,
+      #F3F5F5 56.48%,
+      #E3E7EA 77.5%,
+      #DDE2E5 102.52%
+    );
 
   /* special */
   --transpr: rgba(255, 255, 255, 0);
@@ -114,6 +123,10 @@
   --ic-size-x: calc(1rem / 1.3333);
   --ic-size-s: 1rem;
   --ic-size-m: 1.374rem;
+  /* avatars-sizes */
+  /* s, m */
+  --avatar-size-s: calc(var(--sp-8) * 8);
+  --avatar-size-m: calc(var(--sp-8) * 16);
 
   /* border-radiuses */
   --rad-common: var(--sp-8);
@@ -141,7 +154,6 @@
 
   /* grid*/
   --base-cols: 3;
-
 
   /* __dev */
   --ln-dev-w-bold: 2px;
