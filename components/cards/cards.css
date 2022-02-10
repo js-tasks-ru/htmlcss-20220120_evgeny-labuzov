@@ -1,17 +1,18 @@
 .cards {
   display: grid;
-  /* grid-template-columns: repeat(3, 1fr); */
   grid-template-columns: repeat(auto-fill, minmax( clamp(calc(1rem * 12), 100%, calc(1rem * 20)), 1fr ));
-  grid-template-rows: repeat(3, 1fr);
   justify-items: stretch;
   align-items: stretch;
   gap: 1.875rem;
 
+}
+
+.cards_modif{
   margin-top: calc(4.25rem - var(--sp-24));
+  margin-bottom: calc(4.25rem - var(--sp-24));
 }
 
 .cards__item {
-
   padding: var(--sp-24);
   aspect-ratio: 1;
 
@@ -25,7 +26,7 @@
   box-shadow: var(--shd-card);
 }
 
-.cards__picture {
+.cards__item-picture {
   object-fit: contain;
   display: flex;
   flex-direction: row;
@@ -36,7 +37,7 @@
   flex-grow: 1;
 }
 
-.cards__title {
+.cards__item-title {
   text-align: center;
   font-family: var(--ff-roboto);
   font-size: 1.3125rem;
