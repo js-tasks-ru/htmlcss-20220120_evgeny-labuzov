@@ -41,6 +41,9 @@ html, body {
   color: var(--clr-common-text);
   background-color: var(--bg-main);
 }
+body {
+  min-height: 100vh;
+}
 
 .__dev-bg:not(._off) {
   background-color: var(--clr-dev-b);

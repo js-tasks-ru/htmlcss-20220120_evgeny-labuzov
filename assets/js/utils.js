@@ -11,9 +11,12 @@
   typeof Node === 'object' ? o instanceof Node
     : o && typeof o === 'object' && typeof o.nodeType === 'number' && typeof o.nodeName === 'string'
   );
-
+  const stl = (el, prop, val = null) => (val === null) ? el.style[prop] : el.style[prop] = val;
   const qs = (slctr, ctx = null, mode = 'querySelector') => (ctx ? ctx : document.body)[mode](slctr);
-  const cl = (el, cls, mode = 'contains') => el.classList[mode](cls);
+  const cl = (el, cls, mode = 'contains') => (el.classList[mode](cls), cl);
+  const getCmpStl = (el, prop) => getComputedStyle(el)[prop];
+  const insert = (el, ctx = null) => (ctx ? ctx : document.body).appendChild(el);
+
 
   const px = unit => `${unit}px`;
 
@@ -35,9 +38,11 @@
     isNode,
     qs,
     cl,
+    insert,
     px,
-
+    getCmpStl,
     up, lo, str, trim,
-    int
+    int,
+    stl
   };
 })();
