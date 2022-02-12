@@ -61,6 +61,7 @@
   /* typography: */
   --ff-roboto: 'Roboto', sans-serif;
   --ff-inter: 'Inter', sans-serif;
+  --ff-source: 'Source Sans Pro', sans-serif;
   --ff-common: var(--ff-inter);
   --ff-common-title: var(--ff-inter);
   --ff-ui-controls: var(--ff-roboto);
