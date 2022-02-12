@@ -8,8 +8,8 @@
 }
 
 .cards_modif{
-  margin-top: calc(4.25rem - var(--sp-24));
-  margin-bottom: calc(4.25rem - var(--sp-24));
+  padding-top: calc(4.25rem - var(--sp-24));
+  padding-bottom: calc(4.25rem - var(--sp-24));
 }
 
 .cards__item {
