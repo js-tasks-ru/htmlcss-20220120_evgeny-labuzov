@@ -40,6 +40,8 @@
   --bg-btn-alternate: var(--bg-main);
   --clr-btn-alternate: var(--grey-4);
 
+  --clr-shd-card: rgba(33, 36, 41, 0.05); /*#212429!0d*/
+
   --bg-btn-primary-hover: #2342C0;
   --clr-btn-primary: var(--white);
 
@@ -138,6 +140,9 @@
   --trz-eo-015: /* prop first */ 0.15s 0s ease-out;
   --trz-eo-015-015: /* prop first */ 0.15s 0.15s ease-out;
 
+  /* shadows */
+  --shd-card: 0px 2px 4px var(--clr-shd-card);
+
   /* grid & layout */
   /* container breakpoints*/
   /* not support :-( */
@@ -150,7 +155,7 @@
   /* mini, mobile, desktop */
   --w-container-mini: 100%;
   --w-container-mobile: 640px;
-  --w-container-desktop: 1110px;
+  --w-container-desktop: 1170px;
 
   /* grid*/
   --base-cols: 3;

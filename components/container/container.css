@@ -2,4 +2,5 @@
   width: 100%;
   max-width: var(--w-container-desktop);
   margin: 0 auto;
+  padding: var(--sp-24);
 }
