@@ -1,0 +1,174 @@
+.tooltip {
+  font-family: var(--ff-inter);
+  font-size: 1rem;
+  line-height: var(--lh-common);
+  text-align: center;
+
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  cursor: pointer;
+}
+.tooltip__icon {
+  /* Внутренний отступ для расширения зоны реагирования.
+   * Что бы легче было попадать мышью.
+   */
+  padding: 0.5rem;
+  box-sizing: content-box;
+  border-radius: 50%;
+  position: relative;
+  z-index: 10;
+}
+
+/* default */
+.tooltip__icon:hover + .tooltip__bubble {
+  /* ВНИМАНИЕ! Эт0 не ду6лирование. пpоu30шло тв0p4еств0
+   * Анимация указана с задержкой,
+   * что бы тултип сразу не закрывался, когда мышь увели с иконки
+   */
+  transition:
+    transform var(--trz-eo-025),
+    top var(--trz-eo-025),
+    bottom var(--trz-eo-025),
+    left var(--trz-eo-025),
+    opacity var(--trz-eo-025);
+  opacity: 1;
+}
+
+.tooltip__bubble {
+  pointer-events: none;
+  /* ВНИМАНИЕ! Эт0 не ду6лирование. пpоu30шло тв0p4еств0
+   * Анимация указана с задержкой,
+   * что бы тултип сразу не закрывался, когда мышь увели с иконки
+   */
+  transition:
+    transform var(--trz-eo-025-065),
+    top var(--trz-eo-025-065),
+    bottom var(--trz-eo-025-065),
+    left var(--trz-eo-025-065),
+    opacity var(--trz-eo-025-065);
+  transform: scale(0);
+  opacity: 0;
+
+  position: absolute;
+  z-index: 20;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--white);
+  background-color: var(--clr-tooltip-blue);
+  box-shadow: var(--shd-card);
+  min-width: 12ch;
+  max-width: 25vh;
+  width: clamp(12ch, 30rem, 25vw);
+
+  border-radius: var(--rad-tooltip);
+  padding: var(--sp-8) var(--sp-8) var(--sp-8) var(--sp-8);
+}
+
+.tooltip__bubble:after {
+  content: none;
+  display: none;
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 7px 6px 7px;
+  border-color: transparent transparent var(--clr-tooltip-blue) transparent;
+}
+
+.tooltip_arr-bottom, .tooltip_arr-top { flex-direction: column; }
+.tooltip_arr-left, .tooltip_arr-right { flex-direction: row; }
+
+/* ======================= Top */
+.tooltip_arr-top .tooltip__bubble {
+  padding: calc(1rem / 1.2307) var(--sp-8) var(--sp-8) var(--sp-8);
+  transform: scale(0) translateY(-100%);
+  transform-origin: top;
+  top: 0;
+}
+.tooltip_arr-top .tooltip__icon:hover + .tooltip__bubble {
+  transform: scale(1) translateY(-100%);
+  top: -2px;
+}
+.tooltip_arr-top .tooltip__bubble:after {
+  content: "";
+  display: block;
+  transform: rotate(180deg);
+  bottom: -6px;
+}
+
+/* ======================= Bottom */
+.tooltip_arr-bottom .tooltip__bubble {
+  padding:  var(--sp-8) var(--sp-8) calc(1rem / 1.2307) var(--sp-8);
+  transform: scale(0) translateY(100%);
+  transform-origin: bottom;
+  bottom: 0;
+}
+.tooltip_arr-bottom .tooltip__icon:hover + .tooltip__bubble {
+  transform: scale(1) translateY(100%);
+  bottom: -2px;
+}
+.tooltip_arr-bottom .tooltip__bubble:after {
+  content: "";
+  display: block;
+  transform: rotate(0deg);
+  top: -6px;
+}
+
+
+/* ======================= Left */
+.tooltip_arr-left .tooltip__bubble {
+  padding:  var(--sp-8) var(--sp-8) var(--sp-8) calc(1rem / 1.2307);
+  transform: scale(0) translateX(-100%);
+  transform-origin: left;
+  left: 0;
+}
+.tooltip_arr-left .tooltip__icon:hover + .tooltip__bubble {
+  transform: scale(1) translateX(-100%);
+  /* left: calc(var(--sp-8) * -1); */ /* not work */
+  left: -2px;
+}
+.tooltip_arr-left .tooltip__bubble:after {
+  content: "";
+  display: block;
+  transform: rotate(90deg);
+  right: -9px;
+}
+
+/* ======================= Right */
+.tooltip_arr-right .tooltip__bubble {
+  padding:  var(--sp-8) calc(1rem / 1.2307) var(--sp-8) var(--sp-8);
+  transform: scale(0) translateX(100%);
+  transform-origin: right;
+  right: 0;
+}
+.tooltip_arr-right .tooltip__icon:hover + .tooltip__bubble {
+  transform: scale(1) translateX(100%);
+  right: -2px;
+}
+.tooltip_arr-right .tooltip__bubble:after {
+  content: "";
+  display: block;
+  transform: rotate(270deg);
+  left: -9px;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ Danger */
+.tooltip_danger .tooltip__bubble{
+  background-color: var(--error);
+}
+.tooltip_danger .tooltip__icon{
+  color: var(--error);
+}
+.tooltip_danger .tooltip__bubble:after {
+  border-color: transparent transparent var(--error) transparent;
+}

@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <!-- Страница с тултипом -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./tooltip.css">
-    </head>
-    <body>
 
-    </body>
+<head>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./tooltip.css">
+  <title>The Awesome Tooltip</title>
+  <style>
+    body {
+      padding: var(--sp-64);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .presentation{
+      width: 320px;
+    }
+    .title{
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body class="__dev-grid _off">
+
+  <!--
+   /*
+    * > width="22" height="22" viewBox="0 0 22 22"
+    * Кажется, что это решение проблемы дефолтного размера <svg>.
+    * Но выглядит это громоздко и не гибко. Как же правильно?
+    */
+   -->
+
+  <div class="presentation">
+    <h3 class="title">Top</h3>
+
+    <div class="tooltip tooltip_arr-top">
+      <svg class="tooltip__icon" width="22" height="22" viewBox="0 0 22 22">
+        <use href="../../assets/images/icons-sprite.svg#help"></use>
+      </svg>
+      <div class="tooltip__bubble">Helper Text</div>
+    </div>
+
+  </div>
+
+  <div class="presentation">
+    <h3 class="title">Bottom & Danger</h3>
+
+    <div class="tooltip tooltip_arr-bottom tooltip_danger">
+      <svg class="tooltip__icon" width="22" height="22" viewBox="0 0 22 22">
+        <use href="../../assets/images/icons-sprite.svg#help"></use>
+      </svg>
+      <div class="tooltip__bubble">Основой «японской трагедии» и «оперного вестерна» Пуччини стали постановки американского драматурга.</div>
+    </div>
+
+  </div>
+
+  <div class="presentation">
+    <h3 class="title">Left</h3>
+
+    <div class="tooltip tooltip_arr-left">
+      <svg class="tooltip__icon" width="22" height="22" viewBox="0 0 22 22">
+        <use href="../../assets/images/icons-sprite.svg#help"></use>
+      </svg>
+      <div class="tooltip__bubble">Основой «японской трагедии» и «оперного вестерна» Пуччини стали постановки американского драматурга.</div>
+    </div>
+
+  </div>
+
+  <div class="presentation">
+    <h3 class="title">Right</h3>
+
+    <div class="tooltip tooltip_arr-right">
+      <svg class="tooltip__icon" width="22" height="22" viewBox="0 0 22 22">
+        <use href="../../assets/images/icons-sprite.svg#help"></use>
+      </svg>
+      <div class="tooltip__bubble">Helper Text</div>
+    </div>
+
+  </div>
+
+
+</body>
+
 </html>
