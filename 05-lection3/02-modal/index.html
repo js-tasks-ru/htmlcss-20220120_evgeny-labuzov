@@ -4,9 +4,95 @@
     <head>
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./modal.css">
-        <title>Modal</title>
+        <title>⭐Modal⭐</title>
     </head>
-    <body>
+    <style>
+      body { padding: var(--sp-64); }
+
+      .presentation {
+        transition: filter 0.15s 0.35s ease-in;
+      }
+      .presentation_long { height: 222rem; }
+
+      .presentation__title {
+        font-weight: 600;
+        font-size: 2rem;
+      }
+      .presentation__title_secondary{
+        font-size: 1.4rem;
+      }
+
+      .presentation__text { }
+      .presentation_blur\&contrast {
+        transition: filter 0.15s 0s ease-out;
+        filter: blur(6px) contrast(1.2);
+      }
+
+    </style>
+    <body class="__dev-grid _off">
+
+      <div class="presentation">
+        <!-- откроется с дополнительными эффектами и кнопкой в модальном окне -->
+        <button class="button button_primary" data-open-modal="modal1">Open notification</button>
+
+        <!-- откроется без эффектов и без дополнительной кнопки в модальном окне -->
+        <button class="button button_secondary" data-open-modal="modal2">Open message</button>
+      </div>
+      <article class="presentation presentation_long">
+        <h2 class="presentation__title">Ручная тележка</h2>
+        <p class="presentation__text"><strong>Ручная тележка</strong> — приспособление для ручной перевозки грузов. Состоит из колёс (их количество зависит от модификации и назначения тележки), рамы в разных вариантах и ручек для удобного хвата.</p>
+        <h3 class="presentation__title presentation__title_secondary">Применение</h3>
+        <p class="presentation__text">Ручные тележки для индивидуального пользования, иногда имеют в своей конструкции дополнительное корыто для перевозки сыпучих или жидких грузов, металлическую платформу или сумку для перевозки личных вещей или товаров. Для перемещения тележку можно тянуть за собой, либо толкать перед собой.</p>
+        <p class="presentation__text">Для перемещения больших грузов (обычно в производственных или складских помещениях) может применяться гидравлическая ручная тележка.</p>
+        <p class="presentation__text">Для перемещения грузов по лестницам могут использоваться ручные тележки с особой конструкцией колёс (блок, состоящий из трёх-пяти колёс с каждой стороны) или с гусеничным ходом.</p>
+        <p class="presentation__text">В медицинских учреждениях и домах престарелых такие конструкции, наряду с лифтами, используются для перемещения людей в инвалидных колясках.</p>
+      </article>
+
+      <div id="modal1" class="modal modal_close">
+        <div class="modal__fade"></div>
+        <div class="modal__window">
+
+          <div class="modal__header">
+            <div class="modal__title">Modal title</div>
+          </div>
+          <div class="modal__body">
+            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+          </div>
+          <div class="modal_action">
+            <button class="button button_primary">Ok</button>
+            <button class="modal__button-close">
+              <svg class="tooltip__icon" width="16" height="16" viewBox="0 0 16 16">
+                <use href="../../assets/images/icons-sprite.svg#times"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal2" class="modal modal_close">
+        <div class="modal__fade"></div>
+        <div class="modal__window">
+
+          <div class="modal__header">
+            <div class="modal__title">Modal title</div>
+          </div>
+          <div class="modal__body">
+            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+          </div>
+          <div class="modal_action">
+            <button class="modal__button-close">
+              <svg class="tooltip__icon" width="16" height="16" viewBox="0 0 16 16">
+                <use href="../../assets/images/icons-sprite.svg#times"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
     </body>
-    <script src="./index.js"></script> 
+    <script src="../../assets/js/utils.js"></script>
+    <script src="./index.js"></script>
 </html>

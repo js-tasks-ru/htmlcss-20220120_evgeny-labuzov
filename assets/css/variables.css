@@ -26,6 +26,7 @@
   --bg-header: var(--white);
   --bg-main: var(--white);
   --bg-ui-widgets: var(--bg-main);
+  --bg-ui-modal: var(--bg-main);
 
   /* gradients*/
   --grad-l-silver: linear-gradient(
@@ -60,6 +61,8 @@
   --clr-calendar-blue-light: rgb(160, 177, 245, 0.2); /*#A0B1F5!33*/
   --clr-calendar-blue-light-hover: rgb(160, 177, 245, 0.3);
   --clr-calendar-blue-light-active: hsl(228deg,81%,60%, 0.2);
+
+  --bg-modal-fade: #c4c4c4;
 
   /* typography: */
   --ff-roboto: 'Roboto', sans-serif;
@@ -112,6 +115,7 @@
   --sp-8:  calc(1rem / 2);
   --sp-24: calc(var(--sp-8) * 3) /* calc(1rem * 1.5)*/;
   --sp-32: calc(var(--sp-8) * 4) /* calc(1rem * 2)*/;
+  --sp-40: calc(var(--sp-8) * 5) /* calc(1rem * 2.5)*/;
   --sp-64: calc(var(--sp-8) * 8) /* calc(1rem * 4)*/;
 
   /* buttons */
