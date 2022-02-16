@@ -27,6 +27,15 @@
 @import '../../components/title/title.css';
 @import '../../components/cards/cards.css';
 
+/* 👻 */
+@import '../../03-lection1/01-button/button.css';
+@import '../../03-lection1/02-accordion/accordion.css';
+@import '../../04-lection2/01-histogram/histogram.css';
+@import '../../04-lection2/02-skeleton/skeleton.css';
+@import '../../05-lection3/01-tooltip/tooltip.css';
+@import '../../05-lection3/02-modal/modal.css';
+@import '../../05-lection3/03-calendar/calendar.css';
+
 
 * {
   padding: 0;
