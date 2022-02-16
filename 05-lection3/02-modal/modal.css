@@ -86,22 +86,20 @@
 /* ====================== body */
 .modal__body {
   line-height: var(--lh-common);
-  margin-bottom: calc(1rem / 1.1428);
   color: var(--grey-4);
 }
-.modal__body:last-child{
-  margin-bottom: 0;
-}
+
 .modal__body p {
   margin-bottom: 0;
 }
 
 
 /* ====================== action */
-.modal_action { }
-
-.modal_action:has(div) {
-  background-color: red;
+.modal_action {
+  margin-top: calc(1rem / 1.1428);
+}
+.modal_action:empty {
+  display: none;
 }
 
 .modal__button-close {
