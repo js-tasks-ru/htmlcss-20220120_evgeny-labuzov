@@ -36,13 +36,19 @@ const static = [
   '04-lection2/01-histogram',
   '04-lection2/02-skeleton',
   '05-lection3/01-tooltip',
+  '05-lection3/02-modal',
   '05-lection3/03-calendar',
 ];
 
 app.use('/assets', express.static('assets', options));
 app.use('/components', express.static('components', options));
 
-static.forEach(s => app.use(express.static(s, options)));
+const staticResolve = [...new Set(static.map(s => [s, ...s.split('/')].map(ss => ss)).flat())];
+
+staticResolve.forEach(st => {
+  app.use(`/${st}`, express.static(st, options));
+  app.use(express.static(st, options));
+});
 
 const runRouters = async _ =>  {
   const {entries} = Object;

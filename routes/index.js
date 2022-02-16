@@ -12,6 +12,7 @@ const routes = [
   ['histogram', '/01-histogram', '04-lection2/01-histogram/index.html'],
   ['skeleton', '/02-skeleton', '04-lection2/02-skeleton/index.html'],
   ['tooltip', '/01-tooltip', '05-lection3/01-tooltip/index.html'],
+  ['modal', '/02-modal', '05-lection3/02-modal/index.html'],
   ['calendar', '/03-calendar', '05-lection3/03-calendar/index.html'],
 ];
 
