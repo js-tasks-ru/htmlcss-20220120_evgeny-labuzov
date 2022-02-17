@@ -95,10 +95,10 @@
 
 
 /* ====================== action */
-.modal_action {
+.modal__action {
   margin-top: calc(1rem / 1.1428);
 }
-.modal_action:empty {
+.modal__action:empty {
   display: none;
 }
 

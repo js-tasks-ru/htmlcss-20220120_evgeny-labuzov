@@ -33,7 +33,7 @@
       this.elClose = qs('.modal__button-close', this.elModal);
       this.elFade = qs('.modal__fade', this.elModal);
       this.elWindow = qs('.modal__window', this.elModal);
-      this.elAction = qs('.modal_action', this.elModal);
+      this.elAction = qs('.modal__action', this.elModal);
 
       this.eventOpen = new CustomEvent('modal-open', { detail: {ctx: this, isOpen: true} });
       this.eventClose = new CustomEvent('modal-close', { detail: {ctx: this, isOpen: false} });
