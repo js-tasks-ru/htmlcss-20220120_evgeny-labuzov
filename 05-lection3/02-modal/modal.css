@@ -121,4 +121,5 @@
 }
 ._overflow\:hidden {
   overflow: hidden;
+  border-right: 17px solid transparent;
 }
