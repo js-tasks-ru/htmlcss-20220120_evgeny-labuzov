@@ -63,7 +63,7 @@
   --clr-calendar-blue-light-hover: rgb(160, 177, 245, 0.3);
   --clr-calendar-blue-light-active: hsl(228deg,81%,60%, 0.2);
 
-  --bg-modal-fade: #c4c4c4;
+  --bg-modal-fade: rgba(196, 196, 196, 0.5);
 
   /* typography: */
   --ff-roboto: 'Roboto', sans-serif;

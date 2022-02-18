@@ -16,7 +16,6 @@
     elWindow = null;
     elButton = null;
     elClose = null;
-    elFade = null;
     elAction = null;
 
     actionButtons = [];
@@ -31,7 +30,6 @@
       this.elButton = button;
 
       this.elClose = qs('.modal__button-close', this.elModal);
-      this.elFade = qs('.modal__fade', this.elModal);
       this.elWindow = qs('.modal__window', this.elModal);
       this.elAction = qs('.modal__action', this.elModal);
 
@@ -53,11 +51,12 @@
       }
 
       this.elClose.addEventListener('click', _ => this.close());
-      this.elFade.addEventListener('click', _ => this.close());
+      this.elModal.addEventListener('click', ({target}) => {
+        cl(target, 'modal') ? this.close() : void null;
+      });
       window.addEventListener('keyup', ({keyCode, key}) => {
         (keyCode === 27 || key === 'Escape') ? this.close() : void null;
       });
-
       this.elButton.addEventListener('click', _ => this.closeController());
     };
 

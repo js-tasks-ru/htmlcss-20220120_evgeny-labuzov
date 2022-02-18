@@ -13,7 +13,11 @@
   );
   const stl = (el, prop, val = null) => (val === null) ? el.style[prop] : el.style[prop] = val;
   const qs = (slctr, ctx = null, mode = 'querySelector') => (ctx ? ctx : document.body)[mode](slctr);
-  const cl = (el, cls, mode = 'contains') => (el.classList[mode](cls), cl);
+  const cl = (el, cls, mode = null) => {
+    if(!mode || mode === 'contains') return el.classList.contains(cls);
+    el.classList[mode](cls);
+    return cl;
+  };
   const getCmpStl = (el, prop) => getComputedStyle(el)[prop];
   const insert = (el, ctx = null) => (ctx ? ctx : document.body).appendChild(el);
 
