@@ -5,22 +5,30 @@
   align-items: flex-start;
 }
 
-.page_inner .header {
+/*
+* .page__header { }
+* .page__content { }
+* .page__content-container { }
+* .page__footer { }
+*/
+
+
+.page_inner .page__header {
   padding: 0;
   min-height: calc(1rem * 5.125);
 }
 
-.page_inner .content {
+.page_inner .page__content {
   background-color: var(--bg-content-inner);
 }
-.page_inner .content .container {
+.page_inner .page__content-container {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-column-gap: 3.6rem;
   padding-top: 2.25rem;
 }
 
-.page_inner .footer {
+.page_inner .page__footer {
   background-color: var(--bg-footer-inner);
   padding-bottom: calc(3.5rem - var(--sp-24));
 }
