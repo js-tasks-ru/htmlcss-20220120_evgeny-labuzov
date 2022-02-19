@@ -37,3 +37,14 @@
 .footer .footer__title_size {
   max-width: calc( 1rem * 40);
 }
+
+.footer__title_mutetext {
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(1rem / 1.3333);
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: var(--grey-3);
+}
