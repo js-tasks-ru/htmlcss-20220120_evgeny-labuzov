@@ -7,6 +7,7 @@
   --blue: #374FC7;
   --blue-alt: #4263EB;
   --red: #F03D3E;
+  --orange: #D84910;
 
   /* g r E y colors */
   --grey-0:  #F9FAFC;
@@ -18,6 +19,7 @@
 
   /* utility colors */
   --error: var(--red);
+  --notificaiton: var(--orange);
   --success: var(--blue);
   --primary: var(--blue);
   --secondary: var(--purple);
@@ -25,6 +27,8 @@
   /* bg-colors: */
   --bg-header: var(--white);
   --bg-main: var(--white);
+  --bg-footer-inner: var(--grey-e5);
+  --bg-content-inner: var(--grey-e5);
   --bg-ui-widgets: var(--bg-main);
   --bg-ui-modal: var(--bg-main);
 
@@ -64,6 +68,7 @@
   --clr-calendar-blue-light-active: hsl(228deg,81%,60%, 0.2);
 
   --bg-modal-fade: rgba(196, 196, 196, 0.5);
+  --bg-sidebar-hover: rgba(255, 255, 255, 0.35);
 
   /* typography: */
   --ff-roboto: 'Roboto', sans-serif;
