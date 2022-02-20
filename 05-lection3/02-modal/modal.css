@@ -1,0 +1,125 @@
+@keyframes appearFromTop {
+  0% {
+    transform: scale(0) translateY(-300vh);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes disappearToBottom {
+  0% {
+    transform: scale(1) translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) translateY(300vh);
+    opacity: 0;
+  }
+}
+
+.modal {
+  font-family: var(--ff-inter);
+
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-modal-fade);
+}
+
+.modal__window {
+  background-color: var(--bg-ui-modal);
+  border-radius: var(--rad-common);
+  padding: var(--sp-32) var(--sp-40) var(--sp-32) var(--sp-40);
+
+  min-width: 26.75rem;
+  max-width: 90vw;
+  width: clamp(26.75rem, 40rem, 90vw);
+  position: relative;
+  z-index: 1;
+}
+.modal__window_disappear-to\:bottom {
+  transform-origin: bottom;
+  animation-name: disappearToBottom;
+  animation-duration: 0.65s;
+  animation-iteration-count: 1;
+}
+
+.modal__window_appear-from\:top {
+  transform-origin: top;
+  animation-name: appearFromTop;
+  animation-duration: 0.65s;
+  animation-iteration-count: 1;
+}
+
+/* ====================== header */
+.modal__header {
+  margin-bottom: calc(1rem / 1.1428);
+}
+.modal__title {
+  color: var(--clr-ui-36e);
+  font-size: var(--fz-title-s);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+
+/* ====================== body */
+.modal__body {
+  line-height: var(--lh-common);
+  color: var(--grey-4);
+}
+
+.modal__paragraph {
+  margin-bottom: 0;
+}
+
+
+/* ====================== action */
+.modal__action {
+  margin-top: calc(1rem / 1.1428);
+}
+.modal__action:empty {
+  display: none;
+}
+
+.modal__button-close {
+  box-sizing: content-box;
+  padding: 1rem;
+  color: var(--grey-4);
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 1rem;
+  height: 1rem;
+
+  border: none;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform var(--trz-eo-015);
+}
+
+.modal__button-close:hover,
+.modal__button-close:focus {
+  transform: rotate(90deg);
+}
+.modal__icon { }
+/* модификаторы */
+.modal_close {
+  display: none;
+}
+._overflow\:hidden {
+  overflow: hidden;
+  border-right: 17px solid transparent;
+}
