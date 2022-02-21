@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <!-- Страница с аватаром -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./avatar.css">
-    </head>
-    <body>
 
-    </body>
+<head>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./avatar.css">
+  <title>🤖Avatar</title>
+  <style>
+    body { padding: var(--sp-64); }
+
+    .presentation { }
+    .presentation__title {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body class="__dev-grid _off">
+
+  <div class="presentation">
+    <h3 class="presentation__title">Square Image</h3>
+    <div class="avatar avatar_size">
+      <img src="public/avatar-200.jpg" alt="avatar image" class="avatar__image">
+    </div>
+  </div>
+
+  <div class="presentation">
+    <h3 class="presentation__title">Horizontal Image</h3>
+    <div class="avatar avatar_size">
+      <img src="public/horizontal-Bonk.jpg" alt="avatar image" class="avatar__image">
+    </div>
+  </div>
+
+  <div class="presentation">
+    <h3 class="presentation__title">Vertical Image</h3>
+    <div class="avatar avatar_size">
+      <img src="public/vertical-cat.jpg" alt="avatar image" class="avatar__image">
+    </div>
+  </div>
+
+  <div class="presentation">
+    <h3 class="presentation__title">Lost Image</h3>
+    <div class="avatar avatar_size">
+      <img src="404error/avatar-200.jpg" alt="avatar image" class="avatar__image">
+    </div>
+  </div>
+
+</body>
+
 </html>
