@@ -56,3 +56,9 @@
 .sidebar_separate {
   margin-top: 1.875rem;
 }
+
+@media screen and (max-width: 375px) {
+  .sidebar {
+    display: none;
+  }
+}

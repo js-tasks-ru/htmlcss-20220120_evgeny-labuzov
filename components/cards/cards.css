@@ -24,6 +24,7 @@
   border: 0 solid transparent;
   border-radius: var(--rad-card);
   box-shadow: var(--shd-card);
+  text-decoration: none;
 }
 
 .cards__item-picture {
@@ -33,7 +34,6 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-
   flex-grow: 1;
 }
 
@@ -43,5 +43,28 @@
   font-size: 1.3125rem;
   font-weight: 500;
   line-height: 1.19048;
+  color: var(--clr-common-title);
   margin-top: 1rem;
+}
+
+@media screen and (max-width: 375px) {
+  .cards_modif{
+    padding-top: calc(1.4375rem - 1rem);
+    padding-bottom: calc(1.4375rem - 1rem);
+  }
+  .cards__item-picture {
+    box-shadow: var(--shd-card);
+  }
+  .cards__item {
+    padding: 0;
+  }
+  .cards__item-title {
+    padding: calc(1rem / 1.6);
+    padding-top: 0;
+    margin-top: calc(1rem / 1.3333);
+    font-size: 1rem;
+    line-height: 1.50;
+  }
+
+
 }

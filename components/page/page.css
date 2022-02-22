@@ -33,3 +33,16 @@
   background-color: var(--bg-footer-inner);
   padding-bottom: calc(3.5rem - var(--sp-24));
 }
+
+
+@media screen and (max-width: 375px) {
+  .page__container_inner {
+    grid-template-columns: 1fr;
+  }
+  .page_inner .page__content {
+    background-color: var(--bg-main);
+  }
+  .page_inner .page__footer {
+    background-color: var(--bg-main);
+  }
+}
