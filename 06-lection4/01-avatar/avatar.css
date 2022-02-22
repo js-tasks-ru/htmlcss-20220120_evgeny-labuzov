@@ -1,62 +1,14 @@
 .avatar {
-  white-space: nowrap;
-  font-size: 1rem;
-  line-height: 0;
-
-
-
   border-radius: 50%;
   overflow: hidden;
   aspect-ratio: 1;
-
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 .avatar__image {
-  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  color: transparent;
-  text-align: center;
-
-  background-color: var(--bg-ui-widgets);
-  background-image: url("../../assets/images/ic-black-user.svg");
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: center calc(50% - 0.7rem);
-}
-
-.avatar__image::selection {
-  background-color: transparent;
-}
-
-.avatar__image[alt]:after {
-  content: attr(alt);
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  font-family: var(--ff-inter);
-  font-size: 0.8rem;
-  font-weight: 400;
-  line-height: 4.6;
-  text-align: center;
-
-  color: var(--clr-common-text);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
 }
 
 .avatar_size {
