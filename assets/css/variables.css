@@ -140,7 +140,7 @@
   --sp-pb-footer: calc(var(--sp-8) * 17);
 
   /* icons */
-  --ic-black-chevron-down: url("../../assets/images/ic-black-chevron-down.svg");
+  --ic-black-chevron-down: url('../../assets/images/icons-sprite.svg#chevron-down');
 
   --ic-accordion-toggle: var(--ic-black-chevron-down);
 
