@@ -16,9 +16,6 @@
 
 .demopage_bg { background-image: var(--local-bg-default); }
 
-@media screen and (max-width: 400px) {
-  .demopage_bg { background-image: var(--local-bg-x); }
-}
 @media screen and (min-width: 768px) {
   .demopage_bg { background-image: var(--local-bg-s); }
 }
