@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <script src="../../assets/js/utils.js"></script>
+  <title>Icons 🤘</title>
+</head>
+
+<body class="page page_inner">
+
+  <header class="header page__header">
+    <div class="container"> </div>
+  </header>
+
+  <main class="content page__content">
+    <div class="container page__container page__container_inner">
+      <aside class="sidebar">
+        <h4 class="sidebar__title">Components</h4>
+        <nav class="sidebar__navigation">
+          <a href="#" class="sidebar__link">Modal</a>
+          <a href="#" class="sidebar__link">Tooltip</a>
+          <a href="#" class="sidebar__link">Avatar</a>
+          <a href="#" class="sidebar__link">Calendar</a>
+          <a href="./template.html" class="sidebar__link">Histogram</a>
+          <a href="#" class="sidebar__link">Custom form elements</a>
+          <a href="../index.html" class="sidebar__link sidebar__link_active sidebar_separate">❌ Icons</a>
+          <a href="../index.html" class="sidebar__link sidebar_separate">Main page</a>
+        </nav>
+      </aside>
+      <section class="content__viewer">
+        <h3 class="content__title">Icons</h3>
+
+        <div class="icons">
+
+          <svg class="icons__item" width="22" height="22" viewBox="0 0 22 22">
+            <use href="../../assets/images/icons-sprite.svg#help"></use>
+          </svg>
+          <svg class="icons__item" width="24" height="24" viewBox="0 0 24 24">
+            <use href="../../assets/images/icons-sprite.svg#home"></use>
+          </svg>
+          <svg class="icons__item" width="24" height="24" viewBox="0 0 24 24">
+            <use href="../../assets/images/icons-sprite.svg#success"></use>
+          </svg>
+
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer page__footer">
+    <div class="container">
+      <div class="footer__content">
+        <h5 class="footer__title footer__title_mutetext">Reusable component library</h5>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script>
+  (function() {
+    "use strict";
+    const { qs, insertHtml } = window.utils;
+    const add = (id, size) => [id, size];
+    const tmplIcon = (id, size) => `<svg class="icons__item" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
+      <use href="../../assets/images/icons-sprite.svg#${id}"></use>
+    </svg>`;
+    const icons = [
+      // id, size
+      add('help',         22),
+      add('home',        24),
+      add('success',     24),
+      add('error',       24),
+      add('star',        24),
+      add('cart',        24),
+      add('pin',         24),
+      add('calendar',    24),
+      add('edit',        24),
+      add('image',       24),
+      add('bell',        24),
+      add('upload',      24),
+      add('download',    24),
+      add('bar-chart',   24),
+      add('inbox',       24),
+      add('filter',      24),
+      add('map',         24),
+      add('zap',         24),
+      add('share',       24),
+      add('chat',        20),
+      add('credit-card', 24),
+      add('search',      24),
+      add('user',        24),
+      add('users',       24),
+      add('sun',         24),
+      add('moon',        24),
+      add('times',       24),
+      add('chevron-down',26),
+      add('menu',        24),
+      add('check',       24),
+    ];
+
+    const elIcons = qs('.icons');
+    elIcons.innerText = '';
+    icons.forEach(([id, size]) => insertHtml(tmplIcon(id, size), 'beforeend', elIcons));
+
+  })()
+</script>
+</html>

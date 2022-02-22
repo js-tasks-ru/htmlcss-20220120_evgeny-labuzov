@@ -14,6 +14,9 @@ const routes = [
   ['tooltip', '/01-tooltip', '05-lection3/01-tooltip/index.html'],
   ['modal', '/02-modal', '05-lection3/02-modal/index.html'],
   ['calendar', '/03-calendar', '05-lection3/03-calendar/index.html'],
+
+  ['template', '/template', 'pages/template.html'],
+  ['icons', '/icons', 'pages/icons.html'],
 ];
 
 const obj = routes.reduce((sum, [key, url, path]) => {
