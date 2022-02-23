@@ -27,7 +27,8 @@
   /* bg-colors: */
   --bg-header: var(--white);
   --bg-main: var(--white);
-  --bg-header-inner: var(--grey-0);
+  --bg-header-inner: var(--grey-e5);
+  --bg-header-inner-mobile: var(--grey-0);
   --bg-footer-inner: var(--grey-e5);
   --bg-content-inner: var(--grey-e5);
   --bg-ui-widgets: var(--bg-main);
