@@ -40,6 +40,9 @@
   .page__container_inner {
     grid-template-columns: 1fr;
   }
+  .page_inner .page__header {
+    background-color: var(--bg-header-inner-mobile);
+  }
   .page_inner .page__content {
     background-color: var(--bg-main);
   }
