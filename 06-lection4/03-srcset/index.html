@@ -3,8 +3,18 @@
     <head>
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./srcset.css">
+        <title>🎲Srcset🎲</title>
     </head>
-    <body>
-
+    <style>
+      body { padding: var(--sp-64); }
+      .presentation { }
+    </style>
+    <body class="__dev-grid _off">
+      <div class="presentation">
+        <picture class="picture picture_size">
+          <source srcset="public/forest_400.jpg, public/forest_768.jpg 2x">
+          <img class="picture__image" src="public/forest_400.jpg" alt="Beautiful Forest" width="300" height="300">
+        </picture>
+      </div>
     </body>
 </html>
