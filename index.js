@@ -38,6 +38,7 @@ const static = [
   '05-lection3/01-tooltip',
   '05-lection3/02-modal',
   '05-lection3/03-calendar',
+  '06-lection4/01-avatar',
   '06-lection4/03-srcset',
 ];
 
