@@ -15,6 +15,7 @@ const routes = [
   ['modal', '/02-modal', '05-lection3/02-modal/index.html'],
   ['calendar', '/03-calendar', '05-lection3/03-calendar/index.html'],
   ['background', '/02-background-image', '06-lection4/02-background-image/index.html'],
+  ['srcset', '/03-srcset', '06-lection4/03-srcset/index.html'],
 ];
 
 const obj = routes.reduce((sum, [key, url, path]) => {
