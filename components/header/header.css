@@ -1,7 +1,6 @@
 .header {
   background-color: var(--bg-main);
-  padding-top: 2rem;
-  padding-bottom: 4.5rem;
+  padding: var(--sp-24) 0;
   width: 100%;
 }
 
@@ -18,11 +17,11 @@
 
 @media screen and (max-width: 375px) {
   .header {
-    padding-top: 0px;
+    padding-top: 1rem;
     border-bottom: 1px solid var(--grey-2);
   }
   .header__title {
-    margin-top: 3rem;
+    margin: 3rem 0 4.3125rem 0;
     font-size: var(--fz-title-m);
     line-height: 1.36;
   }

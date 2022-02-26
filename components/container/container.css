@@ -2,11 +2,11 @@
   width: 100%;
   max-width: var(--w-container-desktop);
   margin: 0 auto;
-  padding: var(--sp-24);
+  padding: 0 var(--sp-24);
 }
 
 @media screen and (max-width: 375px) {
   .container {
-    padding: 1rem;
+    padding: 0 1rem;
   }
 }
