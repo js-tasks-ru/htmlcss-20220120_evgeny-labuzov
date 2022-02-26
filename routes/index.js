@@ -14,6 +14,8 @@ const routes = [
   ['avatar', '/01-avatar', '06-lection4/01-avatar/index.html'],
   ['background', '/02-background-image', '06-lection4/02-background-image/index.html'],
   ['srcset', '/03-srcset', '06-lection4/03-srcset/index.html'],
+  ['template', '/template', 'pages/template.html'],
+  ['icons', '/icons', 'pages/icons.html'],
 ];
 
 const obj = routes.reduce((sum, [key, url, path]) => {

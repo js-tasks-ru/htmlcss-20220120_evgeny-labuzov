@@ -1,7 +1,6 @@
 .header {
-  background-color: var(--bg-header);
-  padding-top: var(--sp-pt-header);
-  padding-bottom: var(--sp-pb-header);
+  background-color: var(--bg-main);
+  padding: var(--sp-24) 0;
   width: 100%;
 }
 
@@ -12,4 +11,18 @@
   font-weight: 500;
 
   color: var(--clr-common-title);
+
+  margin-top: 2.375rem;
+}
+
+@media screen and (max-width: 375px) {
+  .header {
+    padding-top: 1rem;
+    border-bottom: 1px solid var(--grey-2);
+  }
+  .header__title {
+    margin: 3rem 0 4.3125rem 0;
+    font-size: var(--fz-title-m);
+    line-height: 1.36;
+  }
 }

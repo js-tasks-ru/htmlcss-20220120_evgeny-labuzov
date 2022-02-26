@@ -9,11 +9,11 @@
   background-color: var(--bg-ui-widgets);
   box-shadow: var(--shd-card);
 
-  padding: var(--sp-32) 3rem var(--sp-32) 3rem;
+  padding: 2rem 3rem;
   border: 0 solid transparent;
   border-radius: var(--rad-card);
 
-  min-width: 50vh;
+  width: auto;
 }
 
 .content__title {
@@ -28,4 +28,19 @@
 
 .content__picture {
 
+}
+
+
+@media screen and (max-width: 375px) {
+  .content__viewer {
+    padding: 0;
+    min-width: unset;
+  }
+  .content__title {
+    font-size: var(--fz-title-s);
+    line-height: 1.30;
+  }
+  .content__viewer {
+    box-shadow: none;
+  }
 }

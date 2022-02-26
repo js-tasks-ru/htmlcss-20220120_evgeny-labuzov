@@ -1,0 +1,25 @@
+.top-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.top-panel__logotype-link{
+  display: block;
+  line-height: 0;
+}
+
+.top-panel__logotype {
+  min-height: 2rem;
+}
+
+
+@media screen and (max-width: 375px) {
+  .top-panel {
+    min-height: unset;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

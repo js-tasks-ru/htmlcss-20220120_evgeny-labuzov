@@ -20,7 +20,7 @@
   };
   const getCmpStl = (el, prop) => getComputedStyle(el)[prop];
   const insert = (el, ctx = null) => (ctx ? ctx : document.body).appendChild(el);
-
+ const insertHtml = (html, position = 'afterbegin', parent = null ) => parent ? parent.insertAdjacentHTML(position, html) : document.body.insertAdjacentHTML(position, html);
 
   const px = unit => `${unit}px`;
 
@@ -43,6 +43,7 @@
     qs,
     cl,
     insert,
+    insertHtml,
     px,
     getCmpStl,
     up, lo, str, trim,

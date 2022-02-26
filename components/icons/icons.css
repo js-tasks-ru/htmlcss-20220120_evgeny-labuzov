@@ -1,0 +1,11 @@
+.icons {
+  display: grid;
+  grid-template-columns: repeat(8, 3rem);
+  grid-template-columns: repeat(auto-fill, minmax( clamp(3rem, 100%, 3rem), 1fr ));
+  place-content: center;
+  place-items: center;
+  gap: 3rem;
+}
+.icons__item {
+  aspect-ratio: 1;
+}

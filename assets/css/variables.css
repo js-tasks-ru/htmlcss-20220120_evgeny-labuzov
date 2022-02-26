@@ -27,6 +27,8 @@
   /* bg-colors: */
   --bg-header: var(--white);
   --bg-main: var(--white);
+  --bg-header-inner: var(--grey-e5);
+  --bg-header-inner-mobile: var(--grey-0);
   --bg-footer-inner: var(--grey-e5);
   --bg-content-inner: var(--grey-e5);
   --bg-ui-widgets: var(--bg-main);
@@ -131,16 +133,14 @@
   --sp-pl-buttons: calc(1rem / 1.0666);
 
 
-  /* header */
-  --sp-pt-header: calc(var(--sp-8) * 12);
-  --sp-pb-header: calc(var(--sp-8) * 9);
+
 
   /* footer */
   --sp-pt-footer: calc(var(--sp-8) * 9);
   --sp-pb-footer: calc(var(--sp-8) * 17);
 
   /* icons */
-  --ic-black-chevron-down: url("../../assets/images/ic-black-chevron-down.svg");
+  --ic-black-chevron-down: url('../../assets/images/icons-sprite.svg#chevron-down');
 
   --ic-accordion-toggle: var(--ic-black-chevron-down);
 
