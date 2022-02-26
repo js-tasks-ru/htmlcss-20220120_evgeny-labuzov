@@ -1,0 +1,27 @@
+.demopage {
+  --local-bg-x: url("public/forest_400.jpg");
+  --local-bg-s: url("public/forest_768.jpg");
+  --local-bg-m: url("public/forest_1024.jpg");
+  --local-bg-l: url("public/forest_2560.jpg");
+
+  --local-bg-default: var(--local-bg-x);
+
+}
+
+.demopage {
+  background-color: var(--bg-main);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.demopage_bg { background-image: var(--local-bg-default); }
+
+@media screen and (min-width: 768px) {
+  .demopage_bg { background-image: var(--local-bg-s); }
+}
+@media screen and (min-width: 1024px) {
+  .demopage_bg { background-image: var(--local-bg-m); }
+}
+@media screen and (min-width: 2560px) {
+  .demopage_bg { background-image: var(--local-bg-l); }
+}
