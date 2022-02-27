@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <!-- Страница чекбокса -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./checkbox.css">
-    </head>
-    <body>
 
-    </body>
+<head>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./checkbox.css">
+  <title>✔Checkbox</title>
+</head>
+<style>
+  body {
+    padding: var(--sp-64);
+  }
+
+  .presentation {}
+</style>
+
+<body class="__dev-grid _off">
+  <div class="presentation">
+
+    <div class="checkbox-group">
+      <div class="checkbox-group__title">Checkbox</div>
+
+      <label class="checkbox checkbox-group__item">
+        <input class="checkbox__input" type="checkbox">
+        <span class="checkbox__label">Default</span>
+      </label>
+
+      <label class="checkbox checkbox-group__item">
+        <input class="checkbox__input" type="checkbox" checked>
+        <span class="checkbox__label">Checked</span>
+      </label>
+
+      <label class="checkbox checkbox-group__item">
+        <input class="checkbox__input" type="checkbox" disabled>
+        <span class="checkbox__label">Disabled</span>
+      </label>
+
+      <label class="checkbox checkbox-group__item">
+        <input class="checkbox__input" type="checkbox" checked disabled>
+        <span class="checkbox__label">Disabled</span>
+      </label>
+    </div>
+
+  </div>
+</body>
+
 </html>

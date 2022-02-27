@@ -62,6 +62,9 @@
   --clr-ui-blue: #4263EB;
   --clr-calendar-blue: var(--clr-ui-blue);
   --clr-tooltip-blue: var(--clr-ui-blue);
+  --bg-checkbox-on: var(--blue);
+  --bg-checkbox-off: var(--bg-main);
+  --bg-checkbox-disabled: var(--grey-2);
   --clr-calendar-blue-hover: hsl(228deg 81% 49%);
   --clr-calendar-blue-active: hsl(228deg 94% 39%);
 
@@ -141,6 +144,7 @@
 
   /* icons */
   --ic-black-chevron-down: url('../../assets/images/icons-sprite.svg#chevron-down');
+  --ic-checkbox: url('../../assets/images/icons-sprite.svg#checkbox-check-white');
 
   --ic-accordion-toggle: var(--ic-black-chevron-down);
 
