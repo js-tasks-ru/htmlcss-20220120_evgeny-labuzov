@@ -41,6 +41,7 @@ const static = [
   '06-lection4/01-avatar',
   '06-lection4/02-background-image',
   '06-lection4/03-srcset',
+  '07-lection5/01-checkbox',
 ];
 
 app.use('/assets', express.static('assets', options));

@@ -29,6 +29,7 @@
 @import '../../components/title/title.css';
 @import '../../components/cards/cards.css';
 @import '../../components/icons/icons.css';
+@import '../../components/checkbox-group/checkbox-group.css';
 
 /* 👻 */
 @import '../../03-lection1/01-button/button.css';
