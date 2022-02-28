@@ -71,6 +71,10 @@
   --bg-radio-off: var(--bg-main);
   --bg-radio-disabled: var(--grey-2);
 
+  --bg-toggler-on: var(--blue);
+  --bg-toggler-off: var(--bg-main);
+  --bg-toggler-disabled: var(--grey-2);
+
   --clr-calendar-blue-hover: hsl(228deg 81% 49%);
   --clr-calendar-blue-active: hsl(228deg 94% 39%);
 
@@ -178,6 +182,7 @@
   --trz-eo-025: /* prop first */ 0.25s 0s ease-out;
   --trz-eo-025-025: /* prop first */ 0.25s 0.25s ease-out;
   --trz-eo-025-065: /* prop first */ 0.25s 0.65s ease-out;
+  --trz-skid-015: /* prop first */ 0.15s 0s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   /* shadows */
   --shd-card: 0px 2px 4px var(--clr-shd-card);

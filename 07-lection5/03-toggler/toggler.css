@@ -1,0 +1,93 @@
+.toggler {
+  position: relative;
+  display: inline-block;
+}
+
+.toggler__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.toggler__label {
+  --l-size-w: 3.25rem;
+  --l-size-h: 1.75rem;
+  --l-bg: var(--bg-toggler-off);
+  --l-bg-disc: var(--grey-2);
+  --l-border-color: var(--grey-2);
+  --l-position-start: 2px;
+  --l-position-end: calc(calc(3.25rem - var(--l-size-h)) + 2px);
+  --l-position: var(--l-position-start);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-family: var(--ff-inter);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--grey-4);
+  cursor: pointer;
+}
+
+.toggler__input:disabled ~ .toggler__label {
+  cursor: not-allowed;
+}
+
+.toggler__input:focus ~ .toggler__label {
+  text-decoration: underline;
+}
+
+.toggler__label:before {
+  content: "";
+  box-sizing: border-box;
+  display: inline-block;
+  width: var(--l-size-w);
+  height: var(--l-size-h);
+  margin-right: calc(1rem / 1.3333);
+  border-radius: var(--l-size-h);
+  background-color: var(--l-bg);
+  border: 1px solid var(--grey-2);
+  transition: background var(--trz-eo-015),
+              border var(--trz-eo-015);
+}
+.toggler__label:after {
+  content: "";
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: var(--l-position);
+  width: calc(var(--l-size-h) - 4px);
+  height: calc(var(--l-size-h) - 4px);
+  border-radius: 50%;
+  background-color: var(--l-bg-disc);
+  transition: left var(--trz-skid-015);
+}
+
+.toggler__input:checked ~ .toggler__label:before {
+  --l-bg: var(--bg-toggler-on);
+  border: 2px solid var(--l-bg);
+}
+.toggler__input:checked ~ .toggler__label:after {
+  --l-bg: var(--bg-toggler-on);
+  --l-bg-disc: var(--bg-main);
+  --l-position: var(--l-position-end)
+}
+.toggler__input:disabled ~ .radio__label {
+  color: var(--grey-2);
+}
+.toggler__input:disabled ~ .toggler__label:before {
+  --l-bg: var(--bg-toggler-disabled);
+}
+.toggler__input:disabled ~ .toggler__label:after {
+  --l-bg: var(--bg-toggler-disabled);
+  --l-bg-disc: var(--grey-3);
+}
+
+.toggler__input:disabled:checked ~ .toggler__label:after {
+  --l-bg-disc: var(--bg-main);
+}
