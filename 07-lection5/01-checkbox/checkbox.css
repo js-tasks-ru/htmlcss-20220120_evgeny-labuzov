@@ -57,7 +57,9 @@
   --l-border-color: var(--transpr);
   background-size: 100% 100%;
 }
-
+.checkbox__input:disabled ~ .radio__label {
+  color: var(--grey-2);
+}
 .checkbox__input:disabled ~ .checkbox__label:before {
   --l-bg: var(--bg-checkbox-disabled);
   --l-border-color: var(--transpr);

@@ -42,6 +42,7 @@ const static = [
   '06-lection4/02-background-image',
   '06-lection4/03-srcset',
   '07-lection5/01-checkbox',
+  '07-lection5/02-radio',
 ];
 
 app.use('/assets', express.static('assets', options));

@@ -15,6 +15,7 @@ const routes = [
   ['background', '/02-background-image', '06-lection4/02-background-image/index.html'],
   ['srcset', '/03-srcset', '06-lection4/03-srcset/index.html'],
   ['checkbox', '/01-checkbox', '07-lection5/01-checkbox/index.html'],
+  ['radio', '/02-radio', '07-lection5/02-radio/index.html'],
   ['template', '/template', 'pages/template.html'],
   ['icons', '/icons', 'pages/icons.html'],
 ];

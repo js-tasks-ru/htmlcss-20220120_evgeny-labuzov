@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <!-- Страница радио -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./radio.css">
-    </head>
-    <body>
 
-    </body>
+<head>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./radio.css">
+  <title>🎶Radio</title>
+</head>
+<style>
+  body { padding: var(--sp-64); }
+  .presentation {}
+</style>
+
+<body class="__dev-grid _off">
+  <div class="presentation">
+
+    <div class="radio-group">
+      <h5 class="radio-group__title">Radio Buttons</h5>
+
+      <label class="radio radio-group__item">
+        <input name="radio1" class="radio__input" type="radio">
+        <span class="radio__label">Default</span>
+      </label>
+
+      <label class="radio radio-group__item">
+        <input name="radio1" class="radio__input" type="radio" checked>
+        <span class="radio__label">Selected</span>
+      </label>
+    </div>
+
+  </div>
+
+  <div class="presentation">
+
+    <div class="radio-group">
+      <h5 class="radio-group__title">Disabled Radio Buttons</h5>
+
+      <label class="radio radio-group__item">
+        <input name="radio2" class="radio__input" type="radio" disabled>
+        <span class="radio__label">Disabled</span>
+      </label>
+
+      <label class="radio radio-group__item">
+        <input name="radio2" class="radio__input" type="radio" checked disabled>
+        <span class="radio__label">Disabled selected</span>
+      </label>
+    </div>
+
+  </div>
+</body>
+
 </html>
