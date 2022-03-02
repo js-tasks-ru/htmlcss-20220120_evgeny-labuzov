@@ -1,15 +1,109 @@
 <!DOCTYPE html>
 <!-- Страница с полем ввода -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./input.css">
-    </head>
-    <body>
 
-    </body>
+<head>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./input.css">
+  <title>✒ Text Input</title>
+  <style>
+    body { padding: var(--sp-64); }
+    .presentation {}
+  </style>
+</head>
+
+<body class="__dev-grid _off">
+
+  <div class="presentation">
+    <div class="input">
+      <label
+      for="id-default"
+      class="input__label">Label</label>
+      <input
+      id="id-default"
+      placeholder="Placeholder"
+      type="text"
+      class="input__control"/>
+    </div>
+  </div>
+
+  <div class="presentation">
+    <div class="input input_success">
+      <label
+      for="id-success"
+      class="input__label">Success</label>
+      <input
+      id="id-success"
+      placeholder="Placeholder"
+      type="text"
+      value="Success"
+      class="input__control"/>
+    </div>
+  </div>
+
+  <div class="presentation">
+    <div class="input input_invalid">
+      <label
+      for="id-invalid"
+      class="input__label">Error</label>
+      <input
+      id="id-invalid"
+      placeholder="Placeholder"
+      value="Error"
+      type="text"
+      class="input__control"/>
+    </div>
+  </div>
+
+  <div class="presentation">
+    <div class="input">
+      <label
+      for="id-disabled"
+      class="input__label">Disabled</label>
+      <input
+      disabled
+      id="id-disabled"
+      placeholder="Placeholder"
+      value="Disabled"
+      type="text"
+      class="input__control"/>
+    </div>
+  </div>
+
+  <div class="presentation">
+    <div class="input input_required">
+      <label
+      for="id-required"
+      class="input__label">Required</label>
+      <input
+      required
+      id="id-required"
+      placeholder="Placeholder"
+      value="Required"
+      type="text"
+      class="input__control"/>
+    </div>
+  </div>
+
+  <div class="presentation">
+    <div class="input input_success input_required">
+      <label
+      for="id-required-success"
+      class="input__label">Required success</label>
+      <input
+      required
+      id="id-required-success"
+      placeholder="Placeholder"
+      value="Required"
+      type="text"
+      class="input__control"/>
+    </div>
+  </div>
+
+</body>
+
 </html>
