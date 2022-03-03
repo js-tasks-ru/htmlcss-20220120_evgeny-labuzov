@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <!-- Страница с кнопкой переключения -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./toggler.css">
-    </head>
-    <body>
 
-    </body>
+<head>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="./toggler.css">
+  <title>🎚Toggler</title>
+</head>
+<style>
+  body { padding: var(--sp-64); }
+  .presentation {}
+</style>
+
+<body class="__dev-grid _off">
+  <div class="presentation">
+
+    <div class="toggler-group">
+      <h5 class="toggler-group__title">Toggle Button</h5>
+
+      <label class="toggler toggler-group__item">
+        <input class="toggler__input" type="checkbox">
+        <span class="toggler__label">Off</span>
+      </label>
+
+      <label class="toggler toggler-group__item">
+        <input class="toggler__input" type="checkbox" checked>
+        <span class="toggler__label">On</span>
+      </label>
+
+      <label class="toggler toggler-group__item">
+        <input class="toggler__input" type="checkbox" disabled>
+        <span class="toggler__label">Disabled Off</span>
+      </label>
+
+      <label class="toggler toggler-group__item">
+        <input class="toggler__input" type="checkbox" checked disabled>
+        <span class="toggler__label">Disabled On</span>
+      </label>
+    </div>
+
+  </div>
+</body>
+
 </html>

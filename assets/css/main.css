@@ -31,6 +31,7 @@
 @import '../../components/icons/icons.css';
 @import '../../components/checkbox-group/checkbox-group.css';
 @import '../../components/radio-group/radio-group.css';
+@import '../../components/toggler-group/toggler-group.css';
 
 /* 👻 */
 @import '../../03-lection1/01-button/button.css';
