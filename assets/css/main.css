@@ -32,6 +32,8 @@
 @import '../../components/checkbox-group/checkbox-group.css';
 @import '../../components/radio-group/radio-group.css';
 @import '../../components/toggler-group/toggler-group.css';
+@import '../../components/hidden-filter/hidden-filter.css';
+@import '../../components/tabs/tabs.css';
 
 /* 👻 */
 @import '../../03-lection1/01-button/button.css';
@@ -64,6 +66,8 @@ body {
 img {
   max-width: 100%;
 }
+*:nth-child(odd)::selection{ background-color: var(--purple); }
+*:nth-child(even)::selection{ background-color: var(--pink); }
 .__dev-bg:not(._off) {
   background-color: var(--clr-dev-b);
   background-image:

@@ -1,0 +1,5 @@
+.hidden-control {
+  transform: scale(0);
+  position: absolute;
+  z-index: -1;
+}

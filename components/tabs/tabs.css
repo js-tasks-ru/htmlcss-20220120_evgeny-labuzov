@@ -1,0 +1,98 @@
+
+.tabs {
+  max-width: 100%;
+  overflow: auto;
+  transform: rotate(180deg) scale(-1, 1);
+  /************
+   * Тут можно заметить странные-странности.
+   * Я обратил внимание, на горизонтальный скролл в мобильной версии.
+   * При сильном сжатии вьюпорта.
+   * Поэтому для браузеров с поддержкой стилизации -webkit- скролла.
+   * я добавляю стили. Но у табов есть декоративный бордер снизу.
+   * Вместе с скроллом -- выглядит плохо.
+   * Поэтому, как насчет отобразить полоску скролла сверху, а не с низу?...
+   * Для этого я переворачиваю и отражаю общий контейнер,
+   * а контейнер с ссылками подвергаю обратной трансформации.
+   * (он тонкий, и это скорее для индикации)
+   */
+
+   /* честно говорят.... выглядит странно.
+    * но с горизонтальным скроллом снизу выглядит не менее странно.
+    */
+}
+
+.tabs::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+  background-color: var(--transpr);
+}
+
+.tabs::-webkit-scrollbar-thumb {
+    background-color: var(--grey-2);
+    border-radius: 2px;
+}
+
+.tabs:hover::-webkit-scrollbar {
+  background-color: var(--grey-2);
+}
+.tabs:hover::-webkit-scrollbar-thumb {
+  background-color: var(--grey-4);
+}
+
+.tabs__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 2.5rem;
+  transform: rotate(180deg) scale(-1, 1);
+}
+
+.tabs__label {
+  --l-color-border: var(--transpr);
+  --l-color: var(--grey-3);
+  user-select: none;
+  white-space: nowrap;
+  font-family: var(--ff-inter);
+  font-size: 1rem;
+  line-height: 1.5;
+
+  color: var(--l-color);
+
+  border-bottom: calc(1rem / 3.2) solid var(--l-color-border);
+  padding-bottom: var(--sp-8);
+
+  cursor: pointer;
+
+  transition: border var(--trz-eo-015),
+              color var(--trz-eo-015);
+}
+
+.tabs__label:hover {
+  --l-color-border: var(--grey-2);
+  --l-color: var(--grey-4);
+}
+
+#tab-all:checked ~ * > * .tabs__menu .tabs__label[for*="all"] {
+  --l-color-border: var(--black);
+  --l-color: var(--black);
+}
+#tab-elements:checked ~ * > * .tabs__menu .tabs__label[for*="elements"] {
+  --l-color-border: var(--black);
+  --l-color: var(--black);
+}
+#tab-containers:checked ~ * > * .tabs__menu .tabs__label[for*="containers"] {
+  --l-color-border: var(--black);
+  --l-color: var(--black);
+}
+#tab-templates:checked ~ * > * .tabs__menu .tabs__label[for*="templates"] {
+  --l-color-border: var(--black);
+  --l-color: var(--black);
+}
+
+
+@media screen and (max-width: 375px) {
+  .tabs__label {
+    --l-color-border: var(--grey-0);
+  }
+}
