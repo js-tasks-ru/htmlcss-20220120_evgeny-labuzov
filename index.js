@@ -43,6 +43,7 @@ const static = [
   '06-lection4/03-srcset',
   '07-lection5/01-checkbox',
   '07-lection5/02-radio',
+  '07-lection5/03-toggler',
   '07-lection5/04-input',
   'assets/images',
 ];
