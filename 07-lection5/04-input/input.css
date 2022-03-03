@@ -1,0 +1,97 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.input__label {
+  font-family: var(--ff-inter);
+  font-size: calc(1rem / 1.3333);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: var(--grey-3);
+
+  cursor: pointer;
+
+  margin-bottom: calc(1rem / 3.2);
+}
+
+.input__label:after {
+  content: none;
+  transition: color var(--trz-eo-025);
+}
+
+.input__control {
+  --l-ic-size: calc(1rem / 1.5);
+  outline: none;
+  padding: calc(1rem / 0.9411) calc(1rem / 0.6666) calc(1rem  / 1.2307) calc(1rem / 0.6666);
+
+  font-family: var(--ff-inter);
+  font-size: calc(1rem / 0.8);
+  line-height: 1.3;
+
+  color: var(--grey-4);
+  border: 1px solid var(--grey-2);
+
+  box-shadow: var(--shd-empty);
+
+  background-image: var(--ic-empty);
+  background-repeat: no-repeat;
+  background-position: right var(--l-ic-size) center;
+  background-size: calc(var(--l-ic-size) + 0.9rem) calc(var(--l-ic-size) + 0.9rem);
+
+  border-radius: var(--rad-common);
+  transition: background-image var(--trz-eo-025),
+              box-shadow var(--trz-eo-025),
+              border var(--trz-eo-025);
+}
+.input__control:disabled {
+  background-color: var(--grey-e5);
+  color: var(--grey-3);
+  border: 1px solid var(--grey-3);
+  cursor: not-allowed;
+}
+
+.input__control::placeholder {
+  color: var(--grey-2);
+  text-indent: 0rem;
+  transition: text-indent var(--trz-eo-025);
+}
+
+.input__control:focus::placeholder {
+  text-indent: -30rem;
+}
+
+.input__control:focus {
+  border: 1px solid var(--blue);
+  box-shadow: var(--shd-input-focus);
+}
+
+.input_required .input__label:after {
+  content: ' *';
+  font-size: 1.2rem;
+  line-height: 0;
+  color: var(--error);
+}
+.input_success.input_required .input__label:after {
+  content: ' *';
+  font-size: 1.2rem;
+  line-height: 0;
+  color: var(--blue);
+}
+
+.input_success .input__control {
+  background-image: var(--ic-success);
+}
+
+.input_invalid .input__control {
+  border: 1px solid var(--error);
+  box-shadow: var(--shd-input-error);
+  background-image: var(--ic-error);
+}
+
+.input_invalid .input__control:focus {
+  border: 1px solid var(--secondary);
+}

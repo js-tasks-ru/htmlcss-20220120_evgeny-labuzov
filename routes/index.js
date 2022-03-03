@@ -17,6 +17,7 @@ const routes = [
   ['checkbox', '/01-checkbox', '07-lection5/01-checkbox/index.html'],
   ['radio', '/02-radio', '07-lection5/02-radio/index.html'],
   ['toggler', '/03-toggler', '07-lection5/03-toggler/index.html'],
+  ['input', '/04-input', '07-lection5/04-input/index.html'],
   ['template', '/template', 'pages/template.html'],
   ['icons', '/icons', 'pages/icons.html'],
 ];

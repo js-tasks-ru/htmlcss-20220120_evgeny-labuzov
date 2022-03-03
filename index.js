@@ -44,6 +44,8 @@ const static = [
   '07-lection5/01-checkbox',
   '07-lection5/02-radio',
   '07-lection5/03-toggler',
+  '07-lection5/04-input',
+  'assets/images',
 ];
 
 app.use('/assets', express.static('assets', options));
