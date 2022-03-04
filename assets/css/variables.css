@@ -148,7 +148,8 @@
   --sp-pl-buttons: calc(1rem / 1.0666);
 
 
-
+  /* tabs */
+  --tabs-y-shift: -2rem;
 
   /* footer */
   --sp-pt-footer: calc(var(--sp-8) * 9);

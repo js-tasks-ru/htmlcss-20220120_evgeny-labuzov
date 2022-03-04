@@ -7,7 +7,7 @@
 
 }
 
-.cards_modif{
+.cards_modif {
   padding: 4.25rem 0;
 }
 
@@ -48,7 +48,7 @@
 
 @media screen and (max-width: 375px) {
   .cards_modif{
-    padding: 1rem 0;
+    padding: calc(1rem + 5px) 0;
   }
   .cards__item-picture {
     box-shadow: var(--shd-card);
@@ -63,6 +63,4 @@
     font-size: 1rem;
     line-height: 1.50;
   }
-
-
 }

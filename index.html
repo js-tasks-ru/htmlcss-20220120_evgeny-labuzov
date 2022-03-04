@@ -1,93 +1,119 @@
 <!DOCTYPE html>
 <!-- Главная страница -->
 <html lang="ru">
-    <head>
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-      <link rel="manifest" href="/site.webmanifest">
-      <link rel="stylesheet" href="./assets/css/main.css">
-    </head>
-    <body class="page">
 
-      <header class="header">
-        <div class="container">
-          <aside class="top-panel">
-            <a href="/" class="top-panel__logotype-link">
-              <img class="top-panel__logotype" src="assets/images/logotype.svg" alt="Logotype">
-            </a>
-          </aside>
-          <h1 class="header__title">Reusable component library</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <title>🏠Home</title>
+</head>
+
+<body class="page">
+
+
+
+  <header class="header">
+    <div class="container">
+      <aside class="top-panel">
+        <a href="/" class="top-panel__logotype-link">
+          <img class="top-panel__logotype" src="assets/images/logotype.svg" alt="Logotype">
+        </a>
+      </aside>
+      <h1 class="header__title">Reusable component library</h1>
+
+
+
+    </div>
+  </header>
+
+
+  <main class="content">
+    <div class="container">
+
+      <div class="tabs">
+        <input class="tabs__input tabs__input_tab-all" type="radio" name="nav" id="tab-all" >
+        <input class="tabs__input tabs__input_tab-elements" type="radio" name="nav" id="tab-elements">
+        <input class="tabs__input tabs__input_tab-containers" type="radio" name="nav" id="tab-containers" checked>
+        <input class="tabs__input tabs__input_tab-templates" type="radio" name="nav" id="tab-templates">
+        <div class="tabs__menu">
+          <label class="tabs__label tabs__input_tab-all" for="tab-all">All components</label>
+          <label class="tabs__label tabs__input_tab-elements" for="tab-elements">Elements</label>
+          <label class="tabs__label tabs__input_tab-containers" for="tab-containers">Containers</label>
+          <label class="tabs__label tabs__input_tab-templates" for="tab-templates">Templates</label>
         </div>
-      </header>
+        <div class="cards cards_modif tabs__viewer">
 
-      <main class="content">
-        <div class="container">
+          <a href="/01-tooltip" class="cards__item tabs__viewer-item tabs__viewer-item_elements">
+            <div class="cards__item-picture"></div>
+            <h3 class="cards__item-title">Tooltip</h3>
+          </a>
 
-          <div class="cards cards_modif">
+          <a href="#" class="cards__item tabs__viewer-item tabs__viewer-item_elements">
+            <div class="cards__item-picture"></div>
+            <h3 class="cards__item-title">Custom form elements</h3>
+          </a>
 
-            <a href="/01-tooltip" class="cards__item">
-              <div class="cards__item-picture"></div>
-              <h3 class="cards__item-title">Tooltip</h3>
-            </a>
+          <a href="/03-calendar" class="cards__item tabs__viewer-item tabs__viewer-item_templates">
+            <div class="cards__item-picture">
+              <picture>
+                <source srcset="assets/images/card-picture-calendar-preview-1x.png" media="(min-width: 735px)">
+                <source srcset="assets/images/card-picture-calendar-preview-2x.png" media="(max-width: 734px)">
+                <img src="assets/images/card-picture-calendar-preview-1x.png" alt="Histogram">
+              </picture>
+            </div>
+            <h3 class="cards__item-title">Calendar</h3>
+          </a>
 
-            <a href="#" class="cards__item">
-              <div class="cards__item-picture"></div>
-              <h3 class="cards__item-title">Custom form elements</h3>
-            </a>
+          <a href="/02-modal" class="cards__item tabs__viewer-item tabs__viewer-item_containers">
+            <div class="cards__item-picture"></div>
+            <h3 class="cards__item-title">Modal dialog</h3>
+          </a>
 
-            <a href="/03-calendar" class="cards__item">
-              <div class="cards__item-picture">
-                <picture>
-                  <source srcset="assets/images/card-picture-calendar-preview-1x.png" media="(min-width: 735px)">
-                  <source srcset="assets/images/card-picture-calendar-preview-2x.png" media="(max-width: 734px)">
-                  <img src="assets/images/card-picture-calendar-preview-1x.png" alt="Histogram">
-                </picture>
-              </div>
-              <h3 class="cards__item-title">Calendar</h3>
-            </a>
+          <a href="/01-histogram" class="cards__item tabs__viewer-item tabs__viewer-item_elements">
+            <div class="cards__item-picture">
+              <picture>
+                <source srcset="assets/images/card-picture-histogram-preview-1x.png" media="(min-width: 735px)">
+                <source srcset="assets/images/card-picture-histogram-preview-2x.png" media="(max-width: 734px)">
+                <img src="assets/images/card-picture-histogram-preview-1x.png" alt="Histogram">
+              </picture>
+            </div>
+            <h3 class="cards__item-title">Histogram</h3>
+          </a>
 
-            <a href="/02-modal" class="cards__item">
-              <div class="cards__item-picture"></div>
-              <h3 class="cards__item-title">Modal dialog</h3>
-            </a>
-
-            <a href="/01-histogram"  class="cards__item">
-              <div class="cards__item-picture">
-                <picture>
-                  <source srcset="assets/images/card-picture-histogram-preview-1x.png" media="(min-width: 735px)">
-                  <source srcset="assets/images/card-picture-histogram-preview-2x.png" media="(max-width: 734px)">
-                  <img src="assets/images/card-picture-histogram-preview-1x.png" alt="Histogram">
-                </picture>
-              </div>
-              <h3 class="cards__item-title">Histogram</h3>
-            </a>
-
-            <a href="/01-avatar" class="cards__item">
-              <div class="cards__item-picture">
-                <picture>
-                  <source srcset="assets/images/card-picture-avatar-preview-1x.png" media="(min-width: 735px)">
-                  <source srcset="assets/images/card-picture-avatar-preview-2x.png" media="(max-width: 734px)">
-                  <img src="assets/images/card-picture-avatar-preview-1x.png" alt="Histogram">
-                </picture>
-              </div>
-              <h3 class="cards__item-title">Avatar</h3>
-            </a>
-
-          </div>
-
+          <a href="/01-avatar" class="cards__item tabs__viewer-item tabs__viewer-item_elements">
+            <div class="cards__item-picture">
+              <picture>
+                <source srcset="assets/images/card-picture-avatar-preview-1x.png" media="(min-width: 735px)">
+                <source srcset="assets/images/card-picture-avatar-preview-2x.png" media="(max-width: 734px)">
+                <img src="assets/images/card-picture-avatar-preview-1x.png" alt="Histogram">
+              </picture>
+            </div>
+            <h3 class="cards__item-title">Avatar</h3>
+          </a>
 
         </div>
-      </main>
+      </div>
 
-      <footer class="footer">
-        <div class="container">
-          <div class="footer__content">
-            <h2 class="footer__title footer__title_size">About</h2>
-            <p class="footer__text footer__text_size">This project is a collection of professionally designed, pre-built, fully responsive HTML snippets you can drop into your projects. Get started by checking out our free preview components, or browsing the PNG previews in the categories you're most curious about.</p>
-          </div>
-        </div>
-      </footer>
 
-    </body>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <h2 class="footer__title footer__title_size">About</h2>
+        <p class="footer__text footer__text_size">This project is a collection of professionally designed, pre-built, fully responsive HTML snippets you can drop into your projects. Get started by checking out our free preview components, or
+          browsing the PNG previews in the categories you're most curious about.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>
