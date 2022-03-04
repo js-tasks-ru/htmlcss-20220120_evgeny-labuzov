@@ -5,7 +5,10 @@
   "scripts": {
     "start": "nodemon index.js",
     "start:debug": "nodemon --inspect index.js",
-    "build": "postcss assets/css/main.scss -o build/index.css",
+    "build:styles": "postcss assets/css/main.scss -o build/index.css",
+    "build:styles:dev": "postcss assets/css/main.scss -o build/index.css -w",
+    "build:styles:lint": "npm run lint:styles:fix && npm run build:styles",
+    "lint:styles:fix": "npx stylelint --fix **/*.scss",
     "test": "cross-env NODE_ENV=test mocha --no-warnings --ignore=node_modules/** **/*.test.js"
   },
   "husky": {
