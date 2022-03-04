@@ -1,24 +1,12 @@
-
 .tabs {
-  max-width: 100%;
-  overflow: auto;
-  transform: rotate(180deg) scale(-1, 1);
-  /************
-   * Тут можно заметить странные-странности.
-   * Я обратил внимание, на горизонтальный скролл в мобильной версии.
-   * При сильном сжатии вьюпорта.
-   * Поэтому для браузеров с поддержкой стилизации -webkit- скролла.
-   * я добавляю стили. Но у табов есть декоративный бордер снизу.
-   * Вместе с скроллом -- выглядит плохо.
-   * Поэтому, как насчет отобразить полоску скролла сверху, а не с низу?...
-   * Для этого я переворачиваю и отражаю общий контейнер,
-   * а контейнер с ссылками подвергаю обратной трансформации.
-   * (он тонкий, и это скорее для индикации)
-   */
 
-   /* честно говорят.... выглядит странно.
-    * но с горизонтальным скроллом снизу выглядит не менее странно.
-    */
+}
+
+.tabs__input {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  z-index: -1;
 }
 
 .tabs::-webkit-scrollbar {
@@ -45,7 +33,8 @@
   justify-content: flex-start;
   align-items: baseline;
   gap: 2.5rem;
-  transform: rotate(180deg) scale(-1, 1);
+  position: absolute;
+  transform: translateY(var(--tabs-y-shift));
 }
 
 .tabs__label {
@@ -73,23 +62,47 @@
   --l-color: var(--grey-4);
 }
 
-#tab-all:checked ~ * > * .tabs__menu .tabs__label[for*="all"] {
+
+
+/* Tabs */
+.tabs__input_tab-all:checked ~ .tabs__menu .tabs__label.tabs__input_tab-all {
   --l-color-border: var(--black);
   --l-color: var(--black);
 }
-#tab-elements:checked ~ * > * .tabs__menu .tabs__label[for*="elements"] {
+.tabs__input_tab-elements:checked ~ .tabs__menu .tabs__label.tabs__input_tab-elements {
   --l-color-border: var(--black);
   --l-color: var(--black);
 }
-#tab-containers:checked ~ * > * .tabs__menu .tabs__label[for*="containers"] {
+.tabs__input_tab-containers:checked ~ .tabs__menu .tabs__label.tabs__input_tab-containers {
   --l-color-border: var(--black);
   --l-color: var(--black);
 }
-#tab-templates:checked ~ * > * .tabs__menu .tabs__label[for*="templates"] {
+.tabs__input_tab-templates:checked ~ .tabs__menu .tabs__label.tabs__input_tab-templates {
   --l-color-border: var(--black);
   --l-color: var(--black);
 }
 
+
+/* Viewer */
+.tabs__viewer { }
+
+.tabs__viewer-item {
+  display: none;
+}
+
+.tabs__input_tab-all:checked ~ .tabs__viewer .tabs__viewer-item {
+  display: flex;
+}
+
+.tabs__input_tab-elements:checked ~ .tabs__viewer .tabs__viewer-item.tabs__viewer-item_elements {
+  display: flex;
+}
+.tabs__input_tab-containers:checked ~ .tabs__viewer .tabs__viewer-item.tabs__viewer-item_containers {
+  display: flex;
+}
+.tabs__input_tab-templates:checked ~ .tabs__viewer .tabs__viewer-item.tabs__viewer-item_templates {
+  display: flex;
+}
 
 @media screen and (max-width: 375px) {
   .tabs__label {

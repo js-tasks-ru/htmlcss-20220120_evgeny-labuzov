@@ -16,10 +16,7 @@
 
 <body class="page">
 
-  <input class="hidden-control" type="radio" name="nav" id="tab-all" checked>
-  <input class="hidden-control" type="radio" name="nav" id="tab-elements">
-  <input class="hidden-control" type="radio" name="nav" id="tab-containers">
-  <input class="hidden-control" type="radio" name="nav" id="tab-templates">
+
 
   <header class="header">
     <div class="container">
@@ -30,14 +27,7 @@
       </aside>
       <h1 class="header__title">Reusable component library</h1>
 
-      <nav class="tabs">
-        <div class="tabs__menu">
-          <label class="tabs__label" for="tab-all">All components</label>
-          <label class="tabs__label" for="tab-elements">Elements</label>
-          <label class="tabs__label" for="tab-containers">Containers</label>
-          <label class="tabs__label" for="tab-templates">Templates</label>
-        </div>
-      </nav>
+
 
     </div>
   </header>
@@ -46,57 +36,70 @@
   <main class="content">
     <div class="container">
 
-      <div class="cards cards_modif">
+      <div class="tabs">
+        <input class="tabs__input tabs__input_tab-all" type="radio" name="nav" id="tab-all" >
+        <input class="tabs__input tabs__input_tab-elements" type="radio" name="nav" id="tab-elements">
+        <input class="tabs__input tabs__input_tab-containers" type="radio" name="nav" id="tab-containers" checked>
+        <input class="tabs__input tabs__input_tab-templates" type="radio" name="nav" id="tab-templates">
+        <div class="tabs__menu">
+          <label class="tabs__label tabs__input_tab-all" for="tab-all">All components</label>
+          <label class="tabs__label tabs__input_tab-elements" for="tab-elements">Elements</label>
+          <label class="tabs__label tabs__input_tab-containers" for="tab-containers">Containers</label>
+          <label class="tabs__label tabs__input_tab-templates" for="tab-templates">Templates</label>
+        </div>
+        <div class="cards cards_modif tabs__viewer">
 
-        <a href="/01-tooltip" class="cards__item cards__item_elements">
-          <div class="cards__item-picture"></div>
-          <h3 class="cards__item-title">Tooltip</h3>
-        </a>
+          <a href="/01-tooltip" class="cards__item tabs__viewer-item tabs__viewer-item_elements">
+            <div class="cards__item-picture"></div>
+            <h3 class="cards__item-title">Tooltip</h3>
+          </a>
 
-        <a href="#" class="cards__item tabs__content_elements">
-          <div class="cards__item-picture"></div>
-          <h3 class="cards__item-title">Custom form elements</h3>
-        </a>
+          <a href="#" class="cards__item tabs__viewer-item tabs__viewer-item_elements">
+            <div class="cards__item-picture"></div>
+            <h3 class="cards__item-title">Custom form elements</h3>
+          </a>
 
-        <a href="/03-calendar" class="cards__item cards__item_templates">
-          <div class="cards__item-picture">
-            <picture>
-              <source srcset="assets/images/card-picture-calendar-preview-1x.png" media="(min-width: 735px)">
-              <source srcset="assets/images/card-picture-calendar-preview-2x.png" media="(max-width: 734px)">
-              <img src="assets/images/card-picture-calendar-preview-1x.png" alt="Histogram">
-            </picture>
-          </div>
-          <h3 class="cards__item-title">Calendar</h3>
-        </a>
+          <a href="/03-calendar" class="cards__item tabs__viewer-item tabs__viewer-item_templates">
+            <div class="cards__item-picture">
+              <picture>
+                <source srcset="assets/images/card-picture-calendar-preview-1x.png" media="(min-width: 735px)">
+                <source srcset="assets/images/card-picture-calendar-preview-2x.png" media="(max-width: 734px)">
+                <img src="assets/images/card-picture-calendar-preview-1x.png" alt="Histogram">
+              </picture>
+            </div>
+            <h3 class="cards__item-title">Calendar</h3>
+          </a>
 
-        <a href="/02-modal" class="cards__item cards__item_containers">
-          <div class="cards__item-picture"></div>
-          <h3 class="cards__item-title">Modal dialog</h3>
-        </a>
+          <a href="/02-modal" class="cards__item tabs__viewer-item tabs__viewer-item_containers">
+            <div class="cards__item-picture"></div>
+            <h3 class="cards__item-title">Modal dialog</h3>
+          </a>
 
-        <a href="/01-histogram" class="cards__item cards__item_elements">
-          <div class="cards__item-picture">
-            <picture>
-              <source srcset="assets/images/card-picture-histogram-preview-1x.png" media="(min-width: 735px)">
-              <source srcset="assets/images/card-picture-histogram-preview-2x.png" media="(max-width: 734px)">
-              <img src="assets/images/card-picture-histogram-preview-1x.png" alt="Histogram">
-            </picture>
-          </div>
-          <h3 class="cards__item-title">Histogram</h3>
-        </a>
+          <a href="/01-histogram" class="cards__item tabs__viewer-item tabs__viewer-item_elements">
+            <div class="cards__item-picture">
+              <picture>
+                <source srcset="assets/images/card-picture-histogram-preview-1x.png" media="(min-width: 735px)">
+                <source srcset="assets/images/card-picture-histogram-preview-2x.png" media="(max-width: 734px)">
+                <img src="assets/images/card-picture-histogram-preview-1x.png" alt="Histogram">
+              </picture>
+            </div>
+            <h3 class="cards__item-title">Histogram</h3>
+          </a>
 
-        <a href="/01-avatar" class="cards__item cards__item_elements">
-          <div class="cards__item-picture">
-            <picture>
-              <source srcset="assets/images/card-picture-avatar-preview-1x.png" media="(min-width: 735px)">
-              <source srcset="assets/images/card-picture-avatar-preview-2x.png" media="(max-width: 734px)">
-              <img src="assets/images/card-picture-avatar-preview-1x.png" alt="Histogram">
-            </picture>
-          </div>
-          <h3 class="cards__item-title">Avatar</h3>
-        </a>
+          <a href="/01-avatar" class="cards__item tabs__viewer-item tabs__viewer-item_elements">
+            <div class="cards__item-picture">
+              <picture>
+                <source srcset="assets/images/card-picture-avatar-preview-1x.png" media="(min-width: 735px)">
+                <source srcset="assets/images/card-picture-avatar-preview-2x.png" media="(max-width: 734px)">
+                <img src="assets/images/card-picture-avatar-preview-1x.png" alt="Histogram">
+              </picture>
+            </div>
+            <h3 class="cards__item-title">Avatar</h3>
+          </a>
 
+        </div>
       </div>
+
 
     </div>
   </main>

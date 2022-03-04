@@ -1,6 +1,6 @@
 .header {
   background-color: var(--bg-main);
-  padding: var(--sp-24) 0 0 0;
+  padding: var(--sp-24) 0 calc(var(--tabs-y-shift) * -1) 0;
   width: 100%;
   border-bottom: 1px solid var(--grey-2);
 }
