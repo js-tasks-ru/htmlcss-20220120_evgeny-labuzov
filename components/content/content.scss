@@ -1,0 +1,41 @@
+.content {
+  background-color: var(--grey-0);
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+
+
+  &__viewer {
+    background-color: var(--bg-ui-widgets);
+    box-shadow: var(--shd-card);
+    padding: 2rem 3rem;
+    border: 0 solid transparent;
+    border-radius: var(--rad-card);
+    width: auto;
+
+    @media $mediaMobile {
+      padding: 0;
+      min-width: unset;
+      box-shadow: none;
+    }
+  }
+
+  &__title {
+    font-family: var(--ff-inter);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.36;
+    color: var(--grey-4);
+    margin-bottom: var(--sp-24);
+
+    @media $mediaMobile {
+      font-size: var(--fz-title-s);
+      line-height: 1.3;
+    }
+  }
+
+  &__picture {
+    /**/
+  }
+}
