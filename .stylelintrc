@@ -1,4 +1,5 @@
 {
+  "customSyntax": "postcss-scss",
   "rules": {
     "block-no-empty": true,
     "color-no-invalid-hex": true,
@@ -16,5 +17,5 @@
     "string-quotes": "single",
     "value-no-vendor-prefix": null,
     "declaration-empty-line-before": "never"
-  }
+  },
 }
