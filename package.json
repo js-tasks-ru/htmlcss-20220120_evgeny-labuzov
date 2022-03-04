@@ -5,6 +5,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "start:debug": "nodemon --inspect index.js",
+    "build": "postcss assets/css/main.scss -o build/index.css",
     "test": "cross-env NODE_ENV=test mocha --no-warnings --ignore=node_modules/** **/*.test.js"
   },
   "husky": {
@@ -33,7 +34,8 @@
     "postcss-import": "^14.0.2",
     "postcss-nested": "^5.0.6",
     "postcss-scss": "^4.0.3",
-    "precss": "^4.0.0"
+    "precss": "^4.0.0",
+    "stylelint": "^14.5.3"
   },
   "dependencies": {
     "express": "^4.17.2",

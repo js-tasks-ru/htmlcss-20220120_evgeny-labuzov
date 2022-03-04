@@ -46,6 +46,7 @@ const static = [
   '07-lection5/03-toggler',
   '07-lection5/04-input',
   'assets/images',
+  'build',
 ];
 
 app.use('/assets', express.static('assets', options));
