@@ -1,0 +1,49 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  &__container_inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 3.6rem;
+    padding-top: 2.375rem;
+    @media $mediaMobile {
+      grid-template-columns: 1fr;
+      padding-top: 2rem;
+    }
+  }
+
+  &_inner {
+    .page__header {
+      padding: var(--sp-24) 0;
+      background-color: var(--bg-header-inner);
+      @media $mediaMobile {
+        padding: 1rem 0;
+        background-color: var(--bg-header-inner-mobile);
+      }
+    }
+
+    .page__content {
+      background-color: var(--bg-content-inner);
+      @media $mediaMobile {
+        background-color: var(--bg-main);
+      }
+    }
+
+
+    .page__footer {
+      background-color: var(--bg-footer-inner);
+      padding: 3.5rem 0;
+      @media $mediaMobile {
+        background-color: var(--bg-main);
+      }
+    }
+
+    .page__footer-title {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+
+}

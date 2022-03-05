@@ -1,0 +1,27 @@
+.header {
+  background-color: var(--bg-main);
+  padding: var(--sp-24) 0 calc(var(--tabs-y-shift) * -1) 0;
+  width: 100%;
+  border-bottom: 1px solid var(--grey-2);
+
+  @media $mediaMobile {
+    padding-top: 1rem;
+  }
+
+  &__title {
+    font-family: var(--ff-common-title);
+    font-size: var(--fz-title-xl);
+    line-height: var(--lh-title);
+    font-weight: 500;
+    color: var(--clr-common-title);
+    margin-top: 2.375rem;
+    margin-bottom: 2.5rem;
+
+    @media $mediaMobile {
+      margin: 3rem 0 2rem 0;
+      font-size: var(--fz-title-m);
+      line-height: 1.36;
+    }
+  }
+
+}

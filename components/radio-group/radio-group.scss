@@ -1,0 +1,19 @@
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  &__item:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    margin-bottom: calc(1rem / 1.2307);
+    color: var(--grey-3);
+    text-transform: uppercase;
+    font-family: var(--ff-inter);
+    font-size: calc(1rem / 1.3333);
+    letter-spacing: .04em;
+    line-height: 1.5;
+  }
+}

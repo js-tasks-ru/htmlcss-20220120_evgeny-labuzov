@@ -1,0 +1,84 @@
+.tabs {
+  &__input {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 2.5rem;
+    position: absolute;
+    transform: translateY(var(--tabs-y-shift));
+  }
+
+  &__label {
+    --l-color-border: var(--transpr);
+    --l-color: var(--grey-3);
+    user-select: none;
+    white-space: nowrap;
+    font-family: var(--ff-inter);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--l-color);
+    border-bottom: calc(1rem / 3.2) solid var(--l-color-border);
+    padding-bottom: var(--sp-8);
+    cursor: pointer;
+    transition: border var(--trz-eo-015),
+      color var(--trz-eo-015);
+
+
+    &:hover {
+      --l-color-border: var(--grey-2);
+      --l-color: var(--grey-4);
+    }
+    @media $mediaMobile {
+      --l-color-border: var(--grey-0);
+    }
+  }
+
+  /* Tabs */
+  &__input_tab-all:checked ~ &__menu &__label&__input_tab-all {
+    --l-color-border: var(--black);
+    --l-color: var(--black);
+  }
+  &__input_tab-elements:checked ~ &__menu &__label&__input_tab-elements {
+    --l-color-border: var(--black);
+    --l-color: var(--black);
+  }
+  &__input_tab-containers:checked ~ &__menu &__label&__input_tab-containers {
+    --l-color-border: var(--black);
+    --l-color: var(--black);
+  }
+  &__input_tab-templates:checked ~ &__menu &__label&__input_tab-templates {
+    --l-color-border: var(--black);
+    --l-color: var(--black);
+  }
+
+
+  /* Viewer */
+  &__viewer { /**/ }
+
+  &__viewer-item {
+    display: none;
+  }
+
+  &__input_tab-all:checked ~ &__viewer &__viewer-item {
+    display: flex;
+  }
+
+  &__input_tab-elements:checked ~ &__viewer &__viewer-item&__viewer-item_elements {
+    display: flex;
+  }
+  &__input_tab-containers:checked ~ &__viewer &__viewer-item&__viewer-item_containers {
+    display: flex;
+  }
+  &__input_tab-templates:checked ~ &__viewer &__viewer-item&__viewer-item_templates {
+    display: flex;
+  }
+
+}

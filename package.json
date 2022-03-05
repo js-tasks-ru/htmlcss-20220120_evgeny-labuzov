@@ -5,6 +5,10 @@
   "scripts": {
     "start": "nodemon index.js",
     "start:debug": "nodemon --inspect index.js",
+    "build:styles": "postcss assets/css/main.scss -o build/index.css",
+    "build:styles:dev": "postcss assets/css/main.scss -o build/index.css -w",
+    "build:styles:lint": "npm run lint:styles:fix && npm run build:styles",
+    "lint:styles:fix": "npx stylelint --fix **/*.scss",
     "test": "cross-env NODE_ENV=test mocha --no-warnings --ignore=node_modules/** **/*.test.js"
   },
   "husky": {
@@ -22,10 +26,19 @@
   "author": "Sergey Zelenov",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.2",
     "chai": "^4.2.0",
     "cross-env": "^7.0.2",
+    "cssnano": "^5.1.0",
     "mocha": "^7.1.2",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "postcss": "^8.4.7",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.6",
+    "postcss-scss": "^4.0.3",
+    "precss": "^4.0.0",
+    "stylelint": "^14.5.3"
   },
   "dependencies": {
     "express": "^4.17.2",

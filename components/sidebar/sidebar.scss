@@ -1,0 +1,60 @@
+.sidebar {
+  @media $mediaMobile {
+    display: none;
+  }
+
+  &__title {
+    font-family: var(--ff-inter);
+    font-weight: 400;
+    font-size: var(--fz-title-s);
+    line-height: 1.3;
+    color: var(--clr-common-title);
+    margin-bottom: 1rem;
+
+  }
+
+  &__navigation { /**/ }
+
+  &__link {
+    --sp: calc(var(--sp-8) / 4);
+    --spn: calc(var(--sp) * -1);
+    display: block;
+    font-family: var(--ff-inter);
+    font-weight: 400;
+    font-size: var(--fz-text-s);
+    line-height: 1.57;
+    text-decoration: none;
+    border-radius: var(--sp);
+    padding: var(--sp);
+    margin-left: var(--spn);
+    margin-right: var(--spn);
+    color: var(--clr-common-text);
+    background-color: var(--transpr);
+    transition: color var(--trz-eo-015),
+      background-color var(--trz-eo-025);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: var(--notificaiton);
+      background-color: var(--bg-sidebar-hover);
+    }
+
+    &_active{
+      color: var(--notificaiton);
+      background-color: var(--transpr);
+      cursor: default;
+      &:hover,
+      &:focus {
+        background-color: var(--transpr);
+      }
+    }
+  }
+
+
+  &_separate {
+    margin-top: 1.875rem;
+  }
+
+
+}
