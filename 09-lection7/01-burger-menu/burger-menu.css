@@ -1,0 +1,123 @@
+.burger-menu {
+  --l-shift: 5.5rem;
+  display: none;
+}
+
+/* button */
+.burger-menu__button {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+
+  position: relative;
+  z-index: 2;
+
+  line-height: 0;
+
+  background-color: var(--transpr);
+  background-image: var(--ic-menu);
+  background-repeat: no-repeat;
+  background-position: 4px 4px;
+
+  border-radius: 50%;
+  border: none;
+
+  cursor: pointer;
+
+  transition: background-color var(--trz-eo-015),
+              background-image var(--trz-eo-015);
+}
+
+
+
+.burger-menu__button:hover {
+  background-color: var(--grey-2);
+}
+
+
+.burger-menu_open .burger-menu__button {
+  background-color: var(--grey-2);
+  background-image: var(--ic-menu-close);
+}
+.burger-menu_open .burger-menu__button:hover {
+  background-color: var(--grey-3);
+}
+
+
+/* content */
+.burger-menu__content {
+  display: none;
+
+  background: var(--bg-main);
+  opacity: 0;
+
+  position: absolute;
+  top: 0;
+  z-index: 1;
+
+  height: 100%;
+
+  padding-top: 9rem;
+
+
+  transition: transform var(--trz-eo-025),
+              opacity var(--trz-eo-025);
+}
+
+
+
+.burger-menu_open .burger-menu__content {
+  transform: translateX(calc(0% - var(--l-shift)));
+  opacity: 1;
+  width: 100%;
+  padding-left: var(--l-shift);
+}
+
+.burger-menu_close .burger-menu__content {
+  transform: translateX(-200%);
+}
+
+/* title */
+.burger-menu__title {
+  color: var(--grey-3);
+}
+
+.burger-menu__separator {
+  display: block;
+  width: 100%;
+  height: 1px;
+
+
+  position: relative;
+  top: 1rem;
+  z-index: 3;
+
+  opacity: 0;
+  background-color: var(--grey-2);
+
+  transition: transform var(--trz-eo-025),
+              opacity var(--trz-eo-025);
+}
+
+.burger-menu_open .burger-menu__separator {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.burger-menu_close .burger-menu__separator {
+  transform: translateX(-200%);
+}
+
+._overflow\:hidden {
+  overflow: hidden;
+  border-right: 17px solid transparent;
+}
+
+@media screen and (max-width: 375px) {
+  .burger-menu {
+    display: block;
+  }
+  .burger-menu__content {
+    display: block;
+  }
+}

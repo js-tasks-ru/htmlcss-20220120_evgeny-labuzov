@@ -45,6 +45,7 @@ const static = [
   '07-lection5/02-radio',
   '07-lection5/03-toggler',
   '07-lection5/04-input',
+  '09-lection7/01-burger-menu',
   'assets/images',
   'build',
 ];
