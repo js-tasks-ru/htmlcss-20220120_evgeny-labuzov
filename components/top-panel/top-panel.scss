@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: baseline;
+  position: relative;
   @media $mediaMobile {
     min-height: unset;
     flex-direction: column;
@@ -13,6 +14,10 @@
   &__logotype-link{
     display: block;
     line-height: 0;
+    z-index: 1;
+    @media $mediaMobile {
+      padding-left: 2.3rem;
+    }
   }
 
   &__logotype {

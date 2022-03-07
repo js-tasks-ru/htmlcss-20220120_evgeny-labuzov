@@ -1,5 +1,7 @@
 $mediaMaxWidthMobile: 375px;
+$mediaMaxWidthTablet: 768px;
 $mediaMobile: screen and (max-width: $mediaMaxWidthMobile);
+$mediaTablet: screen and (max-width: $mediaMaxWidthTablet);
 
 :root {
   /* colors: */

@@ -16,7 +16,7 @@
   <script defer src="./burger-menu.js"></script>
   <title>🍔 Burger Menu</title>
   <style>
-    body { padding: var(--sp-64); }
+    body { padding: 1rem; }
     .presentation {}
     .title {
       font-size: 1.3rem;
@@ -29,24 +29,40 @@
 
   <div class="presentation">
 
-    <div class="burger-menu burger-menu_close" id="burger-menu" data-for="#sidebar">
-      <button class="burger-menu__button"></button>
-      <div class="burger-menu__separator"></div>
-      <aside id="sidebar" class="sidebar burger-menu__content">
-        <h4 class="sidebar__title burger-menu__title">Components</h4>
-        <nav class="sidebar__navigation">
-          <a href="#" class="sidebar__link">Modal</a>
-          <a href="#" class="sidebar__link">Tooltip</a>
-          <a href="#" class="sidebar__link">Avatar</a>
-          <a href="#" class="sidebar__link">Calendar</a>
-          <a href="./template.html" class="sidebar__link sidebar__link_active">Histogram</a>
-          <a href="#" class="sidebar__link">Custom form elements</a>
-          <a href="../index.html" class="sidebar__link sidebar_separate">Main page</a>
-        </nav>
-      </aside>
+
+    <aside class="top-panel">
+      <div class="burger-menu burger-menu_close" id="burger-menu" data-for=".burger-menu__content">
+        <button class="burger-menu__button"></button>
+        <div class="burger-menu__content">
+          <div class="burger-menu__separator"></div>
+          <label class="toggler toggler_reverse toggler_full-width burger-menu__switch">
+            <input class="toggler__input" type="checkbox">
+            <span class="toggler__label">Dark mode</span>
+          </label>
+          <div class="burger-menu__separator"></div>
+          <aside class="sidebar burger-menu__sidebar">
+            <h4 class="sidebar__title burger-menu__title">Components</h4>
+            <nav class="sidebar__navigation">
+              <a href="#" class="sidebar__link">Modal</a>
+              <a href="#" class="sidebar__link">Tooltip</a>
+              <a href="#" class="sidebar__link">Avatar</a>
+              <a href="#" class="sidebar__link">Calendar</a>
+              <a href="./template.html" class="sidebar__link sidebar__link_active">Histogram</a>
+              <a href="#" class="sidebar__link">Custom form elements</a>
+              <a href="../index.html" class="sidebar__link sidebar_separate">Main page</a>
+            </nav>
+          </aside>
+        </div>
+
+      </div>
+
+      <a href="/" class="top-panel__logotype-link">
+        <img class="top-panel__logotype" src="assets/images/logotype.svg" alt="Logotype">
+      </a>
+    </aside>
 
 
-    </div>
+
 
 
   </div>
