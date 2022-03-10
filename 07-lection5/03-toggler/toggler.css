@@ -45,6 +45,7 @@
   content: "";
   box-sizing: border-box;
   display: inline-block;
+  min-width: var(--l-size-w);
   width: var(--l-size-w);
   height: var(--l-size-h);
   margin-right: calc(1rem / 1.3333);
@@ -61,6 +62,7 @@
   position: absolute;
   top: 2px;
   left: var(--l-position);
+  min-width: calc(var(--l-size-h) - 4px);
   width: calc(var(--l-size-h) - 4px);
   height: calc(var(--l-size-h) - 4px);
   border-radius: 50%;
@@ -90,4 +92,37 @@
 
 .toggler__input:disabled:checked ~ .toggler__label:after {
   --l-bg-disc: var(--bg-main);
+}
+
+.toggler.toggler_full-width {
+  width: 100%;
+}
+.toggler.toggler_full-width .toggler__label:before {
+  margin-right: auto;
+}
+.toggler.toggler_reverse.toggler_full-width .toggler__label:before {
+  margin-right: unset;
+  margin-left: auto;
+}
+
+.toggler.toggler_reverse .toggler__label {
+  flex-direction: row-reverse;
+}
+
+.toggler.toggler_reverse .toggler__label:after {
+  top: 2px;
+  left: auto;
+  right: var(--l-position);
+  transition: right var(--trz-skid-015);
+}
+
+.toggler.toggler_reverse .toggler__label:before {
+  margin-right: unset;
+  margin-left: calc(1rem / 1.3333);
+}
+
+@media screen and (max-width: 375px) {
+  .toggler__label {
+    align-items: flex-start;
+  }
 }
