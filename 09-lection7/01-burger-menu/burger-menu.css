@@ -100,6 +100,9 @@
   .burger-menu__button {
     position: relative;
   }
+  .burger-menu__sidebar {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 375px) {
