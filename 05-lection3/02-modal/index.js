@@ -121,18 +121,18 @@
 
   const { modal = null } = Modal.getModalById('modal1');
 
-  let blurContainers = [...(qs('.presentation', document.body, 'querySelectorAll') || [])];
+  let blurContainers = [...(qs('.modal-effect', document.body, 'querySelectorAll') || [])];
   let cond = blurContainers && blurContainers.length && blurContainers.length > 0;
 
   // open event
   modal && modal.addEventListener('modal-open', e => {
-    cond && blurContainers.forEach(el => cl(el, 'presentation_blur&contrast', 'add'));
+    cond && blurContainers.forEach(el => cl(el, 'modal-effect_blur&contrast', 'add'));
     console.log('Modal is opened', e, modal);
   });
 
   // close event
   modal && modal.addEventListener('modal-close', e => {
-    cond && blurContainers.forEach(el => cl(el, 'presentation_blur&contrast', 'remove'));
+    cond && blurContainers.forEach(el => cl(el, 'modal-effect_blur&contrast', 'remove'));
     console.log('Modal is closed', e, modal);
   });
 })();
