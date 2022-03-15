@@ -19,8 +19,16 @@ const routes = [
   ['toggler', '/03-toggler', '07-lection5/03-toggler/index.html'],
   ['input', '/04-input', '07-lection5/04-input/index.html'],
   ['burgerMenu', '/01-burger-menu', '09-lection7/01-burger-menu/index.html'],
+
   ['template', '/template', 'pages/template.html'],
   ['icons', '/icons', 'pages/icons.html'],
+
+  ['p-avatar', '/avatar', 'pages/p-avatar.html'],
+  ['p-calendar', '/calendar', 'pages/p-calendar.html'],
+  ['p-elements', '/elements', 'pages/p-elements.html'],
+  ['p-histogram', '/histogram', 'pages/p-histogram.html'],
+  ['p-modal', '/modal', 'pages/p-modal.html'],
+  ['p-tooltip', '/tooltip', 'pages/p-tooltip.html'],
 ];
 
 const obj = routes.reduce((sum, [key, url, path]) => {

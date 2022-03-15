@@ -48,6 +48,7 @@ const static = [
   '09-lection7/01-burger-menu',
   'assets/images',
   'build',
+  'libs',
 ];
 
 app.use('/assets', express.static('assets', options));

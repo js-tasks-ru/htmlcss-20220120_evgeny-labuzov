@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="../build/index.css">
+  <title>📊 Histogram</title>
+  <script src="../assets/js/utils.js"></script>
+  <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
+</head>
+
+<body class="page page_inner">
+
+  <header class="header page__header">
+    <div class="container">
+      <aside class="top-panel">
+        <div class="burger-menu burger-menu_close" id="burger-menu" data-for=".burger-menu__content">
+          <button class="burger-menu__button"></button>
+          <div class="burger-menu__content">
+            <div class="burger-menu__separator"></div>
+            <label class="toggler toggler_reverse toggler_full-width burger-menu__switch">
+              <input class="toggler__input" type="checkbox">
+              <span class="toggler__label">Dark mode</span>
+            </label>
+            <div class="burger-menu__separator"></div>
+            <aside class="sidebar burger-menu__sidebar">
+              <h4 class="sidebar__title burger-menu__title">Components</h4>
+              <nav class="sidebar__navigation">
+                <a href="/modal" class="sidebar__link">Modal</a>
+                <a href="/tooltip" class="sidebar__link">Tooltip</a>
+                <a href="/avatar" class="sidebar__link">Avatar</a>
+                <a href="/calendar" class="sidebar__link">Calendar</a>
+                <a href="/histogram" class="sidebar__link sidebar__link_active">Histogram</a>
+                <a href="/elements" class="sidebar__link">Custom form elements</a>
+                <a href="/" class="sidebar__link sidebar_separate">Main page</a>
+              </nav>
+            </aside>
+          </div>
+
+        </div>
+
+        <a href="/" class="top-panel__logotype-link">
+          <img class="top-panel__logotype" src="assets/images/logotype.svg" alt="Logotype">
+        </a>
+      </aside>
+    </div>
+  </header>
+
+  <main class="content page__content">
+    <div class="container page__container page__container_inner">
+      <aside class="sidebar">
+        <h4 class="sidebar__title">Components</h4>
+        <nav class="sidebar__navigation">
+          <a href="/modal" class="sidebar__link">Modal</a>
+          <a href="/tooltip" class="sidebar__link">Tooltip</a>
+          <a href="/avatar" class="sidebar__link">Avatar</a>
+          <a href="/calendar" class="sidebar__link">Calendar</a>
+          <a href="/histogram" class="sidebar__link sidebar__link_active">Histogram</a>
+          <a href="/elements" class="sidebar__link">Custom form elements</a>
+          <a href="/" class="sidebar__link sidebar_separate">Main page</a>
+        </nav>
+      </aside>
+      <section class="content__viewer">
+        <h3 class="content__title">Histogram</h3>
+        <div class="histogram">
+          <div class="histogram__info">
+            <label class="histogram__label">Total orders</label>
+            <p class="histogram__value">50254</p>
+            <button class="histogram__action">View all</button>
+          </div>
+          <div class="histogram__chart">
+            <div class="histogram__column" style="height: 10%"></div>
+            <div class="histogram__column" style="height: 20%"></div>
+            <div class="histogram__column" style="height: 30%"></div>
+            <div class="histogram__column" style="height: 40%"></div>
+            <div class="histogram__column" style="height: 11%"></div>
+            <div class="histogram__column" style="height: 14%"></div>
+            <div class="histogram__column" style="height: 16%"></div>
+            <div class="histogram__column" style="height: 18%"></div>
+            <div class="histogram__column" style="height: 20%"></div>
+            <div class="histogram__column" style="height: 40%"></div>
+            <div class="histogram__column" style="height: 60%"></div>
+            <div class="histogram__column" style="height: 80%"></div>
+            <div class="histogram__column" style="height: 22%"></div>
+            <div class="histogram__column" style="height: 24%"></div>
+            <div class="histogram__column" style="height: 26%"></div>
+            <div class="histogram__column" style="height: 28%"></div>
+            <div class="histogram__column" style="height: 30%"></div>
+            <div class="histogram__column" style="height: 40%"></div>
+            <div class="histogram__column" style="height: 50%"></div>
+            <div class="histogram__column" style="height: 60%"></div>
+            <div class="histogram__column" style="height: 33%"></div>
+            <div class="histogram__column" style="height: 36%"></div>
+            <div class="histogram__column" style="height: 39%"></div>
+            <div class="histogram__column" style="height: 41%"></div>
+            <div class="histogram__column" style="height: 12%"></div>
+            <div class="histogram__column" style="height: 16%"></div>
+            <div class="histogram__column" style="height: 18%"></div>
+            <div class="histogram__column" style="height: 81%"></div>
+            <div class="histogram__column" style="height: 61%"></div>
+            <div class="histogram__column" style="height: 21%"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer page__footer">
+    <div class="container">
+      <div class="footer__content">
+        <h5 class="footer__title page__footer-title footer__title_mutetext">Reusable component library</h5>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
