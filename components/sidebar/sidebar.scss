@@ -2,6 +2,9 @@
   @media $mediaMobile {
     display: none;
   }
+  @media $mediaTablet {
+    display: none;
+  }
 
   &__title {
     font-family: var(--ff-inter);

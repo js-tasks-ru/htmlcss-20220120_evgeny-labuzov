@@ -11,7 +11,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="./build/index.css">
-  <title>🏠Home</title>
+  <title>🏠 Home</title>
 </head>
 
 <body class="page">
@@ -26,9 +26,6 @@
         </a>
       </aside>
       <h1 class="header__title">Reusable component library</h1>
-
-
-
     </div>
   </header>
 
@@ -37,45 +34,43 @@
     <div class="container">
 
       <div class="tabs">
-        <input class="tabs__input tabs__input_tab-all" type="radio" name="nav" id="tab-all" >
-        <input class="tabs__input tabs__input_tab-elements" type="radio" name="nav" id="tab-elements">
-        <input class="tabs__input tabs__input_tab-containers" type="radio" name="nav" id="tab-containers" checked>
-        <input class="tabs__input tabs__input_tab-templates" type="radio" name="nav" id="tab-templates">
+        <input class="tabs__input tabs__input_tab-all" type="radio" name="nav" id="tab-all" checked>
+        <input class="tabs__input tabs__input_tab-atoms" type="radio" name="nav" id="tab-atoms">
+        <input class="tabs__input tabs__input_tab-molecules" type="radio" name="nav" id="tab-molecules">
+        <input class="tabs__input tabs__input_tab-organisms" type="radio" name="nav" id="tab-organisms">
         <div class="tabs__menu">
           <label class="tabs__label tabs__input_tab-all" for="tab-all">All components</label>
-          <label class="tabs__label tabs__input_tab-elements" for="tab-elements">Elements</label>
-          <label class="tabs__label tabs__input_tab-containers" for="tab-containers">Containers</label>
-          <label class="tabs__label tabs__input_tab-templates" for="tab-templates">Templates</label>
+          <label class="tabs__label tabs__input_tab-atoms" for="tab-atoms">Atoms</label>
+          <label class="tabs__label tabs__input_tab-molecules" for="tab-molecules">Molecules</label>
+          <label class="tabs__label tabs__input_tab-organisms" for="tab-organisms">Organisms</label>
         </div>
         <div class="cards cards_modif tabs__viewer">
 
-          <a href="/01-tooltip" class="cards__item tabs__viewer-item tabs__viewer-item_elements">
-            <div class="cards__item-picture"></div>
-            <h3 class="cards__item-title">Tooltip</h3>
-          </a>
-
-          <a href="#" class="cards__item tabs__viewer-item tabs__viewer-item_elements">
-            <div class="cards__item-picture"></div>
-            <h3 class="cards__item-title">Custom form elements</h3>
-          </a>
-
-          <a href="/03-calendar" class="cards__item tabs__viewer-item tabs__viewer-item_templates">
+          <a href="/tooltip" class="cards__item tabs__viewer-item tabs__viewer-item_atoms">
             <div class="cards__item-picture">
               <picture>
-                <source srcset="assets/images/card-picture-calendar-preview-1x.png" media="(min-width: 735px)">
-                <source srcset="assets/images/card-picture-calendar-preview-2x.png" media="(max-width: 734px)">
-                <img src="assets/images/card-picture-calendar-preview-1x.png" alt="Histogram">
+                <source srcset="assets/images/card-picture-tooltip-preview-1x.png" media="(min-width: 735px)">
+                <source srcset="assets/images/card-picture-tooltip-preview-2x.png" media="(max-width: 734px)">
+                <img src="assets/images/card-picture-tooltip-preview-1x.png" alt="Tooltip">
               </picture>
             </div>
-            <h3 class="cards__item-title">Calendar</h3>
+            <h3 class="cards__item-title">Tooltip</h3>
+            <p class="cards__item-undertitle">Atom</p>
           </a>
 
-          <a href="/02-modal" class="cards__item tabs__viewer-item tabs__viewer-item_containers">
-            <div class="cards__item-picture"></div>
-            <h3 class="cards__item-title">Modal dialog</h3>
+          <a href="/modal" class="cards__item tabs__viewer-item tabs__viewer-item_organisms">
+            <div class="cards__item-picture">
+              <picture>
+                <source srcset="assets/images/card-picture-modal-preview-1x.png" media="(min-width: 735px)">
+                <source srcset="assets/images/card-picture-modal-preview-2x.png" media="(max-width: 734px)">
+                <img src="assets/images/card-picture-modal-preview-1x.png" alt="Modal">
+              </picture>
+            </div>
+            <h3 class="cards__item-title">Modal</h3>
+            <p class="cards__item-undertitle">Organism</p>
           </a>
 
-          <a href="/01-histogram" class="cards__item tabs__viewer-item tabs__viewer-item_elements">
+          <a href="/histogram" class="cards__item tabs__viewer-item tabs__viewer-item_organisms">
             <div class="cards__item-picture">
               <picture>
                 <source srcset="assets/images/card-picture-histogram-preview-1x.png" media="(min-width: 735px)">
@@ -84,17 +79,43 @@
               </picture>
             </div>
             <h3 class="cards__item-title">Histogram</h3>
+            <p class="cards__item-undertitle">Organism</p>
           </a>
 
-          <a href="/01-avatar" class="cards__item tabs__viewer-item tabs__viewer-item_elements">
+          <a href="/avatar" class="cards__item tabs__viewer-item tabs__viewer-item_atoms">
             <div class="cards__item-picture">
               <picture>
                 <source srcset="assets/images/card-picture-avatar-preview-1x.png" media="(min-width: 735px)">
                 <source srcset="assets/images/card-picture-avatar-preview-2x.png" media="(max-width: 734px)">
-                <img src="assets/images/card-picture-avatar-preview-1x.png" alt="Histogram">
+                <img src="assets/images/card-picture-avatar-preview-1x.png" alt="Avatar">
               </picture>
             </div>
             <h3 class="cards__item-title">Avatar</h3>
+            <p class="cards__item-undertitle">Atom</p>
+          </a>
+
+          <a href="/elements" class="cards__item tabs__viewer-item tabs__viewer-item_molecules">
+            <div class="cards__item-picture">
+              <picture>
+                <source srcset="assets/images/card-picture-elements-preview-1x.png" media="(min-width: 735px)">
+                <source srcset="assets/images/card-picture-elements-preview-2x.png" media="(max-width: 734px)">
+                <img src="assets/images/card-picture-elements-preview-1x.png" alt="Elements">
+              </picture>
+            </div>
+            <h3 class="cards__item-title">Custom form elements</h3>
+            <p class="cards__item-undertitle">Molecule</p>
+          </a>
+
+          <a href="/calendar" class="cards__item tabs__viewer-item tabs__viewer-item_molecules">
+            <div class="cards__item-picture">
+              <picture>
+                <source srcset="assets/images/card-picture-calendar-preview-1x.png" media="(min-width: 735px)">
+                <source srcset="assets/images/card-picture-calendar-preview-2x.png" media="(max-width: 734px)">
+                <img src="assets/images/card-picture-calendar-preview-1x.png" alt="Calendar">
+              </picture>
+            </div>
+            <h3 class="cards__item-title">Calendar</h3>
+            <p class="cards__item-undertitle">Molecule</p>
           </a>
 
         </div>

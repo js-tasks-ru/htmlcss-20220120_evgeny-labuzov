@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="../build/index.css">
+  <title>📠 Custom form elements</title>
+  <script src="../assets/js/utils.js"></script>
+  <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
+  <style>
+    .presentation {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+
+<body class="page page_inner">
+
+  <header class="header page__header">
+    <div class="container">
+      <aside class="top-panel">
+        <div class="burger-menu burger-menu_close" id="burger-menu" data-for=".burger-menu__content">
+          <button class="burger-menu__button"></button>
+          <div class="burger-menu__content">
+            <div class="burger-menu__separator"></div>
+            <label class="toggler toggler_reverse toggler_full-width burger-menu__switch">
+              <input class="toggler__input" type="checkbox">
+              <span class="toggler__label">Dark mode</span>
+            </label>
+            <div class="burger-menu__separator"></div>
+            <aside class="sidebar burger-menu__sidebar">
+              <h4 class="sidebar__title burger-menu__title">Components</h4>
+              <nav class="sidebar__navigation">
+                <a href="/modal" class="sidebar__link">Modal</a>
+                <a href="/tooltip" class="sidebar__link">Tooltip</a>
+                <a href="/avatar" class="sidebar__link">Avatar</a>
+                <a href="/calendar" class="sidebar__link">Calendar</a>
+                <a href="/histogram" class="sidebar__link">Histogram</a>
+                <a href="/elements" class="sidebar__link sidebar__link_active">Custom form elements</a>
+                <a href="/" class="sidebar__link sidebar_separate">Main page</a>
+              </nav>
+            </aside>
+          </div>
+
+        </div>
+
+        <a href="/" class="top-panel__logotype-link">
+          <img class="top-panel__logotype" src="assets/images/logotype.svg" alt="Logotype">
+        </a>
+      </aside>
+    </div>
+  </header>
+
+  <main class="content page__content">
+    <div class="container page__container page__container_inner">
+      <aside class="sidebar">
+        <h4 class="sidebar__title">Elements</h4>
+        <nav class="sidebar__navigation">
+          <a href="/modal" class="sidebar__link">Modal</a>
+          <a href="/tooltip" class="sidebar__link">Tooltip</a>
+          <a href="/avatar" class="sidebar__link">Avatar</a>
+          <a href="/calendar" class="sidebar__link">Calendar</a>
+          <a href="/histogram" class="sidebar__link">Histogram</a>
+          <a href="/elements" class="sidebar__link sidebar__link_active">Custom form elements</a>
+          <a href="/" class="sidebar__link sidebar_separate">Main page</a>
+        </nav>
+      </aside>
+      <section class="content__viewer">
+        <h3 class="content__title">Histogram</h3>
+
+        <div class="presentation">
+          <div class="radio-group">
+            <label class="radio radio-group__item">
+              <input name="radio1" class="radio__input" type="radio">
+              <span class="radio__label">Default</span>
+            </label>
+
+            <label class="radio radio-group__item">
+              <input name="radio1" class="radio__input" type="radio" checked>
+              <span class="radio__label">Selected</span>
+            </label>
+
+            <label class="radio radio-group__item">
+              <input name="radio2" class="radio__input" type="radio" disabled>
+              <span class="radio__label">Disabled</span>
+            </label>
+
+            <label class="radio radio-group__item">
+              <input name="radio2" class="radio__input" type="radio" checked disabled>
+              <span class="radio__label">Disabled selected</span>
+            </label>
+          </div>
+
+          <div class="checkbox-group">
+
+            <label class="checkbox checkbox-group__item">
+              <input class="checkbox__input" type="checkbox">
+              <span class="checkbox__label">Default</span>
+            </label>
+
+            <label class="checkbox checkbox-group__item">
+              <input class="checkbox__input" type="checkbox" checked>
+              <span class="checkbox__label">Checked</span>
+            </label>
+
+            <label class="checkbox checkbox-group__item">
+              <input class="checkbox__input" type="checkbox" disabled>
+              <span class="checkbox__label">Disabled</span>
+            </label>
+
+            <label class="checkbox checkbox-group__item">
+              <input class="checkbox__input" type="checkbox" checked disabled>
+              <span class="checkbox__label">Disabled</span>
+            </label>
+          </div>
+
+          <div class="toggler-group">
+
+            <label class="toggler toggler-group__item">
+              <input class="toggler__input" type="checkbox">
+              <span class="toggler__label">Off</span>
+            </label>
+
+            <label class="toggler toggler-group__item">
+              <input class="toggler__input" type="checkbox" checked>
+              <span class="toggler__label">On</span>
+            </label>
+
+            <label class="toggler toggler-group__item">
+              <input class="toggler__input" type="checkbox" disabled>
+              <span class="toggler__label">Disabled Off</span>
+            </label>
+
+            <label class="toggler toggler-group__item">
+              <input class="toggler__input" type="checkbox" checked disabled>
+              <span class="toggler__label">Disabled On</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="presentation">
+          <div class="input">
+            <label
+            for="id-default"
+            class="input__label">Label</label>
+            <input
+            id="id-default"
+            placeholder="Placeholder"
+            type="text"
+            class="input__control"/>
+          </div>
+          <div class="input input_invalid">
+            <label
+            for="id-invalid"
+            class="input__label">Error</label>
+            <input
+            id="id-invalid"
+            placeholder="Placeholder"
+            value="Error"
+            type="text"
+            class="input__control"/>
+          </div>
+        </div>
+
+        <div class="presentation">
+          <div class="input input_success">
+            <label
+            for="id-success"
+            class="input__label">Success</label>
+            <input
+            id="id-success"
+            placeholder="Placeholder"
+            type="text"
+            value="Success"
+            class="input__control"/>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer page__footer">
+    <div class="container">
+      <div class="footer__content">
+        <h5 class="footer__title page__footer-title footer__title_mutetext">Reusable component library</h5>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

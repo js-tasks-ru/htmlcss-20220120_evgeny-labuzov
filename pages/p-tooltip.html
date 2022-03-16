@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="../build/index.css">
+  <title>📍 Tooltip</title>
+  <script src="../assets/js/utils.js"></script>
+  <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
+  <link rel="stylesheet" href="../libs/highlight/styles/github.min.css">
+  <script src="../libs/highlight/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+
+<body class="page page_inner">
+
+  <header class="header page__header">
+    <div class="container">
+      <aside class="top-panel">
+        <div class="burger-menu burger-menu_close" id="burger-menu" data-for=".burger-menu__content">
+          <button class="burger-menu__button"></button>
+          <div class="burger-menu__content">
+            <div class="burger-menu__separator"></div>
+            <label class="toggler toggler_reverse toggler_full-width burger-menu__switch">
+              <input class="toggler__input" type="checkbox">
+              <span class="toggler__label">Dark mode</span>
+            </label>
+            <div class="burger-menu__separator"></div>
+            <aside class="sidebar burger-menu__sidebar">
+              <h4 class="sidebar__title burger-menu__title">Components</h4>
+              <nav class="sidebar__navigation">
+                <a href="/modal" class="sidebar__link">Modal</a>
+                <a href="/tooltip" class="sidebar__link sidebar__link_active">Tooltip</a>
+                <a href="/avatar" class="sidebar__link">Avatar</a>
+                <a href="/calendar" class="sidebar__link">Calendar</a>
+                <a href="/histogram" class="sidebar__link">Histogram</a>
+                <a href="/elements" class="sidebar__link">Custom form elements</a>
+                <a href="/" class="sidebar__link sidebar_separate">Main page</a>
+              </nav>
+            </aside>
+          </div>
+
+        </div>
+
+        <a href="/" class="top-panel__logotype-link">
+          <img class="top-panel__logotype" src="assets/images/logotype.svg" alt="Logotype">
+        </a>
+      </aside>
+    </div>
+  </header>
+
+  <main class="content page__content">
+    <div class="container page__container page__container_inner">
+      <aside class="sidebar">
+        <h4 class="sidebar__title">Components</h4>
+        <nav class="sidebar__navigation">
+          <a href="/modal" class="sidebar__link">Modal</a>
+          <a href="/tooltip" class="sidebar__link sidebar__link_active">Tooltip</a>
+          <a href="/avatar" class="sidebar__link">Avatar</a>
+          <a href="/calendar" class="sidebar__link">Calendar</a>
+          <a href="/histogram" class="sidebar__link">Histogram</a>
+          <a href="/elements" class="sidebar__link">Custom form elements</a>
+          <a href="/" class="sidebar__link sidebar_separate">Main page</a>
+        </nav>
+      </aside>
+      <section class="content__viewer">
+        <h3 class="content__title">Tooltip</h3>
+        <div class="tooltip tooltip_arr-right">
+          <svg class="tooltip__icon" width="22" height="22" viewBox="0 0 22 22">
+            <use href="../../assets/images/icons-sprite.svg#help"></use>
+          </svg>
+          <div class="tooltip__bubble">Helper Text</div>
+        </div>
+        <div class="tabs tabs_content">
+          <input class="tabs__input tabs__input_tab-html" type="radio" name="nav" id="tab-html" checked>
+          <input class="tabs__input tabs__input_tab-css" type="radio" name="nav" id="tab-css">
+          <div class="tabs__menu">
+            <label class="tabs__label tabs__input_tab-html" for="tab-html">html</label>
+            <label class="tabs__label tabs__input_tab-css" for="tab-css">css</label>
+          </div>
+          <div class="tabs__viewer">
+            <pre class="source-viewer tabs__viewer-item tabs__viewer-item_html">
+              <code class="language-html">
+&#x3C;div class=&#x22;tooltip tooltip_arr-right&#x22;&#x3E;
+  &#x3C;svg class=&#x22;tooltip__icon&#x22; width=&#x22;22&#x22; height=&#x22;22&#x22; viewBox=&#x22;0 0 22 22&#x22;&#x3E;
+    &#x3C;use href=&#x22;../../assets/images/icons-sprite.svg#help&#x22;&#x3E;&#x3C;/use&#x3E;
+  &#x3C;/svg&#x3E;
+  &#x3C;div class=&#x22;tooltip__bubble&#x22;&#x3E;Helper Text&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+              </code>
+            </pre>
+            <pre class="source-viewer tabs__viewer-item tabs__viewer-item_css">
+              <code class="source-viewer__code language-css">
+.tooltip {
+  font-family: var(--ff-inter);
+  font-size: 1rem;
+  line-height: var(--lh-common);
+  text-align: center;
+
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  cursor: pointer;
+}
+.tooltip__icon {
+  /* Внутренний отступ для расширения зоны реагирования.
+   * Что бы легче было попадать мышью.
+   */
+  padding: 0.5rem;
+  box-sizing: content-box;
+  border-radius: 50%;
+  position: relative;
+  z-index: 10;
+}
+
+/* default */
+.tooltip__icon:hover + .tooltip__bubble {
+  /* ВНИМАНИЕ! Эт0 не ду6лирование. пpоu30шло тв0p4еств0
+   * Анимация указана с задержкой,
+   * что бы тултип сразу не закрывался, когда мышь увели с иконки
+   */
+  transition:
+    transform var(--trz-eo-025),
+    top var(--trz-eo-025),
+    bottom var(--trz-eo-025),
+    left var(--trz-eo-025),
+    opacity var(--trz-eo-025);
+  opacity: 1;
+}
+
+.tooltip__bubble {
+  pointer-events: none;
+  /* ВНИМАНИЕ! Эт0 не ду6лирование. пpоu30шло тв0p4еств0
+   * Анимация указана с задержкой,
+   * что бы тултип сразу не закрывался, когда мышь увели с иконки
+   */
+  transition:
+    transform var(--trz-eo-025-065),
+    top var(--trz-eo-025-065),
+    bottom var(--trz-eo-025-065),
+    left var(--trz-eo-025-065),
+    opacity var(--trz-eo-025-065);
+  transform: scale(0);
+  opacity: 0;
+
+  position: absolute;
+  z-index: 20;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--white);
+  background-color: var(--clr-tooltip-blue);
+  box-shadow: var(--shd-card);
+  min-width: 12ch;
+  max-width: 25vh;
+  width: clamp(12ch, 30rem, 25vw);
+
+  border-radius: var(--rad-tooltip);
+  padding: var(--sp-8) var(--sp-8) var(--sp-8) var(--sp-8);
+}
+
+.tooltip__bubble:after {
+  content: none;
+  display: none;
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 7px 6px 7px;
+  border-color: transparent transparent var(--clr-tooltip-blue) transparent;
+}
+
+.tooltip_arr-bottom, .tooltip_arr-top { flex-direction: column; }
+.tooltip_arr-left, .tooltip_arr-right { flex-direction: row; }
+
+/* ======================= Top */
+.tooltip_arr-top .tooltip__bubble {
+  padding: calc(1rem / 1.2307) var(--sp-8) var(--sp-8) var(--sp-8);
+  transform: scale(0) translateY(-100%);
+  transform-origin: top;
+  top: 0;
+}
+.tooltip_arr-top .tooltip__icon:hover + .tooltip__bubble {
+  transform: scale(1) translateY(-100%);
+  top: -2px;
+}
+.tooltip_arr-top .tooltip__bubble:after {
+  content: "";
+  display: block;
+  transform: rotate(180deg);
+  bottom: -6px;
+}
+
+/* ======================= Bottom */
+.tooltip_arr-bottom .tooltip__bubble {
+  padding:  var(--sp-8) var(--sp-8) calc(1rem / 1.2307) var(--sp-8);
+  transform: scale(0) translateY(100%);
+  transform-origin: bottom;
+  bottom: 0;
+}
+.tooltip_arr-bottom .tooltip__icon:hover + .tooltip__bubble {
+  transform: scale(1) translateY(100%);
+  bottom: -2px;
+}
+.tooltip_arr-bottom .tooltip__bubble:after {
+  content: "";
+  display: block;
+  transform: rotate(0deg);
+  top: -6px;
+}
+
+
+/* ======================= Left */
+.tooltip_arr-left .tooltip__bubble {
+  padding:  var(--sp-8) var(--sp-8) var(--sp-8) calc(1rem / 1.2307);
+  transform: scale(0) translateX(-100%);
+  transform-origin: left;
+  left: 0;
+}
+.tooltip_arr-left .tooltip__icon:hover + .tooltip__bubble {
+  transform: scale(1) translateX(-100%);
+  /* left: calc(var(--sp-8) * -1); */ /* not work */
+  left: -2px;
+}
+.tooltip_arr-left .tooltip__bubble:after {
+  content: "";
+  display: block;
+  transform: rotate(90deg);
+  right: -9px;
+}
+
+/* ======================= Right */
+.tooltip_arr-right .tooltip__bubble {
+  padding:  var(--sp-8) calc(1rem / 1.2307) var(--sp-8) var(--sp-8);
+  transform: scale(0) translateX(100%);
+  transform-origin: right;
+  right: 0;
+}
+.tooltip_arr-right .tooltip__icon:hover + .tooltip__bubble {
+  transform: scale(1) translateX(100%);
+  right: -2px;
+}
+.tooltip_arr-right .tooltip__bubble:after {
+  content: "";
+  display: block;
+  transform: rotate(270deg);
+  left: -9px;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ Danger */
+.tooltip_danger .tooltip__bubble{
+  background-color: var(--error);
+}
+.tooltip_danger .tooltip__icon{
+  color: var(--error);
+}
+.tooltip_danger .tooltip__bubble:after {
+  border-color: transparent transparent var(--error) transparent;
+}
+
+              </code>
+            </pre>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer page__footer">
+    <div class="container">
+      <div class="footer__content">
+        <h5 class="footer__title page__footer-title footer__title_mutetext">Reusable component library</h5>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

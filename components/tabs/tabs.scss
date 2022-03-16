@@ -5,6 +5,27 @@
     position: absolute;
     z-index: -1;
   }
+  &_content {
+    min-width: 100%;
+    position: relative;
+    .tabs__menu {
+      transform: translateY(0);
+      margin-top: var(--sp-24);
+      margin-bottom: var(--sp-24);
+      position: relative;
+
+      &:after {
+        border-bottom: 1px solid var(--grey-2);
+        content: "";
+        display: block;
+
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
 
   &__menu {
     display: flex;
@@ -46,15 +67,23 @@
     --l-color-border: var(--black);
     --l-color: var(--black);
   }
-  &__input_tab-elements:checked ~ &__menu &__label&__input_tab-elements {
+  &__input_tab-atoms:checked ~ &__menu &__label&__input_tab-atoms {
     --l-color-border: var(--black);
     --l-color: var(--black);
   }
-  &__input_tab-containers:checked ~ &__menu &__label&__input_tab-containers {
+  &__input_tab-molecules:checked ~ &__menu &__label&__input_tab-molecules {
     --l-color-border: var(--black);
     --l-color: var(--black);
   }
-  &__input_tab-templates:checked ~ &__menu &__label&__input_tab-templates {
+  &__input_tab-organisms:checked ~ &__menu &__label&__input_tab-organisms {
+    --l-color-border: var(--black);
+    --l-color: var(--black);
+  }
+  &__input_tab-html:checked ~ &__menu &__label&__input_tab-html {
+    --l-color-border: var(--black);
+    --l-color: var(--black);
+  }
+  &__input_tab-css:checked ~ &__menu &__label&__input_tab-css {
     --l-color-border: var(--black);
     --l-color: var(--black);
   }
@@ -71,13 +100,19 @@
     display: flex;
   }
 
-  &__input_tab-elements:checked ~ &__viewer &__viewer-item&__viewer-item_elements {
+  &__input_tab-atoms:checked ~ &__viewer &__viewer-item&__viewer-item_atoms {
     display: flex;
   }
-  &__input_tab-containers:checked ~ &__viewer &__viewer-item&__viewer-item_containers {
+  &__input_tab-molecules:checked ~ &__viewer &__viewer-item&__viewer-item_molecules {
     display: flex;
   }
-  &__input_tab-templates:checked ~ &__viewer &__viewer-item&__viewer-item_templates {
+  &__input_tab-organisms:checked ~ &__viewer &__viewer-item&__viewer-item_organisms {
+    display: flex;
+  }
+  &__input_tab-html:checked ~ &__viewer &__viewer-item&__viewer-item_html {
+    display: flex;
+  }
+  &__input_tab-css:checked ~ &__viewer &__viewer-item&__viewer-item_css {
     display: flex;
   }
 

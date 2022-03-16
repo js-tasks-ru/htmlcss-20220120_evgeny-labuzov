@@ -9,7 +9,11 @@
     grid-column-gap: 3.6rem;
     padding-top: 2.375rem;
     @media $mediaMobile {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(auto-fill, 100%);
+      padding-top: 2rem;
+    }
+    @media $mediaTablet {
+      grid-template-columns: repeat(auto-fill, 100%);
       padding-top: 2rem;
     }
   }

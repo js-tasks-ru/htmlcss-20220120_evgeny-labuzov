@@ -39,6 +39,15 @@
       color: var(--clr-common-title);
       margin-top: 1rem;
     }
+    &-undertitle {
+      text-align: center;
+      font-family: var(--ff-roboto);
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1;
+      color: var(--grey-4);
+      margin-top: calc(1rem / 2.666);
+    }
   }
 
   @media $mediaMobile {

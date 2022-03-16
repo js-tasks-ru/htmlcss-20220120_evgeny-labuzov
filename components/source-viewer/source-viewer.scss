@@ -1,0 +1,23 @@
+.source-viewer {
+  max-width: 100%;
+  overflow: auto;
+  .source-viewer__code{
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 2px;
+      background-color: var(--transpr);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--grey-2);
+      border-radius: 2px;
+    }
+
+    &:hover::-webkit-scrollbar {
+      background-color: var(--grey-2);
+    }
+    &:hover::-webkit-scrollbar-thumb {
+      background-color: var(--grey-4);
+    }
+  }
+}

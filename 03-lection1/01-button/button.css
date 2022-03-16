@@ -5,7 +5,8 @@
 .button {
   transition: background-color var(--trz-eo-015-015),
               color var(--trz-eo-015-015),
-              border var(--trz-eo-015-015);
+              border var(--trz-eo-015-015),
+              transform var(--trz-eo-015-015);
 
   padding-top: var(--sp-pt-buttons);
   padding-right: var(--sp-pr-buttons);
@@ -34,12 +35,19 @@
 
   cursor: pointer;
   outline: none;
+
+  transform: translateY(0);
 }
 
 .button:hover{
   transition: background-color var(--trz-eo-015),
               color var(--trz-eo-015),
-              border var(--trz-eo-015);
+              border var(--trz-eo-015),
+              transform var(--trz-eo-015);
+}
+
+.button:active{
+  transform: translateY(0.25rem);
 }
 
 /* disabled */
