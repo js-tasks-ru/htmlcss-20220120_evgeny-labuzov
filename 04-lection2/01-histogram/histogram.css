@@ -74,11 +74,12 @@
   gap: 1px;
   max-width: 100%;
 
-  transform: scaleY(100%);
+  transform: scaleY(0%);
   transform-origin: bottom;
 
   animation-name: growScaleY;
   animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
   animation-duration: 0.65s;
   animation-delay: 0.25s;
 }
