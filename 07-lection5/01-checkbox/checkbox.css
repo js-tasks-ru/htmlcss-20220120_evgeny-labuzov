@@ -91,3 +91,11 @@
   --l-bg: var(--bg-checkbox-disabled);
   --l-border-color: var(--transpr);
 }
+
+[data-theme-dark] .checkbox__input:checked ~ .checkbox__label:before {
+  --l-bg: var(--l-bg-checkbox-on-dark);
+}
+
+[data-theme-dark] .checkbox__label:after {
+  background-color: var(--l-bg-splash-dark);
+}

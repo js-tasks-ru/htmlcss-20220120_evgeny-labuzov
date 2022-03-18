@@ -1,0 +1,7 @@
+[data-theme-dark] {
+  & .cards {
+    &__item-undertitle {
+      color: var(--font-color);
+    }
+  }
+}

@@ -39,12 +39,12 @@
 
     &:hover,
     &:focus {
-      color: var(--notificaiton);
+      color: var(--clr-sidebar-active);
       background-color: var(--bg-sidebar-hover);
     }
 
     &_active{
-      color: var(--notificaiton);
+      color: var(--clr-sidebar-active);
       background-color: var(--transpr);
       cursor: default;
       &:hover,

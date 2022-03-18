@@ -1,0 +1,5 @@
+[data-theme-dark] {
+  & .header {
+    border-bottom: 1px solid var(--grey-2);
+  }
+}

@@ -1,0 +1,7 @@
+[data-theme-dark] {
+  & .content {
+    &__title {
+      color: var(--grey-2);
+    }
+  }
+}

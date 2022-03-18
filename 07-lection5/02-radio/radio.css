@@ -21,7 +21,7 @@
   font-family: var(--ff-inter);
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--grey-4);
+  color: var(--clr-ui-label-flag);
   cursor: pointer;
 }
 
@@ -36,7 +36,8 @@
 .radio__label:before {
   --l-size: 1.75rem;
   --l-bg: var(--bg-radio-off);
-  --l-border-color: var(--grey-2);
+  --l-border-color: var(--clr-border-flag);
+  --l-border-color-dark: var(--purple);
   content: "";
 
   box-sizing: border-box;
@@ -72,4 +73,8 @@
   --l-bg: var(--bg-radio-disabled);
   --l-border-color: var(--transpr);
   background-blend-mode: color-dodge;
+}
+
+[data-theme-dark] .radio__input:checked ~ .radio__label:before {
+  --l-border-color: var(--l-border-color-dark);
 }

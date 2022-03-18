@@ -37,18 +37,21 @@
 
   box-shadow: var(--shd-empty);
 
+  background-color: var(--bg-ui-input);
   background-image: var(--ic-empty);
   background-repeat: no-repeat;
   background-position: right var(--l-ic-size) center;
   background-size: calc(var(--l-ic-size) + 0.9rem) calc(var(--l-ic-size) + 0.9rem);
 
   border-radius: var(--rad-common);
-  transition: background-image var(--trz-eo-025),
+  transition: background-color var(--trz-eo-025),
+              background-image var(--trz-eo-025),
               box-shadow var(--trz-eo-025),
               border var(--trz-eo-025);
 }
+
 .input__control:disabled {
-  background-color: var(--grey-e5);
+  background-color: var(--bg-ui-input-disabled);
   color: var(--grey-3);
   border: 1px solid var(--grey-3);
   cursor: not-allowed;
@@ -94,4 +97,19 @@
 
 .input_invalid .input__control:focus {
   border: 1px solid var(--secondary);
+}
+
+
+[data-theme-dark] .input__control {
+  border: 1px solid var(--grey-4);
+  color: var(--grey-2);
+}
+
+[data-theme-dark] .input__control::placeholder {
+  color: var(--grey-4);
+}
+
+[data-theme-dark] .input__control:disabled {
+  color: var(--grey-4);
+  border: 1px solid var(--grey-4);
 }

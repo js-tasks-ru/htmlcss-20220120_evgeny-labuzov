@@ -1,0 +1,7 @@
+[data-theme-dark] {
+  & .top-navigation {
+    &__link_active{
+      color: var(--white);
+    }
+  }
+}

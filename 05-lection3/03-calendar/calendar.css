@@ -143,3 +143,44 @@
   opacity: 1;
   background-color: rgba(255, 255, 255, 0);
 }
+
+[data-theme-dark] .calendar__header {
+  color: var(--clr-ui-bea);
+}
+[data-theme-dark] .calendar__day {
+  background-color: var(--bg-ui-widgets);
+}
+[data-theme-dark] .calendar__day:hover,
+[data-theme-dark] .calendar__day:focus {
+  background-color: var(--clr-calendar-blue-light);
+}
+
+[data-theme-dark] .calendar__day:active{
+  background-color: var(--clr-calendar-blue);
+}
+
+
+[data-theme-dark] .calendar__day_period-handle {
+  background-color: var(--clr-calendar-blue);
+}
+
+[data-theme-dark] .calendar__day_period-handle:hover,
+[data-theme-dark] .calendar__day_period-handle:focus {
+  background-color: var(--clr-calendar-blue-hover);
+}
+
+[data-theme-dark] .calendar__day_period-handle:active{
+  background-color: var(--clr-calendar-blue-active);
+}
+[data-theme-dark] .calendar__day_period-range {
+  background-color: var(--clr-calendar-blue-light);
+}
+
+[data-theme-dark] .calendar__day_period-range:hover,
+[data-theme-dark] .calendar__day_period-range:focus {
+  background-color: var(--clr-calendar-blue-light-hover);
+}
+
+[data-theme-dark] .calendar__day_period-range:active{
+  background-color: var(--clr-calendar-blue-light-active);
+}

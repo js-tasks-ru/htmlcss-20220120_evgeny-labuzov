@@ -1,0 +1,10 @@
+[data-theme-dark] {
+  & .top-panel {
+    &__logotype {
+      display: none;
+      &-fordark {
+        display: block;
+      }
+    }
+  }
+}

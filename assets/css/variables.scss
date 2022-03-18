@@ -37,7 +37,10 @@ $mediaTablet: screen and (max-width: $mediaMaxWidthTablet);
   --bg-footer-inner: var(--grey-e5);
   --bg-content-inner: var(--grey-e5);
   --bg-ui-widgets: var(--bg-main);
+  --bg-ui-input: var(--bg-main);
+  --bg-ui-input-disabled: var(--grey-e5);
   --bg-ui-modal: var(--bg-main);
+  --bg-content: var(--grey-0);
 
   /* gradients*/
   --grad-l-silver: linear-gradient(
@@ -65,6 +68,8 @@ $mediaTablet: screen and (max-width: $mediaMaxWidthTablet);
   --clr-calendar-blue: var(--clr-ui-blue);
   --clr-tooltip-blue: var(--clr-ui-blue);
 
+  --clr-border-flag: var(--grey-2);
+
   --bg-checkbox-on: var(--blue);
   --bg-checkbox-off: var(--bg-main);
   --bg-checkbox-disabled: var(--grey-2);
@@ -84,8 +89,13 @@ $mediaTablet: screen and (max-width: $mediaMaxWidthTablet);
   --clr-calendar-blue-light-hover: rgb(160, 177, 245, .3);
   --clr-calendar-blue-light-active: hsl(228deg, 81%, 60%, .2);
 
+  --clr-ui-label-flag: var(--grey-4);
+
   --bg-modal-fade: rgba(196, 196, 196, .5);
   --bg-sidebar-hover: rgba(255, 255, 255, .35);
+  --clr-sidebar-active: var(--notificaiton);
+  --clr-modal-common: var(--grey-4);
+  --clr-modal-title: var(--clr-ui-36e);
 
   /* typography: */
   --ff-roboto: 'Roboto', sans-serif;
@@ -224,4 +234,8 @@ $mediaTablet: screen and (max-width: $mediaMaxWidthTablet);
 
   --clr-dev-a: hsla(255deg, 50%, 87%, 1);
   --clr-dev-b: var(--grey-e5);
+
+  --z-burger-menu-content: 30;
+  --z-burger-menu-button: 40;
+  --z-top-panel-link: 50;
 }

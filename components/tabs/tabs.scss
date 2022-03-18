@@ -1,4 +1,5 @@
 .tabs {
+  --l-color-active: var(--black);
   &__input {
     opacity: 0;
     transform: scale(0);
@@ -63,29 +64,14 @@
   }
 
   /* Tabs */
-  &__input_tab-all:checked ~ &__menu &__label&__input_tab-all {
-    --l-color-border: var(--black);
-    --l-color: var(--black);
-  }
-  &__input_tab-atoms:checked ~ &__menu &__label&__input_tab-atoms {
-    --l-color-border: var(--black);
-    --l-color: var(--black);
-  }
-  &__input_tab-molecules:checked ~ &__menu &__label&__input_tab-molecules {
-    --l-color-border: var(--black);
-    --l-color: var(--black);
-  }
-  &__input_tab-organisms:checked ~ &__menu &__label&__input_tab-organisms {
-    --l-color-border: var(--black);
-    --l-color: var(--black);
-  }
-  &__input_tab-html:checked ~ &__menu &__label&__input_tab-html {
-    --l-color-border: var(--black);
-    --l-color: var(--black);
-  }
+  &__input_tab-all:checked ~ &__menu &__label&__input_tab-all,
+  &__input_tab-atoms:checked ~ &__menu &__label&__input_tab-atoms,
+  &__input_tab-molecules:checked ~ &__menu &__label&__input_tab-molecules,
+  &__input_tab-organisms:checked ~ &__menu &__label&__input_tab-organisms,
+  &__input_tab-html:checked ~ &__menu &__label&__input_tab-html,
   &__input_tab-css:checked ~ &__menu &__label&__input_tab-css {
-    --l-color-border: var(--black);
-    --l-color: var(--black);
+    --l-color-border: var(--l-color-active);
+    --l-color: var(--l-color-active);
   }
 
 
@@ -96,24 +82,13 @@
     display: none;
   }
 
-  &__input_tab-all:checked ~ &__viewer &__viewer-item {
-    display: flex;
-  }
-
-  &__input_tab-atoms:checked ~ &__viewer &__viewer-item&__viewer-item_atoms {
-    display: flex;
-  }
-  &__input_tab-molecules:checked ~ &__viewer &__viewer-item&__viewer-item_molecules {
-    display: flex;
-  }
-  &__input_tab-organisms:checked ~ &__viewer &__viewer-item&__viewer-item_organisms {
-    display: flex;
-  }
-  &__input_tab-html:checked ~ &__viewer &__viewer-item&__viewer-item_html {
-    display: flex;
-  }
+  &__input_tab-all:checked ~ &__viewer &__viewer-item,
+  &__input_tab-atoms:checked ~ &__viewer &__viewer-item&__viewer-item_atoms,
+  &__input_tab-atoms:checked ~ &__viewer &__viewer-item&__viewer-item_atoms,
+  &__input_tab-molecules:checked ~ &__viewer &__viewer-item&__viewer-item_molecules,
+  &__input_tab-organisms:checked ~ &__viewer &__viewer-item&__viewer-item_organisms,
+  &__input_tab-html:checked ~ &__viewer &__viewer-item&__viewer-item_html,
   &__input_tab-css:checked ~ &__viewer &__viewer-item&__viewer-item_css {
     display: flex;
   }
-
 }

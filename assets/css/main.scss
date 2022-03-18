@@ -7,6 +7,7 @@
 
 /* variables */
 @import 'variables.scss';
+@import 'dark-theme.scss';
 
 /* animation keyframes */
 @import 'animation.scss';
@@ -21,21 +22,29 @@
 
 /* global layout */
 @import '../../components/header/header.scss';
+@import '../../components/header/header-dark.scss';
 @import '../../components/content/content.scss';
+@import '../../components/content/content-dark.scss';
 @import '../../components/footer/footer.scss';
+@import '../../components/footer/footer-dark.scss';
 @import '../../components/sidebar/sidebar.scss';
 @import '../../components/top-panel/top-panel.scss';
+@import '../../components/top-panel/top-panel-dark.scss';
+@import '../../components/top-navigation/top-navigation-dark.scss';
 
 
 /* blocks */
 @import '../../components/presentation/presentation.scss';
+@import '../../components/presentation/presentation-dark.scss';
 @import '../../components/title/title.scss';
 @import '../../components/cards/cards.scss';
+@import '../../components/cards/cards-dark.scss';
 @import '../../components/icons/icons.scss';
 @import '../../components/checkbox-group/checkbox-group.scss';
 @import '../../components/radio-group/radio-group.scss';
 @import '../../components/toggler-group/toggler-group.scss';
 @import '../../components/tabs/tabs.scss';
+@import '../../components/tabs/tabs-dark.scss';
 @import '../../components/source-viewer/source-viewer.scss';
 
 /* 👻 */
