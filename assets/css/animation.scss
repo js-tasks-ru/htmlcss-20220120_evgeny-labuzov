@@ -49,3 +49,12 @@
     transform: scaleY(100%);
   }
 }
+
+@keyframes backgroundXShift {
+  0% {
+    background-position-x: 0rem;
+  }
+  100% {
+    background-position-x: 200rem;
+  }
+}
