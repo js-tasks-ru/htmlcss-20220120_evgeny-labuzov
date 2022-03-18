@@ -90,6 +90,19 @@ img {
   background-color: var(--pink);
   color: var(--clr-common-text);
 }
+
+.preload,
+.preload *,
+.preload *:before,
+.preload *:after {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+  animation: none !important;
+}
+
 .__dev {
   &-bg:not(._off) {
     background-color: var(--clr-dev-b);
