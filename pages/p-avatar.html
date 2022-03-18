@@ -14,7 +14,8 @@
   <script src="../assets/js/utils.js"></script>
   <script src="./assets/js/common.js"></script>
   <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
-  <link rel="stylesheet" href="../libs/highlight/styles/github.min.css">
+  <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
+  <link rel="stylesheet" href="../libs/highlight/styles/github.min.css" data-light="../libs/highlight/styles/github.min.css" data-dark="../libs/highlight/styles/github-dark.min.css" id="source-theme">
   <script src="../libs/highlight/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
 </head>
@@ -28,9 +29,9 @@
           <button class="burger-menu__button"></button>
           <div class="burger-menu__content">
             <div class="burger-menu__separator"></div>
-            <label class="toggler toggler_reverse toggler_full-width burger-menu__switch">
+            <label class="toggler toggler_reverse toggler_full-width burger-menu__switch" id="mobile-theme-switcher">
               <input class="toggler__input" type="checkbox">
-              <span class="toggler__label">Dark mode</span>
+              <span class="toggler__label" data-label-on="Dark mode on" data-label-off="Dark mode off">Dark mode</span>
             </label>
             <div class="burger-menu__separator"></div>
             <aside class="sidebar burger-menu__sidebar">
@@ -51,7 +52,20 @@
 
         <a href="/" class="top-panel__logotype-link">
           <img class="top-panel__logotype" src="assets/images/logotype.svg" alt="Logotype">
+          <img class="top-panel__logotype-fordark" src="assets/images/logotype-fordark.svg" alt="Logotype">
         </a>
+        <div class="top-panel__switch theme-changer theme-changer_self-end" id="theme-changer">
+          <label class="theme-changer__label" for="theme-changer-checkbox"><svg class="theme-changer__icon" width="24" height="24" viewBox="0 0 24 24">
+              <use href="../../assets/images/icons-sprite.svg#sun"></use>
+            </svg></label>
+          <label class="theme-changer__toggler toggler" >
+            <input class="theme-changer__input toggler__input" type="checkbox" id="theme-changer-checkbox" checked>
+            <span class="theme-changer__toggler-body toggler__label"></span>
+          </label>
+          <label class="theme-changer__label" for="theme-changer-checkbox"><svg class="theme-changer__icon" width="24" height="24" viewBox="0 0 24 24">
+              <use href="../../assets/images/icons-sprite.svg#moon"></use>
+            </svg></label>
+        </div>
       </aside>
     </div>
   </header>
