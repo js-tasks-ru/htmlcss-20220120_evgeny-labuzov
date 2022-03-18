@@ -19,6 +19,7 @@ const routes = [
   ['toggler', '/03-toggler', '07-lection5/03-toggler/index.html'],
   ['input', '/04-input', '07-lection5/04-input/index.html'],
   ['burgerMenu', '/01-burger-menu', '09-lection7/01-burger-menu/index.html'],
+  ['themeChanger', '/01-theme-changer', '10-lection8/01-theme-changer/index.html'],
 
   ['template', '/template', 'pages/template.html'],
   ['icons', '/icons', 'pages/icons.html'],
