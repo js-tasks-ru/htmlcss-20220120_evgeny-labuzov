@@ -14,10 +14,8 @@
 
 .checkbox__label {
   --l-size: 1.75rem;
-  --l-bg: var(--bg-checkbox-off);
-  --l-bg-splash: var(--bg-checkbox-on);
-  --l-bg-splash-dark: var(--purple);
-  --l-bg-checkbox-on-dark: var(--purple);
+  --l-bg: var(--checkbox__label-bg-checkbox-off);
+  --l-bg-splash: var(--checkbox__label-bg-splash);
   --l-border-color: var(--clr-border-flag);
   display: flex;
   flex-direction: row;
@@ -80,7 +78,7 @@
 }
 
 .checkbox__input:checked ~ .checkbox__label:before {
-  --l-bg: var(--bg-checkbox-on);
+  --l-bg: var(--checkbox__label-bg-checkbox-on);
   --l-border-color: var(--transpr);
   background-size: 100% 100%;
 }
@@ -88,14 +86,6 @@
   color: var(--grey-2);
 }
 .checkbox__input:disabled ~ .checkbox__label:before {
-  --l-bg: var(--bg-checkbox-disabled);
+  --l-bg: var(--checkbox__label-bg-checkbox-disabled);
   --l-border-color: var(--transpr);
-}
-
-[data-theme-dark] .checkbox__input:checked ~ .checkbox__label:before {
-  --l-bg: var(--l-bg-checkbox-on-dark);
-}
-
-[data-theme-dark] .checkbox__label:after {
-  background-color: var(--l-bg-splash-dark);
 }

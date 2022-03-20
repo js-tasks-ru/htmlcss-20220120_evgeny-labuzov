@@ -6,11 +6,14 @@
 @import '../fonts/fonts.css';
 
 /* variables */
-@import 'variables.scss';
-@import 'dark-theme.scss';
+@import 'variables/variables.scss';
+@import 'variables/dark-theme.scss';
 
-@import 'var_calendar.scss';
-@import 'var_calendar-dark.scss';
+@import 'variables/var_calendar.scss';
+@import 'variables/var_calendar-dark.scss';
+
+@import 'variables/var_checkbox.scss';
+@import 'variables/var_checkbox-dark.scss';
 
 /* animation keyframes */
 @import 'animation.scss';

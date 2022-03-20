@@ -1,0 +1,13 @@
+$nms-calendar: checkbox;
+:root {
+  --bg-checkbox-on: var(--blue);
+  --bg-checkbox-off: var(--bg-main);
+  --bg-checkbox-disabled: var(--grey-2);
+
+  --ic-checkbox: url('../../assets/images/icons-sprite.svg#checkbox-check-white');
+
+  --checkbox__label-bg-splash: var(--bg-checkbox-on);
+  --checkbox__label-bg-checkbox-off: var(--bg-checkbox-off);
+  --checkbox__label-bg-checkbox-on: var(--bg-checkbox-on);
+  --checkbox__label-bg-checkbox-disabled: var(--bg-checkbox-disabled);
+}
