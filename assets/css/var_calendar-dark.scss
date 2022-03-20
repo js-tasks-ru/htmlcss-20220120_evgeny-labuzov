@@ -1,0 +1,26 @@
+[data-theme-dark] {
+  // --calendar-bg: var(--bg-ui-widgets);
+  // --calendar-clr-border: var(--grey-3);
+  //
+  --calendar__header-clr: var(--clr-ui-bea);
+  // --calendar__weeks-clr: var(--clr-ui-9b7);
+  //
+  --calendar__day-bg: var(--bg-ui-widgets);
+  //
+  --calendar__day-bg-focus: var(--clr-calendar-blue-light);
+  //
+  // --calendar__day-clr-active: var(--white);
+  --calendar__day-bg-active: var(--clr-calendar-blue);
+  //
+  // --calendar__day_period-handle-clr: var(--white);
+  --calendar__day_period-handle-bg: var(--clr-calendar-blue);
+  //
+  --calendar__day_period-handle-bg-focus: var(--clr-calendar-blue-hover);
+  //
+  // --calendar__day_period-handle-clr-active: var(--white);
+  --calendar__day_period-handle-bg-active: var(--clr-calendar-blue-active);
+  //
+  --calendar__day_period-range-bg: var(--clr-calendar-blue-light);
+  --calendar__day_period-range-bg-focus: var(--clr-calendar-blue-light-hover);
+  --calendar__day_period-range-bg-active: var(--clr-calendar-blue-light-active);
+}

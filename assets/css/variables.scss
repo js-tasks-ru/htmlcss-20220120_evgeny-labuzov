@@ -65,7 +65,7 @@ $mediaTablet: screen and (max-width: $mediaMaxWidthTablet);
   --clr-ui-36e: #334D6E;
   --clr-ui-9b7: #90A0B7;
   --clr-ui-blue: #4263EB;
-  --clr-calendar-blue: var(--clr-ui-blue);
+
   --clr-tooltip-blue: var(--clr-ui-blue);
 
   --clr-border-flag: var(--grey-2);
@@ -81,13 +81,6 @@ $mediaTablet: screen and (max-width: $mediaMaxWidthTablet);
   --bg-toggler-on: var(--blue);
   --bg-toggler-off: var(--bg-main);
   --bg-toggler-disabled: var(--grey-2);
-
-  --clr-calendar-blue-hover: hsl(228deg 81% 49%);
-  --clr-calendar-blue-active: hsl(228deg 94% 39%);
-
-  --clr-calendar-blue-light: rgb(160, 177, 245, .2); /*#A0B1F5!33*/
-  --clr-calendar-blue-light-hover: rgb(160, 177, 245, .3);
-  --clr-calendar-blue-light-active: hsl(228deg, 81%, 60%, .2);
 
   --clr-ui-label-flag: var(--grey-4);
 
