@@ -1,4 +1,5 @@
-.top-panel {
+.#{$nms-top-panel} {
+  $nms: $nms-top-panel;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -24,9 +25,9 @@
 
   &__logotype {
     min-height: 2rem;
-    display: block;
+    display: var(--top-panel__logotype-display);
     &-fordark {
-      display: none;
+      display: var(--top-panel__logotype-dark-display);
     }
   }
   &__navigation {

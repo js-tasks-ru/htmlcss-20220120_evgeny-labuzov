@@ -51,6 +51,9 @@
 @import 'variables/var_top-navigation.scss';
 @import 'variables/var_top-navigation-dark.scss';
 
+@import 'variables/var_top-panel.scss';
+@import 'variables/var_top-panel-dark.scss';
+
 
 /* animation keyframes */
 @import 'animation.scss';
@@ -69,7 +72,6 @@
 @import '../../components/footer/footer.scss';
 @import '../../components/sidebar/sidebar.scss';
 @import '../../components/top-panel/top-panel.scss';
-@import '../../components/top-panel/top-panel-dark.scss';
 @import '../../components/top-navigation/top-navigation.scss';
 
 
