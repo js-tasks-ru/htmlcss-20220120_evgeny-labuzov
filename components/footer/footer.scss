@@ -1,4 +1,5 @@
-.footer {
+.#{$nms-footer} {
+  $nms: $nms-footer;
   width: 100%;
   padding: var(--sp-pt-footer) 0 8.5 0;
 
@@ -45,6 +46,6 @@
     font-size: calc(1rem / 1.3333);
     letter-spacing: .04em;
     text-transform: uppercase;
-    color: var(--grey-3);
+    color: var(--footer__title_mutetext-cls);
   }
 }
