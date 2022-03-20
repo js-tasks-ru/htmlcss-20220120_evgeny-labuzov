@@ -1,0 +1,14 @@
+$nms-radio: radio;
+:root {
+  --bg-radio-on: var(--bg-main);
+  --bg-radio-off: var(--bg-main);
+  --bg-radio-disabled: var(--grey-2);
+
+  --ic-radio: url('../../assets/images/icons-sprite.svg#radiobutton-radio-blue');
+
+  --radio__label-bg-radio-off: var(--bg-radio-off);
+  --radio__label-bg-radio-on: var(--bg-radio-on);
+  --radio__label-bg-radio-disabled: var(--bg-radio-disabled);
+  --radio__label-clr-border: var(--clr-border-flag);
+  --radio__input-clr-border: var(--blue);
+}

@@ -70,9 +70,6 @@ $mediaTablet: screen and (max-width: $mediaMaxWidthTablet);
 
   --clr-border-flag: var(--grey-2);
 
-  --bg-radio-on: var(--bg-main);
-  --bg-radio-off: var(--bg-main);
-  --bg-radio-disabled: var(--grey-2);
 
   --bg-toggler-on: var(--blue);
   --bg-toggler-off: var(--bg-main);
@@ -157,7 +154,7 @@ $mediaTablet: screen and (max-width: $mediaMaxWidthTablet);
   /* icons */
   --ic-black-chevron-down: url('../../assets/images/icons-sprite.svg#chevron-down');
 
-  --ic-radio: url('../../assets/images/icons-sprite.svg#radiobutton-radio-blue');
+
   --ic-success: url('../../assets/images/icons-sprite.svg#success-blue');
   --ic-error: url('../../assets/images/icons-sprite.svg#error-red');
   --ic-empty: url('../../assets/images/icons-sprite.svg#empty');
