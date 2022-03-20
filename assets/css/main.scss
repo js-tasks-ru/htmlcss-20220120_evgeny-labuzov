@@ -36,6 +36,10 @@
 @import 'variables/var_footer.scss';
 @import 'variables/var_footer-dark.scss';
 
+@import 'variables/var_header.scss';
+@import 'variables/var_header-dark.scss';
+
+
 /* animation keyframes */
 @import 'animation.scss';
 
@@ -49,7 +53,6 @@
 
 /* global layout */
 @import '../../components/header/header.scss';
-@import '../../components/header/header-dark.scss';
 @import '../../components/content/content.scss';
 @import '../../components/footer/footer.scss';
 @import '../../components/sidebar/sidebar.scss';
