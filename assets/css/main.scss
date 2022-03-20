@@ -30,6 +30,9 @@
 @import 'variables/var_cards.scss';
 @import 'variables/var_cards-dark.scss';
 
+@import 'variables/var_content.scss';
+@import 'variables/var_content-dark.scss';
+
 /* animation keyframes */
 @import 'animation.scss';
 
@@ -45,7 +48,6 @@
 @import '../../components/header/header.scss';
 @import '../../components/header/header-dark.scss';
 @import '../../components/content/content.scss';
-@import '../../components/content/content-dark.scss';
 @import '../../components/footer/footer.scss';
 @import '../../components/footer/footer-dark.scss';
 @import '../../components/sidebar/sidebar.scss';
