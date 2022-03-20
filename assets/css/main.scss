@@ -39,6 +39,9 @@
 @import 'variables/var_header.scss';
 @import 'variables/var_header-dark.scss';
 
+@import 'variables/var_presentation.scss';
+@import 'variables/var_presentation-dark.scss';
+
 
 /* animation keyframes */
 @import 'animation.scss';
@@ -64,7 +67,6 @@
 
 /* blocks */
 @import '../../components/presentation/presentation.scss';
-@import '../../components/presentation/presentation-dark.scss';
 @import '../../components/title/title.scss';
 @import '../../components/cards/cards.scss';
 @import '../../components/icons/icons.scss';
