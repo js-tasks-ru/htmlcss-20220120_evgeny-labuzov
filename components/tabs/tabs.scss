@@ -1,5 +1,6 @@
-.tabs {
-  --l-color-active: var(--black);
+.#{$nms-tabs} {
+  $nms: $nms-tabs;
+  --l-color-active: var(--tabs-clr-active);
   &__input {
     opacity: 0;
     transform: scale(0);
@@ -16,7 +17,7 @@
       position: relative;
 
       &:after {
-        border-bottom: 1px solid var(--grey-2);
+        border-bottom: 1px solid var(--tabs_content-clr-line);
         content: "";
         display: block;
 
@@ -55,8 +56,8 @@
 
 
     &:hover {
-      --l-color-border: var(--grey-2);
-      --l-color: var(--grey-4);
+      --l-color-border: var(--tabs__label-clr-border-hover);
+      --l-color: var(--tabs__label-clr-hover);
     }
     @media $mediaMobile {
       --l-color-border: var(--grey-0);

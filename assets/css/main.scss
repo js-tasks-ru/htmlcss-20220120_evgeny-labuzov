@@ -42,6 +42,9 @@
 @import 'variables/var_presentation.scss';
 @import 'variables/var_presentation-dark.scss';
 
+@import 'variables/var_tabs.scss';
+@import 'variables/var_tabs-dark.scss';
+
 
 /* animation keyframes */
 @import 'animation.scss';
@@ -75,7 +78,6 @@
 @import '../../components/toggler-group/toggler-group.scss';
 @import '../../components/theme-changer/theme-changer.scss';
 @import '../../components/tabs/tabs.scss';
-@import '../../components/tabs/tabs-dark.scss';
 @import '../../components/source-viewer/source-viewer.scss';
 
 /* 👻 */
