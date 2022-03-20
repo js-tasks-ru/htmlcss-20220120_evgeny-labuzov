@@ -1,0 +1,9 @@
+$nms-burger-menu: burger-menu;
+:root {
+  --ic-menu: url('../../assets/images/icons-sprite.svg#menu');
+  --ic-menu-close: url('../../assets/images/icons-sprite.svg#times');
+
+  --burger-menu__button-bg-hover: var(--grey-2);
+  --burger-menu__button-bg-open: var(--grey-2);
+  --burger-menu__button-bg-open-hover: var(--grey-3);
+}

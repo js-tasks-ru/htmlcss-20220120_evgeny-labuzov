@@ -149,8 +149,6 @@ $mediaTablet: screen and (max-width: $mediaMaxWidthTablet);
   --ic-success: url('../../assets/images/icons-sprite.svg#success-blue');
   --ic-error: url('../../assets/images/icons-sprite.svg#error-red');
   --ic-empty: url('../../assets/images/icons-sprite.svg#empty');
-  --ic-menu: url('../../assets/images/icons-sprite.svg#menu');
-  --ic-menu-close: url('../../assets/images/icons-sprite.svg#times');
 
   --ic-accordion-toggle: var(--ic-black-chevron-down);
 
@@ -210,6 +208,7 @@ $mediaTablet: screen and (max-width: $mediaMaxWidthTablet);
   --clr-dev-a: hsla(255deg, 50%, 87%, 1);
   --clr-dev-b: var(--grey-e5);
 
+  /* z-index */
   --z-burger-menu-content: 30;
   --z-burger-menu-button: 40;
   --z-top-panel-link: 50;
