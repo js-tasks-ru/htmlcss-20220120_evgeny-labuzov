@@ -27,6 +27,9 @@
 @import 'variables/var_burger-menu.scss';
 @import 'variables/var_burger-menu-dark.scss';
 
+@import 'variables/var_cards.scss';
+@import 'variables/var_cards-dark.scss';
+
 /* animation keyframes */
 @import 'animation.scss';
 
@@ -57,7 +60,6 @@
 @import '../../components/presentation/presentation-dark.scss';
 @import '../../components/title/title.scss';
 @import '../../components/cards/cards.scss';
-@import '../../components/cards/cards-dark.scss';
 @import '../../components/icons/icons.scss';
 @import '../../components/checkbox-group/checkbox-group.scss';
 @import '../../components/radio-group/radio-group.scss';
