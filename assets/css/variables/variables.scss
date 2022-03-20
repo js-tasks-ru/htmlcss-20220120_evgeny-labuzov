@@ -37,8 +37,7 @@ $mediaTablet: screen and (max-width: $mediaMaxWidthTablet);
   --bg-footer-inner: var(--grey-e5);
   --bg-content-inner: var(--grey-e5);
   --bg-ui-widgets: var(--bg-main);
-  --bg-ui-input: var(--bg-main);
-  --bg-ui-input-disabled: var(--grey-e5);
+
   --bg-ui-modal: var(--bg-main);
   --bg-content: var(--grey-0);
 
@@ -53,9 +52,6 @@ $mediaTablet: screen and (max-width: $mediaMaxWidthTablet);
   --clr-btn-alternate: var(--grey-4);
 
   --clr-shd-card: rgba(33, 36, 41, .05); /*#212429!0d*/
-  --clr-shd-input-focus: rgba(51, 154, 240, .1);
-  --clr-shd-input-error: rgba(240, 61, 62, .1);
-
   --bg-btn-primary-hover: #2342C0;
   --clr-btn-primary: var(--white);
 
@@ -186,8 +182,6 @@ $mediaTablet: screen and (max-width: $mediaMaxWidthTablet);
   /* shadows */
   --shd-empty: 0px 0px 0px var(--transpr);
   --shd-card: 0px 2px 4px var(--clr-shd-card);
-  --shd-input-focus: 0px 1px 1px var(--clr-shd-input-focus);
-  --shd-input-error: 0px 1px 1px var(--clr-shd-input-error);
 
   /* grid & layout */
   /* container breakpoints*/
