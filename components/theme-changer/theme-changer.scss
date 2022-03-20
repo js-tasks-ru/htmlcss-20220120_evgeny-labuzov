@@ -1,12 +1,13 @@
-.theme-changer {
+.#{$nms-theme-changer} {
+  $nms: $nms-theme-changer;
   user-select: none;
   display: flex;
 
   &__icon {
-    color: var(--grey-3);
+    color: var(--theme-changer-clr-icon);
     transition: color var(--trz-eo-015);
     &:hover {
-      color: var(--grey-4);
+      color: var(--theme-changer-clr-icon-hover);
     }
   }
 
@@ -14,8 +15,8 @@
     cursor: pointer;
     &:first-child {
       cursor: default;
-      .theme-changer__icon {
-        color: var(--grey-4);
+      .#{$nms}__icon {
+        color: var(--theme-changer-clr-icon-first);
       }
     }
   }
@@ -44,11 +45,11 @@
   }
   &_on {
 
-    .theme-changer__icon:hover {
-      color: var(--grey-3);
+    .#{$nms}__icon:hover {
+      color: var(--theme-changer-on-clr-icon-hover);
     }
 
-    .theme-changer__label {
+    .#{$nms}__label {
       cursor: default;
       &:first-child {
         cursor: pointer;
