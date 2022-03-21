@@ -1,0 +1,9 @@
+$nms-tabs: tabs;
+
+:root {
+  --tabs-y-shift: -2.4rem;
+  --tabs-clr-active: var(--black);
+  --tabs_content-clr-line: var(--grey-2);
+  --tabs__label-clr-hover: var(--grey-4);
+  --tabs__label-clr-border-hover: var(--grey-2);
+}

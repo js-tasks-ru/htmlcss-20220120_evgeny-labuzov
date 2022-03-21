@@ -12,9 +12,12 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="./build/index.css">
   <title>🏠 Home</title>
+  <script src="./assets/js/utils.js"></script>
+  <script src="./assets/js/common.js"></script>
+  <script defer src="./10-lection8/01-theme-changer/theme-changer.js"></script>
 </head>
 
-<body class="page">
+<body class="page preload">
 
 
 
@@ -23,7 +26,26 @@
       <aside class="top-panel">
         <a href="/" class="top-panel__logotype-link">
           <img class="top-panel__logotype" src="assets/images/logotype.svg" alt="Logotype">
+          <img class="top-panel__logotype-fordark" src="assets/images/logotype-fordark.svg" alt="Logotype">
         </a>
+        <nav class="top-navigation top-panel__navigation">
+          <a href="/" class="top-navigation__link top-navigation__link_active">Components</a>
+          <a href="/about" class="top-navigation__link">About</a>
+          <a href="/contact" class="top-navigation__link">Contact</a>
+        </nav>
+        <div class="top-panel__switch theme-changer" id="theme-changer">
+          <label class="theme-changer__label" for="theme-changer-checkbox"><svg class="theme-changer__icon" width="24" height="24" viewBox="0 0 24 24">
+              <use href="../../assets/images/icons-sprite.svg#sun"></use>
+            </svg></label>
+          <label class="theme-changer__toggler toggler">
+            <input class="theme-changer__input toggler__input" type="checkbox" id="theme-changer-checkbox" checked>
+            <span class="theme-changer__toggler-body toggler__label"></span>
+          </label>
+          <label class="theme-changer__label" for="theme-changer-checkbox"><svg class="theme-changer__icon" width="24" height="24" viewBox="0 0 24 24">
+              <use href="../../assets/images/icons-sprite.svg#moon"></use>
+            </svg></label>
+        </div>
+
       </aside>
       <h1 class="header__title">Reusable component library</h1>
     </div>

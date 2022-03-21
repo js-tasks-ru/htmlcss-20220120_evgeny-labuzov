@@ -6,7 +6,12 @@
   const getAttr = (el, keyAttribute) => el.getAttribute(keyAttribute);
   const setAttr = (el, keyAttribute, valAttribute) => el.setAttribute(keyAttribute, valAttribute);
   const remAttr = (el, keyAttribute) => el.removeAttribute(keyAttribute);
-
+  const domReady = fn => {
+    let isRun = false;
+    document.addEventListener('DOMContentLoaded', _ => !isRun && ( isRun = true, fn()));
+    let conds = [document.readyState === 'interactive', document.readyState === 'complete'];
+    if (!isRun && conds.some(cond => !!cond)) (isRun = true, fn())
+  };
   const isNode = o => (
   typeof Node === 'object' ? o instanceof Node
     : o && typeof o === 'object' && typeof o.nodeType === 'number' && typeof o.nodeName === 'string'
@@ -40,6 +45,7 @@
     setAttr,
     remAttr,
     isNode,
+    domReady,
     qs,
     cl,
     insert,

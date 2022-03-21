@@ -1,0 +1,12 @@
+$nms-toggler: toggler;
+:root {
+  --bg-toggler-disc-off: var(--grey-2);
+  --bg-toggler-disc-on: var(--bg-main);
+  --bg-toggler-disc-off-disabled: var(--grey-3);
+  --bg-toggler-disc-on-disabled: var(--bg-main);
+
+  --bg-toggler-on: var(--blue);
+  --bg-toggler-off: var(--bg-main);
+  --bg-toggler-disabled: var(--grey-2);
+
+}

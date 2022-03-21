@@ -6,7 +6,57 @@
 @import '../fonts/fonts.css';
 
 /* variables */
-@import 'variables.scss';
+@import 'variables/variables.scss';
+@import 'variables/dark-theme.scss';
+
+@import 'variables/var_calendar.scss';
+@import 'variables/var_calendar-dark.scss';
+
+@import 'variables/var_checkbox.scss';
+@import 'variables/var_checkbox-dark.scss';
+
+@import 'variables/var_radio.scss';
+@import 'variables/var_radio-dark.scss';
+
+@import 'variables/var_toggler.scss';
+@import 'variables/var_toggler-dark.scss';
+
+@import 'variables/var_input.scss';
+@import 'variables/var_input-dark.scss';
+
+@import 'variables/var_burger-menu.scss';
+@import 'variables/var_burger-menu-dark.scss';
+
+@import 'variables/var_cards.scss';
+@import 'variables/var_cards-dark.scss';
+
+@import 'variables/var_content.scss';
+@import 'variables/var_content-dark.scss';
+
+@import 'variables/var_footer.scss';
+@import 'variables/var_footer-dark.scss';
+
+@import 'variables/var_header.scss';
+@import 'variables/var_header-dark.scss';
+
+@import 'variables/var_presentation.scss';
+@import 'variables/var_presentation-dark.scss';
+
+@import 'variables/var_tabs.scss';
+@import 'variables/var_tabs-dark.scss';
+
+@import 'variables/var_theme-changer.scss';
+@import 'variables/var_theme-changer-dark.scss';
+
+@import 'variables/var_top-navigation.scss';
+@import 'variables/var_top-navigation-dark.scss';
+
+@import 'variables/var_top-panel.scss';
+@import 'variables/var_top-panel-dark.scss';
+
+
+/* animation keyframes */
+@import 'animation.scss';
 
 /* components */
 
@@ -22,6 +72,7 @@
 @import '../../components/footer/footer.scss';
 @import '../../components/sidebar/sidebar.scss';
 @import '../../components/top-panel/top-panel.scss';
+@import '../../components/top-navigation/top-navigation.scss';
 
 
 /* blocks */
@@ -32,6 +83,7 @@
 @import '../../components/checkbox-group/checkbox-group.scss';
 @import '../../components/radio-group/radio-group.scss';
 @import '../../components/toggler-group/toggler-group.scss';
+@import '../../components/theme-changer/theme-changer.scss';
 @import '../../components/tabs/tabs.scss';
 @import '../../components/source-viewer/source-viewer.scss';
 
@@ -87,6 +139,19 @@ img {
   background-color: var(--pink);
   color: var(--clr-common-text);
 }
+
+.preload,
+.preload *,
+.preload *:before,
+.preload *:after {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+  animation: none !important;
+}
+
 .__dev {
   &-bg:not(._off) {
     background-color: var(--clr-dev-b);

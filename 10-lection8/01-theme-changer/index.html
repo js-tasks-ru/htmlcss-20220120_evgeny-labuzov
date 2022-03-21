@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <!-- Пример использования theme-changer -->
 <html lang="ru">
-    <head>
-        <style>
-            html[data-theme-dark] {
-                background: #000;
-            }
-        </style>
-        <script defer src="./theme-changer.js"></script>
-    </head>
-    <body>
-        <input type="checkbox" id="theme-changer">
-    </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="../../build/index.css">
+  <script src="../../assets/js/utils.js"></script>
+  <script defer src="./theme-changer.js"></script>
+  <style>
+    body { padding: var(--sp-64); }
+    html[data-theme-dark] { background: #000; }
+    .presentation {}
+  </style>
+  <script defer src="./theme-changer.js"></script>
+</head>
+
+<body class="__dev-grid _off">
+  <div class="presentation">
+    <div class="theme-changer" id="theme-changer">
+      <label class="theme-changer__label" for="theme-changer-checkbox"><svg class="theme-changer__icon" width="24" height="24" viewBox="0 0 24 24">
+          <use href="../../assets/images/icons-sprite.svg#sun"></use>
+        </svg></label>
+      <label class="theme-changer__toggler toggler">
+        <input class="theme-changer__input toggler__input" type="checkbox" id="theme-changer-checkbox">
+        <span class="theme-changer__toggler-body toggler__label"></span>
+      </label>
+      <label class="theme-changer__label" for="theme-changer-checkbox"><svg class="theme-changer__icon" width="24" height="24" viewBox="0 0 24 24">
+          <use href="../../assets/images/icons-sprite.svg#moon"></use>
+        </svg></label>
+    </div>
+  </div>
+</body>
+
 </html>

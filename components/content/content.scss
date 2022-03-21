@@ -1,5 +1,6 @@
-.content {
-  background-color: var(--grey-0);
+.#{$nms-content} {
+  $nms: $nms-content;
+  background-color: var(--bg-content);
   width: 100%;
   display: flex;
   flex-grow: 1;
@@ -26,7 +27,7 @@
     font-weight: 400;
     font-size: 28px;
     line-height: 1.36;
-    color: var(--grey-4);
+    color: var(--content__title-clr);
     margin-bottom: var(--sp-24);
 
     @media $mediaMobile {

@@ -16,8 +16,8 @@
   --l-size-w: 3.25rem;
   --l-size-h: 1.75rem;
   --l-bg: var(--bg-toggler-off);
-  --l-bg-disc: var(--grey-2);
-  --l-border-color: var(--grey-2);
+  --l-bg-disc: var(--bg-toggler-disc-off);
+  --l-border-color: var(--clr-border-flag);
   --l-position-start: 2px;
   --l-position-end: calc(calc(3.25rem - var(--l-size-h)) + 2px);
   --l-position: var(--l-position-start);
@@ -29,7 +29,7 @@
   font-family: var(--ff-inter);
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--grey-4);
+  color: var(--clr-ui-label-flag);
   cursor: pointer;
 }
 
@@ -51,7 +51,7 @@
   margin-right: calc(1rem / 1.3333);
   border-radius: var(--l-size-h);
   background-color: var(--l-bg);
-  border: 1px solid var(--grey-2);
+  border: 1px solid var(--l-border-color);
   transition: background var(--trz-eo-015),
               border var(--trz-eo-015);
 }
@@ -76,7 +76,7 @@
 }
 .toggler__input:checked ~ .toggler__label:after {
   --l-bg: var(--bg-toggler-on);
-  --l-bg-disc: var(--bg-main);
+  --l-bg-disc: var(--bg-toggler-disc-on);
   --l-position: var(--l-position-end)
 }
 .toggler__input:disabled ~ .radio__label {
@@ -87,11 +87,11 @@
 }
 .toggler__input:disabled ~ .toggler__label:after {
   --l-bg: var(--bg-toggler-disabled);
-  --l-bg-disc: var(--grey-3);
+  --l-bg-disc: var(--bg-toggler-disc-off-disabled);
 }
 
 .toggler__input:disabled:checked ~ .toggler__label:after {
-  --l-bg-disc: var(--bg-main);
+  --l-bg-disc: var(--bg-toggler-disc-on-disabled);
 }
 
 .toggler.toggler_full-width {

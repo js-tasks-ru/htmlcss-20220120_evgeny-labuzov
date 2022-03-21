@@ -12,7 +12,9 @@
   <link rel="stylesheet" href="../build/index.css">
   <title>📠 Custom form elements</title>
   <script src="../assets/js/utils.js"></script>
+  <script src="./assets/js/common.js"></script>
   <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
+  <script defer src="../10-lection8/01-theme-changer/theme-changer.js"></script>
   <style>
     .presentation {
       display: -webkit-flex;
@@ -29,7 +31,7 @@
   </style>
 </head>
 
-<body class="page page_inner">
+<body class="page page_inner preload">
 
   <header class="header page__header">
     <div class="container">
@@ -38,9 +40,9 @@
           <button class="burger-menu__button"></button>
           <div class="burger-menu__content">
             <div class="burger-menu__separator"></div>
-            <label class="toggler toggler_reverse toggler_full-width burger-menu__switch">
+            <label class="toggler toggler_reverse toggler_full-width burger-menu__switch" id="mobile-theme-switcher">
               <input class="toggler__input" type="checkbox">
-              <span class="toggler__label">Dark mode</span>
+              <span class="toggler__label" data-label-on="Dark mode on" data-label-off="Dark mode off">Dark mode</span>
             </label>
             <div class="burger-menu__separator"></div>
             <aside class="sidebar burger-menu__sidebar">
@@ -61,7 +63,20 @@
 
         <a href="/" class="top-panel__logotype-link">
           <img class="top-panel__logotype" src="assets/images/logotype.svg" alt="Logotype">
+          <img class="top-panel__logotype-fordark" src="assets/images/logotype-fordark.svg" alt="Logotype">
         </a>
+        <div class="top-panel__switch theme-changer theme-changer_self-end" id="theme-changer">
+          <label class="theme-changer__label" for="theme-changer-checkbox"><svg class="theme-changer__icon" width="24" height="24" viewBox="0 0 24 24">
+              <use href="../../assets/images/icons-sprite.svg#sun"></use>
+            </svg></label>
+          <label class="theme-changer__toggler toggler">
+            <input class="theme-changer__input toggler__input" type="checkbox" id="theme-changer-checkbox" checked>
+            <span class="theme-changer__toggler-body toggler__label"></span>
+          </label>
+          <label class="theme-changer__label" for="theme-changer-checkbox"><svg class="theme-changer__icon" width="24" height="24" viewBox="0 0 24 24">
+              <use href="../../assets/images/icons-sprite.svg#moon"></use>
+            </svg></label>
+        </div>
       </aside>
     </div>
   </header>
@@ -81,7 +96,7 @@
         </nav>
       </aside>
       <section class="content__viewer">
-        <h3 class="content__title">Histogram</h3>
+        <h3 class="content__title">Custom form elements</h3>
 
         <div class="presentation">
           <div class="radio-group">
@@ -188,6 +203,18 @@
             type="text"
             value="Success"
             class="input__control"/>
+          </div>
+          <div class="input">
+            <label
+            for="id-disabled"
+            class="input__label">Disabled</label>
+            <input
+            id="id-disabled"
+            placeholder="Placeholder"
+            type="text"
+            value="Disabled"
+            class="input__control"
+            disabled/>
           </div>
         </div>
 

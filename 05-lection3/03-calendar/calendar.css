@@ -2,8 +2,8 @@
   aspect-ratio: 0.938 / 1;
   min-width: 19rem;
 
-  background-color: var(--bg-ui-widgets);
-  border: 1px solid var(--grey-3);
+  background-color: var(--calendar-bg);
+  border: 1px solid var(--calendar-clr-border);
   border-radius: var(--rad-common);
   padding: var(--sp-24);
 
@@ -18,7 +18,7 @@
   font-weight: 600;
   line-height: 1.2;
 
-  color: var(--clr-ui-36e);
+  color: var(--calendar__header-clr);
 
   margin-bottom: var(--sp-24);
 }
@@ -37,7 +37,7 @@
 
   margin-bottom: var(--sp-24);
 
-  color: var(--clr-ui-9b7);
+  color: var(--calendar__weeks-clr);
 
 }
 .calendar__week {
@@ -72,7 +72,7 @@
   align-items: center;
 
   position: relative;
-  background-color: var(--white);
+  background-color: var(--calendar__day-bg);
   cursor: pointer;
 
   transition: background-color var(--trz-eo-015-015),
@@ -82,15 +82,15 @@
 
 .calendar__day:hover,
 .calendar__day:focus {
-  background-color: var(--clr-calendar-blue-light);
+  background-color: var(--calendar__day-bg-focus);
   transition: background-color var(--trz-eo-015),
               color var(--trz-eo-015),
               opacity var(--trz-eo-015);
 }
 
 .calendar__day:active{
-  color: var(--white);
-  background-color: var(--clr-calendar-blue);
+  color: var(--calendar__day-clr-active);
+  background-color: var(--calendar__day-bg-active);
   transition: background-color var(--trz-eo-015),
               color var(--trz-eo-015),
               opacity var(--trz-eo-015);
@@ -98,34 +98,34 @@
 
 
 .calendar__day_period-handle {
-  color: var(--white);
-  background-color: var(--clr-calendar-blue);
+  color: var(--calendar__day_period-handle-clr);
+  background-color: var(--calendar__day_period-handle-bg);
   cursor: grab;
 }
 
 .calendar__day_period-handle:hover,
 .calendar__day_period-handle:focus {
-  background-color: var(--clr-calendar-blue-hover);
+  background-color: var(--calendar__day_period-handle-bg-focus);
 }
 
 .calendar__day_period-handle:active{
-  color: var(--white);
-  background-color: var(--clr-calendar-blue-active);
+  color: var(--calendar__day_period-handle-clr-active);
+  background-color: var(--calendar__day_period-handle-bg-active);
   cursor: grabbing;
 }
 
 .calendar__day_period-range {
-  background-color: var(--clr-calendar-blue-light);
+  background-color: var(--calendar__day_period-range-bg);
 }
 
 .calendar__day_period-range:hover,
 .calendar__day_period-range:focus {
-  background-color: var(--clr-calendar-blue-light-hover);
+  background-color: var(--calendar__day_period-range-bg-focus);
 }
 
 .calendar__day_period-range:active{
   color: currentcolor;
-  background-color: var(--clr-calendar-blue-light-active);
+  background-color: var(--calendar__day_period-range-bg-active);
 }
 
 

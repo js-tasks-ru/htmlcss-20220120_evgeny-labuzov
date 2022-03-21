@@ -1,0 +1,17 @@
+$nms-input: input;
+:root {
+  --bg-ui-input: var(--bg-main);
+  --bg-ui-input-disabled: var(--grey-e5);
+  --clr-shd-input-focus: rgba(51, 154, 240, .1);
+  --clr-shd-input-error: rgba(240, 61, 62, .1);
+  --shd-input-focus: 0px 1px 1px var(--clr-shd-input-focus);
+  --shd-input-error: 0px 1px 1px var(--clr-shd-input-error);
+
+  --input__control-clr: var(--grey-4);
+  --input__control-clr-disabled: var(--grey-3);
+  --input__control-clr-placeholder: var(--grey-2);
+
+  --input__control-clr-border: var(--grey-2);
+  --input__control-clr-border-disabled: var(--grey-3);
+  --input__control-clr-border-focus: var(--blue);
+}

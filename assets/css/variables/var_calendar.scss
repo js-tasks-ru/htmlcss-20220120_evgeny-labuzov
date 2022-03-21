@@ -1,0 +1,37 @@
+$nms-calendar: calendar;
+:root {
+
+  --clr-calendar-blue: var(--clr-ui-blue);
+
+  --clr-calendar-blue-hover: hsl(228deg 81% 49%);
+  --clr-calendar-blue-active: hsl(228deg 94% 39%);
+
+  --clr-calendar-blue-light: rgb(160, 177, 245, .2); /*#A0B1F5!33*/
+  --clr-calendar-blue-light-hover: rgb(160, 177, 245, .3);
+  --clr-calendar-blue-light-active: hsl(228deg, 81%, 60%, .2);
+
+  --calendar-bg: var(--bg-ui-widgets);
+  --calendar-clr-border: var(--grey-3);
+
+  --calendar__header-clr: var(--clr-ui-36e);
+  --calendar__weeks-clr: var(--clr-ui-9b7);
+
+  --calendar__day-bg: var(--white);
+
+  --calendar__day-bg-focus: var(--clr-calendar-blue-light);
+
+  --calendar__day-clr-active: var(--white);
+  --calendar__day-bg-active: var(--clr-calendar-blue);
+
+  --calendar__day_period-handle-clr: var(--white);
+  --calendar__day_period-handle-bg: var(--clr-calendar-blue);
+
+  --calendar__day_period-handle-bg-focus: var(--clr-calendar-blue-hover);
+
+  --calendar__day_period-handle-clr-active: var(--white);
+  --calendar__day_period-handle-bg-active: var(--clr-calendar-blue-active);
+
+  --calendar__day_period-range-bg: var(--clr-calendar-blue-light);
+  --calendar__day_period-range-bg-focus: var(--clr-calendar-blue-light-hover);
+  --calendar__day_period-range-bg-active: var(--clr-calendar-blue-light-active);
+}

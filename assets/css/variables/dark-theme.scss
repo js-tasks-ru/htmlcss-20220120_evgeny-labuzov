@@ -1,0 +1,48 @@
+[data-theme-dark] {
+
+    // --main-bg: var(--black);
+    --font-color: #ffffff75;
+    // --dark-bg: var(--grey-1);
+    // --white-bg: var(--black);
+    // --light-bg: var(--grey-4);
+    --grey-bg: var(--grey-4);
+    // --card-bg: var(--black);
+    // --text-primary: var(--white);
+    // --active-text-color: var(--grey-2);
+    // --input-text-color: var(--font-color);
+
+
+  --black-hole: #000;
+  --night: #262e3b;
+  --asphalt: #242f3a;
+  --purpleNight: #bea9ff;
+  --yelloPain: #ffc51b;
+
+
+  --bg-main: var(--black);
+  --bg-content: var(--grey-bg);
+
+  --bg-header-inner: var(--grey-4);
+  --bg-content-inner: var(--grey-4);
+  --bg-footer-inner: var(--grey-4);
+
+  // --clr-common-title: var(--grey-1);
+  --clr-common-title: var(--font-color);
+  --clr-common-text: var(--grey-2);
+
+  --bg-ui-input: var(--asphalt);
+  --bg-ui-input-disabled: var(--bg-main);
+  --clr-border-flag: var(--grey-4);
+
+  --clr-ui-bea: var(--purpleNight);
+  --clr-ui-label-flag: var(--grey-3);
+
+  --bg-header-inner-mobile: var(--black-hole);
+
+  --bg-sidebar-hover: rgba(255, 255, 255, .07);
+  --clr-sidebar-active: var(--yelloPain);
+  --clr-modal-common: var(--grey-2);
+  --clr-modal-title: var(--purpleNight);
+
+  --ic-menu: url('../../assets/images/icons-sprite.svg#menu-white');
+}

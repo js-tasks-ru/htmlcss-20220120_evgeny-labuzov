@@ -46,6 +46,7 @@ const static = [
   '07-lection5/03-toggler',
   '07-lection5/04-input',
   '09-lection7/01-burger-menu',
+  '10-lection8/01-theme-changer',
   'assets/images',
   'build',
   'libs',

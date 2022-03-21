@@ -1,8 +1,9 @@
-.header {
+.#{$nms-header} {
+  $nms: $nms-header;
   background-color: var(--bg-main);
   padding: var(--sp-24) 0 calc(var(--tabs-y-shift) * -1) 0;
   width: 100%;
-  border-bottom: 1px solid var(--grey-2);
+  border-bottom: 1px solid var(--header-clr-border);
 
   @media $mediaMobile {
     padding-top: 1rem;

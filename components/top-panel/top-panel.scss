@@ -1,9 +1,11 @@
-.top-panel {
+.#{$nms-top-panel} {
+  $nms: $nms-top-panel;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: baseline;
   position: relative;
+  flex-wrap: wrap;
   @media $mediaMobile {
     min-height: unset;
     flex-direction: column;
@@ -14,7 +16,8 @@
   &__logotype-link{
     display: block;
     line-height: 0;
-    z-index: 1;
+    z-index: var(--z-top-panel-link);
+    flex-shrink: 0;
     @media $mediaMobile {
       padding-left: 2.3rem;
     }
@@ -22,5 +25,17 @@
 
   &__logotype {
     min-height: 2rem;
+    display: var(--top-panel__logotype-display);
+    &-fordark {
+      display: var(--top-panel__logotype-dark-display);
+    }
+  }
+  &__navigation {
+    margin-left: auto;
+  }
+  &__switch {
+    @media $mediaMobile {
+      margin-top: 1rem;
+    }
   }
 }
